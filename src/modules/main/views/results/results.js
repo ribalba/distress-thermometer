@@ -7,14 +7,6 @@ module.exports = Marionette.View.extend({
 
     template: ResultTemplate,
 
-    events: {
-        'click button': 'start_show'
-    },
-
-    start_show: function(){
-        this.triggerMethod('start:show', this);
-    },
-
     onAttach: function(){
         this.$el.find('.progress').progress();
     },

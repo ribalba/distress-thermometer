@@ -15,6 +15,16 @@ module.exports = Marionette.View.extend({
         mainContainer: '.main-container'
     },
 
+    events: {
+        'click .js-help': 'show_help',
+        'click .js-home': 'onRender'
+    },
+
+    show_help(){
+        console.log('Hello', this.$('.ui.basic.modal'))
+        this.$('.ui.basic.modal').modal('show');
+    },
+
     onChildviewQuestionnaireStart(childView) {
         this.showChildView('mainContainer', new QuestionView({collection: new questionCollection(Datas.questions)}));
     },

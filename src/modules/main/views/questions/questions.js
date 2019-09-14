@@ -10,14 +10,14 @@ const QuestionView = Marionette.View.extend({
     className: 'item',
 
     events: {
-        'click button': 'save_answer'
+        'click .js-save': 'save_answer'
     },
 
     save_answer: function (event) {
         this.$el.find('.button').removeClass('primary');
         this.$(event.target).addClass('primary');
 
-        if (this.$(event.target).hasClass('js_yes')) {
+        if (this.$(event.target).hasClass('js-yes')) {
             this.model.set('answer', true);
         } else {
             this.model.set('answer', false);

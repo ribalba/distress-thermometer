@@ -2,8 +2,15 @@
 <html lang="en">
     <head>
         <meta charset="utf-8">
-        <meta http-equiv="Content-Security-Policy" content="default-src 'self' gap: ws: https://ssl.gstatic.com;img-src * 'self' data: content:;style-src 'self' 'unsafe-inline' data: blob:;script-src 'self' 'unsafe-inline' data: blob:;">
-        <title>Marionette boilerplate example</title>
+
+        <!--(if target prod)><!-->
+        <meta http-equiv="Content-Security-Policy" content="default-src 'self' gap: ws: https://ssl.gstatic.com;img-src * 'self' data: content:;style-src 'self' 'unsafe-inline' data: blob:;script-src 'self' 'unsafe-inline' data: blob:;font-src *;">
+        <!--<!(endif)-->
+        <meta
+            name='viewport'
+            content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0'
+        />
+        <title>Distress Thermometer</title>
         <link rel="stylesheet" href="css/app.css">
         <link rel="stylesheet" href="sematic/semantic.min.css">
     </head>

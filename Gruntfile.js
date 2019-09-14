@@ -31,8 +31,8 @@ module.exports = function (grunt) {
                 src: 'src/app.js',
                 dest: 'www/js/bundle.js',
                 options: {
-                    extensions: ['.coffee', '.hbs'],
-                    transform: ['coffeeify', 'hbsfy']
+                    extensions: ['.hbs'],
+                    transform: ['hbsfy']
                 }
             }
         },
@@ -55,13 +55,18 @@ module.exports = function (grunt) {
               cwd: 'semantic/dist/',
               src: '**',
               dest: 'www/sematic'
+            },
+            icon: {
+                src: 'assets/icon.png',
+                dest: 'www/icon.png'
+
             }
           },
 
 
         uglify: {
             bundle: {
-                src: 'www/bundle.js',
+                src: 'www/js/bundle.js',
                 dest: 'www/js/bundle.js'
             }
         },
@@ -135,8 +140,8 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-contrib-clean');
 
 
-    grunt.registerTask('builddev', ['clean', 'browserify:app', 'browserify:vendors', 'targethtml:dev', 'stylus:dev', 'copy:semantic']);
-    grunt.registerTask('buildprod', ['clean', 'browserify:bundle', 'uglify', 'targethtml:prod', 'stylus:prod', 'autoprefixer', 'copy:semantic']);
+    grunt.registerTask('builddev', ['clean', 'browserify:app', 'browserify:vendors', 'targethtml:dev', 'stylus:dev', 'copy']);
+    grunt.registerTask('buildprod', ['clean', 'browserify:bundle', 'targethtml:prod', 'stylus:prod', 'autoprefixer', 'copy']);
     grunt.registerTask('run',   ['builddev', 'connect', 'watch']);
 
 };

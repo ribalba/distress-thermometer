@@ -19,6 +19,16 @@ To test if also everything works in phonegap you can use `./node_modules/.bin/ph
 and then test it either in the browser or with the phonegap mobile app. You will have to have
 build the app before with `./node_modules/.bin/grunt builddev`
 
+## Hint
+
+We also publish a html version of the app under https://distress-thermometer.netlify.com/
+This might have limited functionality but we will try to make it as functional as possible.
+
+## Build Server
+
+We are using the PhoneGap build service to build our app automatically. The newest version
+can be downloaded under https://build.phonegap.com/apps/3706225/share
+
 ## Self Build
 
 ### iOS
