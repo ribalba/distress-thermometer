@@ -1,0 +1,50 @@
+
+
+
+<h1 class="ui header">Your results</h1>
+<div class="ui segment">
+
+    <div class="ui statistics">
+
+        <div class="statistic">
+            <div class="value">
+                <i class="question  icon"></i> {{total}}
+            </div>
+            <div class="label">
+                Questionnaires
+            </div>
+        </div>
+
+        <div class="statistic">
+            <div class="value">
+                <i class="check  icon"></i> {{yes}}
+            </div>
+            <div class="label">
+                Yes Answers
+            </div>
+        </div>
+
+        <div class="statistic">
+            <div class="value">
+                <i class="times  icon"></i> {{no}}
+            </div>
+            <div class="label">
+                No Answers
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<div class="ui multiple progress" data-value="{{yes}},{{no}}" data-total='{{total_yn}}'>
+  <div class="green bar"></div>
+  <div class="yellow bar"></div>
+</div>
+
+
+<div>
+    <button class="ui labeled icon button">
+        <i class="arrow left icon"></i>
+        Back
+    </button>
+</div>

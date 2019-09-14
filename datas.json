@@ -1,0 +1,22 @@
+{
+	"questions": [
+		{
+			"title": "Did you have problems with child care?"
+		},
+		{
+			"title": "How secure was your housing situation?"
+        },
+        {
+			"title": "Did you have fears?"
+        },
+        {
+			"title": "Did you have problems eating?"
+        },
+        {
+			"title": "Did you have pain?"
+        },
+        {
+			"title": "Did you sleep normally?"
+		}
+	]
+}
