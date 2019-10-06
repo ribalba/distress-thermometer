@@ -1,25 +1,150 @@
 (function(){function r(e,n,t){function o(i,f){if(!n[i]){if(!e[i]){var c="function"==typeof require&&require;if(!f&&c)return c(i,!0);if(u)return u(i,!0);var a=new Error("Cannot find module '"+i+"'");throw a.code="MODULE_NOT_FOUND",a}var p=n[i]={exports:{}};e[i][0].call(p.exports,function(r){var n=e[i][1][r];return o(n||r)},p,p.exports,r,e,n,t)}return n[i].exports}for(var u="function"==typeof require&&require,i=0;i<t.length;i++)o(t[i]);return o}return r})()({1:[function(require,module,exports){
 module.exports={
-	"questions": [
-		{
-			"title": "Did you have problems with child care?"
-		},
-		{
-			"title": "How secure was your housing situation?"
+    "questions": [
+        {
+            "title": "Practical Problems",
+            "items": [
+                {
+                    "title": "Child care"
+                },
+                {
+                    "title": "Housing"
+                },
+                {
+                    "title": "Insurance/ financial"
+                },
+                {
+                    "title": "Transportation"
+                },
+                {
+                    "title": "Work/ school"
+                },
+                {
+                    "title": "Treatment decisions"
+                }
+            ]
         },
         {
-			"title": "Did you have fears?"
+            "title": "Family Problems",
+            "items": [
+                {
+                    "title": "Dealing with children"
+                },
+                {
+                    "title": "Dealing with partner"
+                },
+                {
+                    "title": "Ability to have children"
+                },
+                {
+                    "title": "Family health issues"
+                }
+            ]
         },
         {
-			"title": "Did you have problems eating?"
+            "title": "Emotional Problems",
+            "items": [
+                {
+                    "title": "Depression"
+                },
+                {
+                    "title": "Fears"
+                },
+                {
+                    "title": "Nervousness"
+                },
+                {
+                    "title": "Sadness"
+                },
+                {
+                    "title": "Worry"
+                },
+                {
+                    "title": "Loss of interest in usual activities"
+                }
+            ]
         },
         {
-			"title": "Did you have pain?"
+            "title": "Physical Problems",
+            "items": [
+                {
+                    "title": "Appearance"
+                },
+                {
+                    "title": "Bathing/ dressing"
+                },
+                {
+                    "title": "Breathing"
+                },
+                {
+                    "title": "Changes in urination"
+                },
+                {
+                    "title": "Constipation"
+                },
+                {
+                    "title": "Diarrhea"
+                },
+                {
+                    "title": "Eating"
+                },
+                {
+                    "title": "Fatigue"
+                },
+                {
+                    "title": "Feeling swollen"
+                },
+                {
+                    "title": "Fevers"
+                },
+                {
+                    "title": "Getting around"
+                },
+                {
+                    "title": "Indigestion"
+                },
+                {
+                    "title": "Memory/ concentration"
+                },
+                {
+                    "title": "Mouth sores"
+                },
+                {
+                    "title": "Nausea"
+                },
+                {
+                    "title": "Nose dry/ congested"
+                },
+                {
+                    "title": "Pain"
+                },
+                {
+                    "title": "Sexual"
+                },
+                {
+                    "title": "Skin dry/ itchy"
+                },
+                {
+                    "title": "Sleep"
+                },
+                {
+                    "title": "Substance use"
+                },
+                {
+                    "title": "Tingling in hands/ feet"
+                }
+            ]
         },
         {
-			"title": "Did you sleep normally?"
-		}
-	]
+            "title": "Other Problems",
+            "items": [
+                {
+                    "title": "Spiritual/ Religious concerns",
+                    "input": "What other problems are you facing?"
+                }
+            ]
+        }
+    ]
 }
 },{}],2:[function(require,module,exports){
 (function webpackUniversalModuleDefinition(root, factory) {
@@ -18448,7 +18573,7 @@ Backbone.$ = $;
 
 // Globals
 window.jQuery = $;
-window._ = require('underscore');
+var _ = require('underscore');
 
 require('../semantic/dist/semantic.min.js');
 
@@ -18480,7 +18605,7 @@ module.exports = Marionette.Application.extend({
     }
   });
 
-},{"./collections/results":14,"./models/user":17,"./views/layout/layout":19,"backbone":5,"backbone.marionette":3}],13:[function(require,module,exports){
+},{"./collections/results":14,"./models/user":17,"./views/layout/layout":21,"backbone":5,"backbone.marionette":3}],13:[function(require,module,exports){
 var Backbone = require('backbone');
 var questionModel = require('../models/question');
 
@@ -18508,10 +18633,6 @@ module.exports = resultStorage;
 var Backbone = require('backbone');
 
 module.exports = Backbone.Model.extend({
-    defaults: {
-        title: "",
-        answer: null
-    }
 });
 },{"backbone":5}],16:[function(require,module,exports){
 var Backbone = require('backbone');
@@ -18532,15 +18653,49 @@ module.exports = Backbone.Model.extend({
 // hbsfy compiled Handlebars template
 var HandlebarsCompiler = require('hbsfy/runtime');
 module.exports = HandlebarsCompiler.template({"compiler":[7,">= 4.0.0"],"main":function(container,depth0,helpers,partials,data) {
-    return "  <div class=\"ui borderless main menu\">\n    <div class=\"ui text container\">\n      <div class=\"header item\">\n        <img class=\"logo\" src=\"icon.png\">\n        Distress Thermometer\n      </div>\n      <a class=\"ui right floated item js-help\">\n        Help\n      </a>\n    </div>\n  </div>\n\n<div class=\"ui basic modal\">\n  <div class=\"ui icon header\">\n    <i class=\"question circle outline icon\"></i>\n    Help\n  </div>\n  <div class=\"content\">\n    <p>Please feel to tell us what you think didi@rebelproject.org</p>\n    <p>Currently this is a very simple app just to show that the build process works and that we have the\n        basic functionality up and running. So there isn't really much to show.\n    </p>\n  </div>\n  <div class=\"actions\">\n    <div class=\"ui green cancel inverted button\">\n      <i class=\"checkmark icon\"></i>\n      Yes\n    </div>\n  </div>\n</div>\n\n<div class=\"ui raised padded text container\">\n    <div class=\"main-container\"></div>\n</div>\n";
+    return "<div class=\"topbox\">\n    <h1 class=\"vcentre\">Awesome! <br> You're all done</h1>\n\n</div>\n<button class=\"circular primary ui icon right floated button js-home\">\n    <i class=\"angle right icon\"></i>\n</button>\n";
 },"useData":true});
 
 },{"hbsfy/runtime":7}],19:[function(require,module,exports){
+var Marionette = require('backbone.marionette');
+var DoneTemplate = require('./done.hbs');
+var resultStorage = require('../../collections/results');
+var _= require('underscore');
+
+module.exports = Marionette.View.extend({
+
+    template: DoneTemplate,
+
+    events: {
+        'click .js-question': 'take_questionnaire',
+        'click .js-results': 'show_results'
+    },
+
+    take_questionnaire: function(){
+        this.triggerMethod('questionnaire:start', this);
+    },
+    show_results: function(){
+        this.triggerMethod('results:show', this);
+    },
+
+
+});
+},{"../../collections/results":14,"./done.hbs":18,"backbone.marionette":3,"underscore":9}],20:[function(require,module,exports){
+// hbsfy compiled Handlebars template
+var HandlebarsCompiler = require('hbsfy/runtime');
+module.exports = HandlebarsCompiler.template({"compiler":[7,">= 4.0.0"],"main":function(container,depth0,helpers,partials,data) {
+    return "<div class=\"main-container\"></div>\n";
+},"useData":true});
+
+},{"hbsfy/runtime":7}],21:[function(require,module,exports){
 var LayoutTemplate = require('./layout.hbs');
 var Marionette = require('backbone.marionette');
-var StartView = require('../start/start');
+var StartView = require('../done/done');
 var QuestionView = require('../questions/questions');
-var ResultsView = require('../results/results')
+var ResultsView = require('../results/results');
+var SplashView = require('../splash/splash');
+var ThermoView = require('../thermo/thermo');
+var DoneView = require('../done/done');
 
 var questionCollection = require('../../collections/questions')
 var Datas = require('../../../../../datas.json');
@@ -18555,7 +18710,7 @@ module.exports = Marionette.View.extend({
 
     events: {
         'click .js-help': 'show_help',
-        'click .js-home': 'onRender'
+        'click .js-home': 'onRender',
     },
 
     show_help(){
@@ -18563,11 +18718,11 @@ module.exports = Marionette.View.extend({
         this.$('.ui.basic.modal').modal('show');
     },
 
-    onChildviewQuestionnaireStart(childView) {
+    onChildviewDistressquestionsStart(childView) {
         this.showChildView('mainContainer', new QuestionView({collection: new questionCollection(Datas.questions)}));
     },
-    onChildviewQuestionnaireFinish(childView) {
-        this.showChildView('mainContainer', new StartView());
+    onChildviewDistressthermometerStart(childView) {
+        this.showChildView('mainContainer', new ThermoView());
     },
 
     onChildviewResultsShow(childView) {
@@ -18577,33 +18732,50 @@ module.exports = Marionette.View.extend({
     onChildviewStartShow(childView) {
         this.showChildView('mainContainer', new StartView());
     },
+    onChildviewQuestionnaireFinish(childView){
+        this.showChildView('mainContainer', new DoneView());
+    },
 
     onRender() {
-        this.showChildView('mainContainer', new StartView());
+        this.showChildView('mainContainer', new SplashView());
+        //this.showChildView('mainContainer', new QuestionView({collection: new questionCollection(Datas.questions)}));
     }
 });
-},{"../../../../../datas.json":1,"../../collections/questions":13,"../questions/questions":22,"../results/results":24,"../start/start":26,"./layout.hbs":18,"backbone.marionette":3}],20:[function(require,module,exports){
+},{"../../../../../datas.json":1,"../../collections/questions":13,"../done/done":19,"../questions/questions":24,"../results/results":26,"../splash/splash":28,"../thermo/thermo":30,"./layout.hbs":20,"backbone.marionette":3}],22:[function(require,module,exports){
+// hbsfy compiled Handlebars template
+var HandlebarsCompiler = require('hbsfy/runtime');
+module.exports = HandlebarsCompiler.template({"1":function(container,depth0,helpers,partials,data) {
+    var helper;
+
+  return "<br>\n<div class=\"item\">\n    <div class=\"ui form\">\n          <div class=\"field\">\n\n        <label>"
+    + container.escapeExpression(((helper = (helper = helpers.input || (depth0 != null ? depth0.input : depth0)) != null ? helper : helpers.helperMissing),(typeof helper === "function" ? helper.call(depth0 != null ? depth0 : (container.nullContext || {}),{"name":"input","hash":{},"data":data}) : helper)))
+    + "</label>\n        <textarea></textarea>\n        </div>\n\n    </div>\n</div>\n\n";
+},"compiler":[7,">= 4.0.0"],"main":function(container,depth0,helpers,partials,data) {
+    var stack1, helper, alias1=depth0 != null ? depth0 : (container.nullContext || {});
+
+  return "<div class=\"item\">\n    <div class=\"right floated content\">\n        <div class=\"ui toggle checkbox\">\n            <input type=\"checkbox\" name=\"newsletter\">\n            <label></label>\n        </div>\n    </div>\n    <div class=\"content\">\n        "
+    + container.escapeExpression(((helper = (helper = helpers.title || (depth0 != null ? depth0.title : depth0)) != null ? helper : helpers.helperMissing),(typeof helper === "function" ? helper.call(alias1,{"name":"title","hash":{},"data":data}) : helper)))
+    + "\n    </div>\n</div>\n"
+    + ((stack1 = helpers["if"].call(alias1,(depth0 != null ? depth0.input : depth0),{"name":"if","hash":{},"fn":container.program(1, data, 0),"inverse":container.noop,"data":data})) != null ? stack1 : "");
+},"useData":true});
+
+},{"hbsfy/runtime":7}],23:[function(require,module,exports){
 // hbsfy compiled Handlebars template
 var HandlebarsCompiler = require('hbsfy/runtime');
 module.exports = HandlebarsCompiler.template({"compiler":[7,">= 4.0.0"],"main":function(container,depth0,helpers,partials,data) {
     var helper;
 
-  return "<div class=\"content\">\n    <div class=\"description\">\n        <p>"
+  return "<div class=\"topbox\">\n    <h2>Problem List</h2>\n    <div>\n        Over the past week, including today, have any of the following been a problem for you?    </div>\n    </div>\n\n</div>\n\n<div class=\"bottombox \">\n    <h3>"
     + container.escapeExpression(((helper = (helper = helpers.title || (depth0 != null ? depth0.title : depth0)) != null ? helper : helpers.helperMissing),(typeof helper === "function" ? helper.call(depth0 != null ? depth0 : (container.nullContext || {}),{"name":"title","hash":{},"data":data}) : helper)))
-    + "</p>\n    </div>\n    <div class=\"extra\">\n        <div class=\"ui right floated buttons\">\n            <button class=\"ui button js-yes js-save\">Yes</button>\n            <div class=\"or\"></div>\n            <button class=\"ui button js-no js-save\">No</button>\n        </div>\n    </div>\n</div>\n";
+    + "\n        <div class=\"ui tiny progress\">\n            <div class=\"bar\"></div>\n        </div>\n    </h3>\n\n    <div class=\"js-items\"></div>\n\n</div>\n\n\n<button class=\"circular primary ui icon right floated button js-next\">\n    <i class=\"angle right icon\"></i>\n</button>\n";
 },"useData":true});
 
-},{"hbsfy/runtime":7}],21:[function(require,module,exports){
-// hbsfy compiled Handlebars template
-var HandlebarsCompiler = require('hbsfy/runtime');
-module.exports = HandlebarsCompiler.template({"compiler":[7,">= 4.0.0"],"main":function(container,depth0,helpers,partials,data) {
-    return "<button class=\"ui right floated icon button js-home\">\n  <i class=\"home icon js-home\"></i>\n</button>\n<h1>Questionnaire</h1>\n\n\n<div class=\"ui active progress sticky\">\n  <div class=\"bar\"></div>\n</div>\n\n<div class=\"ui divided items js-items\"></div>\n";
-},"useData":true});
-
-},{"hbsfy/runtime":7}],22:[function(require,module,exports){
+},{"hbsfy/runtime":7}],24:[function(require,module,exports){
 var Marionette = require('backbone.marionette');
 var QuestionsTemplate = require('./questions.hbs');
 var QuestionTemplate = require('./question.hbs');
+var _ = require('underscore');
+var questionCollection = require('../../collections/questions')
 
 var resultStorage = require('../../collections/results');
 var resultModel = require('../../models/result');
@@ -18629,32 +18801,23 @@ const QuestionView = Marionette.View.extend({
 });
 
 
-module.exports = Marionette.CollectionView.extend({
+const QuestionGroup = Marionette.CollectionView.extend({
 
-    template: QuestionsTemplate,
+    template: _.template('<div id="question-items" class="ui middle aligned list"></div>'),
     childView: QuestionView,
-    childViewContainer: '.js-items',
+    childViewContainer: '#question-items',
 
     collectionEvents: {
         'change': 'update_progress'
     },
 
-    onAttach: function(){
-        this.$el.find('.progress').progress({
-            total: this.collection.length,
-        });
-        this.$('.ui.sticky').sticky({
-            context: '.js-items'
-        });
-
-    },
 
     update_progress: function () {
-        null_questions = this.collection.where({answer: null}).length;
+        null_questions = this.collection.where({ answer: null }).length;
         open_questions = this.collection.length - null_questions
         this.$el.find('.progress').progress('set progress', open_questions)
 
-        if (null_questions === 0){
+        if (null_questions === 0) {
             window.jQuery('body').toast({
                 class: 'success',
                 title: 'Brilliant',
@@ -18672,11 +18835,67 @@ module.exports = Marionette.CollectionView.extend({
 
             this.triggerMethod('questionnaire:finish', this);
         }
+    }
+});
+
+const QuestionWrapper = Marionette.View.extend({
+
+    template: QuestionsTemplate,
+    regions: {
+        qg: '.js-items'
     },
 
+    onRender: function () {
+        this.showChildView('qg', new QuestionGroup({ collection: new questionCollection(this.model.get('items')) }));
+    }
+
+})
+
+
+module.exports = Marionette.View.extend({
+    template: _.template('<div id="question_group"></div>'),
+
+    regions: {
+        qg: '#question_group'
+    },
+
+    events: {
+        'click .js-next': 'show_next'
+    },
+
+    onAttach: function () {
+        this.$el.find('.progress').progress({
+            total: this.collection.length,
+        });
+
+    },
+
+    show_next: function () {
+        this.counter += 1
+        if (this.collection.length === this.counter) {
+            this.triggerMethod('questionnaire:finish', this);
+        }
+        this.render()
+    },
+
+    initialize: function (options) {
+        this.collection = options.collection;
+        this.counter = 0;
+    },
+
+    onRender: function () {
+        this.showChildView('qg', new QuestionWrapper({ model: this.collection.at(this.counter) }));
+        this.$el.find('.progress').progress({
+            total: this.collection.length,
+            value: this.counter
+        });
+
+
+    }
 
 });
-},{"../../collections/results":14,"../../models/result":16,"./question.hbs":20,"./questions.hbs":21,"backbone.marionette":3}],23:[function(require,module,exports){
+
+},{"../../collections/questions":13,"../../collections/results":14,"../../models/result":16,"./question.hbs":22,"./questions.hbs":23,"backbone.marionette":3,"underscore":9}],25:[function(require,module,exports){
 // hbsfy compiled Handlebars template
 var HandlebarsCompiler = require('hbsfy/runtime');
 module.exports = HandlebarsCompiler.template({"compiler":[7,">= 4.0.0"],"main":function(container,depth0,helpers,partials,data) {
@@ -18697,7 +18916,7 @@ module.exports = HandlebarsCompiler.template({"compiler":[7,">= 4.0.0"],"main":f
     + "'>\n  <div class=\"green bar\"></div>\n  <div class=\"yellow bar\"></div>\n</div>\n\n\n<div>\n    <button class=\"ui labeled icon button js-home\">\n        <i class=\"arrow left icon\"></i>\n        Back\n    </button>\n</div>";
 },"useData":true});
 
-},{"hbsfy/runtime":7}],24:[function(require,module,exports){
+},{"hbsfy/runtime":7}],26:[function(require,module,exports){
 var Marionette = require('backbone.marionette');
 var ResultTemplate = require('./results.hbs');
 var resultStorage = require('../../collections/results');
@@ -18728,35 +18947,59 @@ module.exports = Marionette.View.extend({
         }
     }
 });
-},{"../../collections/results":14,"./results.hbs":23,"backbone.marionette":3}],25:[function(require,module,exports){
+},{"../../collections/results":14,"./results.hbs":25,"backbone.marionette":3}],27:[function(require,module,exports){
 // hbsfy compiled Handlebars template
 var HandlebarsCompiler = require('hbsfy/runtime');
 module.exports = HandlebarsCompiler.template({"compiler":[7,">= 4.0.0"],"main":function(container,depth0,helpers,partials,data) {
-    return "<h1 class=\"ui header\">Welcome to the distress thermometer</h1>\n<p>\n<div class=\"ui placeholder\">\n    <div class=\"paragraph\">\n        <div class=\"line\"></div>\n        <div class=\"line\"></div>\n        <div class=\"line\"></div>\n        <div class=\"line\"></div>\n        <div class=\"line\"></div>\n    </div>\n</div>\n</p>\n\n<button class=\"ui labeled icon primary button js-question\">\n <i class=\"thermometer half icon\"></i>\n  Take Questionnaire\n</button>\n\n<button class=\"ui labeled icon button js-results\">\n <i class=\"poll icon\"></i>\n  View Results\n</button>\n";
+    return "        <input id=\"anPageName\" name=\"page\" type=\"hidden\" value=\"a10000nccnsplash\"/>\n        <div class=\"a10000nccnsplash\">\n            <div style=\"width: 375px; height: 100%; position:relative; margin:auto;\">\n                <img src=\"./img/nccn/10000---nccn---splash-rectangle-6.png\" class=\"rectangle6\" src=\"data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==\"/>\n                <img src=\"./img/nccn/10000---nccn---splash-rectangle@2x.png\" class=\"rectangle getstarted-js\" src=\"data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==\"/>\n                <div class=\"getstarted getstarted-js\">\n                    Get Started\n                </div>\n                <div class=\"nccn\">\n                    NCCN\n                </div>\n                <div class=\"distressthermometer\">\n                    Distress Thermometer\n                </div>\n            </div>\n        </div>\n";
 },"useData":true});
 
-},{"hbsfy/runtime":7}],26:[function(require,module,exports){
+},{"hbsfy/runtime":7}],28:[function(require,module,exports){
 var Marionette = require('backbone.marionette');
-var StartTemplate = require('./start.hbs');
-var resultStorage = require('../../collections/results');
-var _= require('underscore');
+var SplashTemplate = require('./splash.hbs');
 
 module.exports = Marionette.View.extend({
 
-    template: StartTemplate,
+    template: SplashTemplate,
 
     events: {
-        'click .js-question': 'take_questionnaire',
-        'click .js-results': 'show_results'
+        'click .getstarted-js': 'distressthermometer_start'
     },
 
-    take_questionnaire: function(){
-        this.triggerMethod('questionnaire:start', this);
-    },
-    show_results: function(){
-        this.triggerMethod('results:show', this);
-    },
-
-
+    distressthermometer_start: function(){
+        this.triggerMethod('distressthermometer:start', this);
+    }
 });
-},{"../../collections/results":14,"./start.hbs":25,"backbone.marionette":3,"underscore":9}]},{},[11]);
+},{"./splash.hbs":27,"backbone.marionette":3}],29:[function(require,module,exports){
+// hbsfy compiled Handlebars template
+var HandlebarsCompiler = require('hbsfy/runtime');
+module.exports = HandlebarsCompiler.template({"compiler":[7,">= 4.0.0"],"main":function(container,depth0,helpers,partials,data) {
+    return "<div class=\"topbox\">\n    <h2>Distress Thermometer</h2>\n    <div>\n        What number best describes how much distress you have been experiencing in the past week, including today?\n    </div>\n</div>\n\n<div class=\"bottombox\">\n    <div class=\"ui labeled slider\"></div>\n    <div class=\"ui grid\">\n    <div class=\"four wide column\">No distress</div>\n    <div class=\"four wide column\"></div>\n    <div class=\"four wide column\"></div>\n    <div class=\"four wide column\">Extreme distress</div>\n    </div>\n</div>\n\n<button class=\"circular primary ui icon right floated button js-qstart\">\n    <i class=\"angle right icon\"></i>\n</button>\n";
+},"useData":true});
+
+},{"hbsfy/runtime":7}],30:[function(require,module,exports){
+var Marionette = require('backbone.marionette');
+var ThermoTemplate = require('./thermo.hbs');
+
+module.exports = Marionette.View.extend({
+
+    template: ThermoTemplate,
+
+    events: {
+        'click .js-qstart': 'distressthermometer_start'
+    },
+
+    onAttach: function(){
+        this.$el.find('.ui.slider').slider({min: 0,
+            max: 10,
+            step: 1
+        });
+    },
+
+
+
+    distressthermometer_start: function(){
+        this.triggerMethod('distressquestions:start', this);
+    }
+});
+},{"./thermo.hbs":29,"backbone.marionette":3}]},{},[11]);
