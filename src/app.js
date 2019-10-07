@@ -5,7 +5,7 @@ Backbone.$ = $;
 
 // Globals
 window.jQuery = $;
-window._ = require('underscore');
+var _ = require('underscore');
 
 require('../semantic/dist/semantic.min.js');
 

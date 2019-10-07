@@ -1,51 +1,4 @@
-.main-container {
-  width: 375px;
-  height: 100%;
-  position: relative;
-  margin: auto;
-}
-.ui.slider .inner .thumb {
-  background: #326cf4 !important;
-}
-.ui.slider .inner .track-fill {
-  background: #326cf4 !important;
-}
-.ui.primary.button {
-  background-color: #326cf4 !important;
-}
-.topbox {
-  color: #fff;
-  background-color: #326cf4;
-  padding: 20px 20px 20px 20px;
-  height: 249px;
-  border-radius: 0px 0px 25px 25px;
-}
-.bottombox {
-  width: 350px;
-  position: relative;
-  margin: auto;
-  background-color: #fff;
-  padding: 20px;
-  border-radius: 25px;
-  top: -20px;
-  margin-top: -80px;
-}
-.vcentre {
-  position: absolute;
-  top: 35%;
-/* adjust top up half the height of a single line */
-  margin-top: -0.5em;
-/* force content to always be a single line */
-  overflow: hidden;
-  white-space: nowrap;
-  width: 100%;
-  text-overflow: ellipsis;
-}
-.whitelink {
-  color: #fff;
-  text-decoration: underline;
-}
-@import url('https://fonts.googleapis.com/css?family=Montserrat:300,600,500,700');
+.main-container{width:375px;height:100%;position:relative;margin:auto}.right-button{margin-right:30px !important}.ui.slider .inner .thumb{background:#326cf4 !important}.ui.slider .inner .track-fill{background:#326cf4 !important}.ui.primary.button{background-color:#326cf4 !important}.topbox{color:#fff;background-color:#326cf4;padding:20px 20px 20px 20px;height:249px;border-radius:0 0 25px 25px}.bottombox{width:350px;position:relative;margin:auto;background-color:#fff;padding:20px;border-radius:25px;top:-20px;margin-top:-80px}.vcentre{position:absolute;top:35%;margin-top:-.5em;overflow:hidden;white-space:nowrap;width:100%;text-overflow:ellipsis}.whitelink{color:#fff;text-decoration:underline}@import url('https://fonts.googleapis.com/css?family=Montserrat:300,600,500,700');
 
 @font-face {
                           font-family: "SFProText-Regular";
@@ -90,8 +43,7 @@ div {
   width               : 377px;
   position            : absolute;
   margin              : 0;
-  left                : -1px;
-  -ms-transform       : rotate(0deg); /* IE 9 */
+  left                : -1px; /* IE 9 */
   -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
   transform           : rotate(0deg);
 }
@@ -102,8 +54,7 @@ div {
   width               : 363px;
   position            : absolute;
   margin              : 0;
-  left                : 6px;
-  -ms-transform       : rotate(0deg); /* IE 9 */
+  left                : 6px; /* IE 9 */
   -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
   transform           : rotate(0deg);
 }
@@ -114,8 +65,7 @@ div {
   width               : 363px;
   position            : relative;
   margin              : 0;
-  left                : 0px;
-  -ms-transform       : rotate(0deg); /* IE 9 */
+  left                : 0px; /* IE 9 */
   -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
   transform           : rotate(0deg);
 }
@@ -126,8 +76,7 @@ div {
   width               : 34px;
   position            : absolute;
   margin              : 0;
-  left                : 0px;
-  -ms-transform       : rotate(0deg); /* IE 9 */
+  left                : 0px; /* IE 9 */
   -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
   transform           : rotate(0deg);
 }
@@ -138,8 +87,7 @@ div {
   width               : 65px;
   position            : absolute;
   margin              : 0;
-  left                : 39px;
-  -ms-transform       : rotate(0deg); /* IE 9 */
+  left                : 39px; /* IE 9 */
   -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
   transform           : rotate(0deg);
   font-family         : "SFProText-Regular", Helvetica, Arial, serif;
@@ -155,8 +103,7 @@ div {
   width               : 13px;
   position            : absolute;
   margin              : 0;
-  left                : 80px;
-  -ms-transform       : rotate(0deg); /* IE 9 */
+  left                : 80px; /* IE 9 */
   -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
   transform           : rotate(0deg);
 }
@@ -167,8 +114,7 @@ div {
   width               : 58px;
   position            : absolute;
   margin              : 0;
-  left                : 152px;
-  -ms-transform       : rotate(0deg); /* IE 9 */
+  left                : 152px; /* IE 9 */
   -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
   transform           : rotate(0deg);
   font-family         : "Helvetica", Helvetica, Arial, serif;
@@ -184,8 +130,7 @@ div {
   width               : 33px;
   position            : absolute;
   margin              : 0;
-  left                : 301px;
-  -ms-transform       : rotate(0deg); /* IE 9 */
+  left                : 301px; /* IE 9 */
   -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
   transform           : rotate(0deg);
   font-family         : "Helvetica", Helvetica, Arial, serif;
@@ -201,8 +146,7 @@ div {
   width               : 25px;
   position            : absolute;
   margin              : 0;
-  left                : 339px;
-  -ms-transform       : rotate(0deg); /* IE 9 */
+  left                : 339px; /* IE 9 */
   -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
   transform           : rotate(0deg);
 }
@@ -213,8 +157,7 @@ div {
   width               : 319px;
   position            : absolute;
   margin              : 0;
-  left                : 28px;
-  -ms-transform       : rotate(0deg); /* IE 9 */
+  left                : 28px; /* IE 9 */
   -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
   transform           : rotate(0deg);
 }
@@ -224,8 +167,7 @@ div {
   height              : auto;
   position            : absolute;
   margin              : 0;
-  left                : 136px;
-  -ms-transform       : rotate(0deg); /* IE 9 */
+  left                : 136px; /* IE 9 */
   -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
   transform           : rotate(0deg);
   font-family         : "Montserrat", Helvetica, Arial, serif;
@@ -243,8 +185,7 @@ div {
   width               : 194px;
   position            : absolute;
   margin              : 0;
-  left                : 91px;
-  -ms-transform       : rotate(0deg); /* IE 9 */
+  left                : 91px; /* IE 9 */
   -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
   transform           : rotate(0deg);
   font-family         : "Montserrat", Helvetica, Arial, serif;
@@ -262,8 +203,7 @@ div {
   width               : 194px;
   position            : absolute;
   margin              : 0;
-  left                : 91px;
-  -ms-transform       : rotate(0deg); /* IE 9 */
+  left                : 91px; /* IE 9 */
   -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
   transform           : rotate(0deg);
   font-family         : "Montserrat", Helvetica, Arial, serif;
@@ -279,53 +219,19 @@ div {
   opacity             : 0;
   display             : block;
   -webkit-animation   : anima-reveal 0.3s ease-in-out 1 normal forwards;
-  -moz-animation      : anima-reveal 0.3s ease-in 1 normal forwards;
-  -o-animation        : anima-reveal 0.3s ease-in-out 1 normal forwards;
   animation           : anima-reveal 0.3s ease-in-out 1 normal forwards;
 }
 .anima-animate-disappear {
   opacity             : 1;
   display             : block;
   -webkit-animation   : anima-reveal 0.3s ease-in-out 1 reverse forwards;
-  -moz-animation      : anima-reveal 0.3s ease-in 1 normal forwards;
-  -o-animation        : anima-reveal 0.3s ease-in-out 1 reverse forwards;
   animation           : anima-reveal 0.3s ease-in-out 1 reverse forwards;
 }
 .anima-animate-nodelay {
   -webkit-animation-delay: 0;
-  -moz-animation-delay: 0;
-  -o-animation-delay  : 0;
   animation-delay     : 0;
 }
 @-webkit-keyframes anima-reveal {
-  0%
-
-  {
-      opacity: 0;
-    }
-
-
-  100%
-
-  {
-      opacity: 1;
-    }
-}
-@-moz-keyframes anima-reveal {
-  0%
-
-  {
-      opacity: 0;
-    }
-
-
-  100%
-
-  {
-      opacity: 1;
-    }
-}
-@-o-keyframes anima-reveal {
   0%
 
   {

@@ -1,10 +1,15 @@
 var LayoutTemplate = require('./layout.hbs');
 var Marionette = require('backbone.marionette');
-var StartView = require('../start/start');
+var StartView = require('../done/done');
 var QuestionView = require('../questions/questions');
-var ResultsView = require('../results/results')
-
-var questionCollection = require('../../collections/questions')
+var ResultsView = require('../results/results');
+var SplashView = require('../splash/splash');
+var ThermoView = require('../thermo/thermo');
+var DoneView = require('../done/done');
+var PersonalView = require('../personal/personal');
+var SessionStorage = require('../../models/session');
+var UserModel = require('../../models/user');
+var questionCollection = require('../../collections/questions');
 var Datas = require('../../../../../datas.json');
 
 module.exports = Marionette.View.extend({
@@ -16,31 +21,45 @@ module.exports = Marionette.View.extend({
     },
 
     events: {
-        'click .js-help': 'show_help',
-        'click .js-home': 'onRender'
+        'click .js-home': 'onRender',
     },
 
-    show_help(){
-        console.log('Hello', this.$('.ui.basic.modal'))
-        this.$('.ui.basic.modal').modal('show');
-    },
-
-    onChildviewQuestionnaireStart(childView) {
+    onChildviewDistressquestionsStart(childView) {
+        this.detachChildView('mainContainer');
         this.showChildView('mainContainer', new QuestionView({collection: new questionCollection(Datas.questions)}));
     },
-    onChildviewQuestionnaireFinish(childView) {
-        this.showChildView('mainContainer', new StartView());
+    onChildviewDistressthermometerStart(childView) {
+        this.detachChildView('mainContainer');
+        this.showChildView('mainContainer', new ThermoView({model: SessionStorage}));
     },
 
-    onChildviewResultsShow(childView) {
-        this.showChildView('mainContainer', new ResultsView());
+    onChildviewPersonalStart(childView) {
+        if(!SessionStorage.has('user')){
+            SessionStorage.set({'user': new UserModel()})
+        }
+
+        this.detachChildView('mainContainer');
+        this.showChildView('mainContainer', new PersonalView({model: SessionStorage}));
     },
 
     onChildviewStartShow(childView) {
+        this.detachChildView('mainContainer');
         this.showChildView('mainContainer', new StartView());
+    },
+    onChildviewQuestionnaireFinish(childView){
+        this.detachChildView('mainContainer');
+        this.showChildView('mainContainer', new DoneView({model: SessionStorage}));
+    },
+    onChildviewSplashStart(childView){
+        this.detachChildView('mainContainer');
+        this.showChildView('mainContainer', new SplashView());
+
     },
 
     onRender() {
-        this.showChildView('mainContainer', new StartView());
+        this.showChildView('mainContainer', new SplashView());
+        //this.showChildView('mainContainer', new PersonalView());
+        //this.onChildviewQuestionnaireFinish()
+
     }
 });

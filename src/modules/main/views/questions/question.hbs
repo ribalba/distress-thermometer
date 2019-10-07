@@ -1,12 +1,25 @@
-<div class="content">
-    <div class="description">
-        <p>{{title}}</p>
+{{#if title}}
+
+<div class="item">
+    <div class="right floated content">
+        <div class="ui toggle checkbox" id="answer-js">
+            <input type="checkbox" >
+            <label></label>
+        </div>
     </div>
-    <div class="extra">
-        <div class="ui right floated buttons">
-            <button class="ui button js-yes js-save">Yes</button>
-            <div class="or"></div>
-            <button class="ui button js-no js-save">No</button>
+    <div class="content">
+        {{title}}
+    </div>
+</div>
+{{/if}}
+{{#if input}}
+<br>
+<div class="item">
+    <div class="ui form">
+        <div class="field">
+            <label>{{input}}</label>
+            <textarea id="inputtext"></textarea>
         </div>
     </div>
 </div>
+{{/if}}

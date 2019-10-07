@@ -59,7 +59,18 @@ module.exports = function (grunt) {
             icon: {
                 src: 'assets/icon.png',
                 dest: 'www/icon.png'
-
+            },
+            img: {
+                expand: true,
+                cwd: 'assets/img/',
+                src: '**',
+                dest: 'www/img'
+            },
+            font: {
+                expand: true,
+                cwd: 'assets/fonts/',
+                src: '**',
+                dest: 'www/fonts'
             }
           },
 
@@ -74,14 +85,16 @@ module.exports = function (grunt) {
         stylus: {
             'dev': {
                 options: {
-                    compress: false
+                    compress: false,
+                    "include css": true
                 },
                 src: ['assets/css/app.styl'],
                 dest: 'www/css/app.css'
             },
             'prod': {
                 options: {
-                    compress: true
+                    compress: true,
+                    "include css": true
                 },
                 src: ['assets/css/app.styl'],
                 dest: 'www/css/app.css'
@@ -103,7 +116,7 @@ module.exports = function (grunt) {
                 interrupt: true
             },
             src: {
-                files: ['src/**/*', '!src/index.html', 'assets/css/*.styl', 'assets/css/**/*.styl'],
+                files: ['src/**/*', '!src/index.html', 'assets/css/*.styl', 'assets/css/**/*'],
                 tasks: ['browserify:app', 'stylus:dev', 'autoprefixer'],
             },
             index: {
@@ -118,11 +131,11 @@ module.exports = function (grunt) {
         connect: {
             server: {
                 options: {
-                    hostname: '127.0.0.1',
+                    hostname: '0.0.0.0',
                     base: 'www',
-                    open: true,
+                    //open: true,
                     useAvailablePort: true,
-                    livereload: true
+                    livereload: true,
                 }
             }
         }
@@ -140,7 +153,7 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-contrib-clean');
 
 
-    grunt.registerTask('builddev', ['clean', 'browserify:app', 'browserify:vendors', 'targethtml:dev', 'stylus:dev', 'copy']);
+    grunt.registerTask('builddev', ['clean', 'browserify:app', 'browserify:vendors', 'targethtml:dev', 'stylus:dev', 'copy' ]);
     grunt.registerTask('buildprod', ['clean', 'browserify:bundle', 'targethtml:prod', 'stylus:prod', 'autoprefixer', 'copy']);
     grunt.registerTask('run',   ['builddev', 'connect', 'watch']);
 

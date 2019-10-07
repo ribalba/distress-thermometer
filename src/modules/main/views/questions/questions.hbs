@@ -1,11 +1,23 @@
-<button class="ui right floated icon button js-home">
-  <i class="home icon js-home"></i>
-</button>
-<h1>Questionnaire</h1>
-
-
-<div class="ui active progress sticky">
-  <div class="bar"></div>
+<div class="topbox">
+    <h2>Problem List</h2>
+    <div>
+        Over the past week, including today, have any of the following been a
+        problem for you?
+    </div>
+    <br>
+    <div class="ui tiny progress">
+        <div class="bar"></div>
+    </div>
 </div>
 
-<div class="ui divided items js-items"></div>
+<div class="bottombox">
+    <h3>{{title}}</h3>
+    <div class="js-items"></div>
+</div>
+
+
+<button class="huge circular primary ui icon right floated button js-next right-button">
+    <i class="angle right icon"></i>
+</button>
+
+<div style="padding-bottom: 100px"><br></div>

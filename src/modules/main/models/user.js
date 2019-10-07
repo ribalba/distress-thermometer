@@ -1,7 +1,13 @@
 var Backbone = require('backbone');
 
-module.exports = Backbone.Model.extend({
+module.exports =  Backbone.Model.extend({
 	defaults: {
-		name: "Hellos",
-	}
+        fname: "",
+        lname: ""
+    },
 });
+
+// var userStorage = new User();
+// userStorage.fetch();
+
+// module.exports = userStorage;

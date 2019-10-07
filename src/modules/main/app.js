@@ -9,9 +9,9 @@ module.exports = Marionette.Application.extend({
 
     onBeforeStart(app, options) {
         // In the future we will set the style to choose here
-        this.user_model = new UserModel();
+        //this.user_model = new UserModel();
 
-        resultStorage.fetch();
+        //resultStorage.fetch();
     },
 
     onStart() {

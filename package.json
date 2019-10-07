@@ -15,7 +15,9 @@
     "handlebars": "^4.2.0",
     "jquery": "^3.4.1",
     "marionette.approuter": "^1.0.2",
+    "nouislider": "^14.0.2",
     "phonegap": "^8.2.2",
+    "semantic": "0.0.1",
     "underscore": "^1.9.1"
   },
   "devDependencies": {
@@ -37,8 +39,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "Didi Hoffmann",
+  "license": "",
+  "repository": "https://github.com/ribalba/distress-thermometer/projects/1",
   "cordova": {
     "platforms": [
       "browser",

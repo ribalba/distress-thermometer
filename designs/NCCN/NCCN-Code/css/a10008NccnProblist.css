@@ -1,0 +1,1338 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,600,500,700');
+
+@font-face {
+                          font-family: "SFProText-Regular";
+                          src: url('../fonts/SF-Pro-Text-Regular.otf') format("opentype");
+                        }
+                        @font-face {
+                          font-family: "SFProText-Light";
+                          src: url('../fonts/SF-Pro-Text-Light.otf') format("opentype");
+                        }
+                        
+.a10008nccnproblist {
+  width               : 100%;
+  min-width           : 375px;
+  height              : 100vh;
+  min-height          : 667px;
+  position            : relative;
+  overflow            : hidden;
+  margin              : 0px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color    : rgba(244, 245, 255, 1.0);
+}
+a {
+  text-decoration     : none;
+}
+div {
+  -webkit-text-size-adjust: none;
+}
+.anima-full-width-a {
+  width               : 100%;
+}
+.anima-full-height-a {
+  height              : 100%;
+}
+div {
+  -webkit-text-size-adjust: none;
+}
+.a10008nccnproblist .lightstatusbar {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : -51px;
+  height              : 296px;
+  width               : 377px;
+  position            : absolute;
+  margin              : 0;
+  left                : 0px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+}
+.a10008nccnproblist .lightstatusbar .rectangle6 {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 0px;
+  height              : 296px;
+  width               : 377px;
+  position            : absolute;
+  margin              : 0;
+  left                : 0px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+}
+.a10008nccnproblist .rectanglecopy {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 166px;
+  height              : 198px;
+  width               : 388px;
+  position            : absolute;
+  margin              : 0;
+  left                : -5px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+}
+.a10008nccnproblist .rectanglecopy3 {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 336px;
+  height              : 273px;
+  width               : 388px;
+  position            : absolute;
+  margin              : 0;
+  left                : -5px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+}
+.a10008nccnproblist .overthepastweek {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 132px;
+  height              : auto;
+  width               : 292px;
+  position            : absolute;
+  margin              : 0;
+  left                : 23px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+  font-family         : "Montserrat", Helvetica, Arial, serif;
+  font-weight         : 300;
+  font-style          : normal;
+  font-size           : 13.0px;
+  color               : rgba(255, 255, 255, 1.0);
+  text-align          : left;
+  line-height         : 20.0px;
+}
+.a10008nccnproblist .problemlist {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 92px;
+  height              : auto;
+  width               : 344px;
+  position            : absolute;
+  margin              : 0;
+  left                : 23px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+  font-family         : "Montserrat", Helvetica, Arial, serif;
+  font-weight         : 600;
+  font-style          : normal;
+  font-size           : 24.0px;
+  color               : rgba(255, 255, 255, 1.0);
+  text-align          : left;
+  line-height         : 22.0px;
+}
+.a10008nccnproblist .lightstatusbar1 {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 3px;
+  height              : 15px;
+  width               : 363px;
+  position            : absolute;
+  margin              : 0;
+  left                : 6px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+}
+.a10008nccnproblist .lightstatusbar1 .group {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 0px;
+  height              : 15px;
+  width               : 363px;
+  position            : relative;
+  margin              : 0;
+  left                : 0px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+}
+.a10008nccnproblist .lightstatusbar1 .group .mobilesignal {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 5px;
+  height              : 6px;
+  width               : 34px;
+  position            : absolute;
+  margin              : 0;
+  left                : 0px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+}
+.a10008nccnproblist .lightstatusbar1 .group .name {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 0px;
+  height              : auto;
+  width               : 65px;
+  position            : absolute;
+  margin              : 0;
+  left                : 39px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+  font-family         : "SFProText-Regular", Helvetica, Arial, serif;
+  font-size           : 12.0px;
+  color               : rgba(255, 255, 255, 1.0);
+  text-align          : left;
+  line-height         : 14.0px;
+}
+.a10008nccnproblist .lightstatusbar1 .group .wifi {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 3px;
+  height              : 9px;
+  width               : 13px;
+  position            : absolute;
+  margin              : 0;
+  left                : 80px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+}
+.a10008nccnproblist .lightstatusbar1 .group .hour {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 1px;
+  height              : auto;
+  width               : 58px;
+  position            : absolute;
+  margin              : 0;
+  left                : 152px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+  font-family         : "Helvetica", Helvetica, Arial, serif;
+  font-size           : 12.0px;
+  color               : rgba(255, 255, 255, 1.0);
+  text-align          : center;
+  line-height         : 14.0px;
+}
+.a10008nccnproblist .lightstatusbar1 .group .battery {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 1px;
+  height              : auto;
+  width               : 33px;
+  position            : absolute;
+  margin              : 0;
+  left                : 301px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+  font-family         : "Helvetica", Helvetica, Arial, serif;
+  font-size           : 12.0px;
+  color               : rgba(255, 255, 255, 1.0);
+  text-align          : right;
+  line-height         : 14.0px;
+}
+.a10008nccnproblist .lightstatusbar1 .group .battery1 {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 3px;
+  height              : 10px;
+  width               : 25px;
+  position            : absolute;
+  margin              : 0;
+  left                : 339px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+}
+.a10008nccnproblist .path {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 42px;
+  height              : 21px;
+  width               : 21px;
+  position            : absolute;
+  margin              : 0;
+  left                : 23px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+}
+.a10008nccnproblist .progresstrends3 {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 619px;
+  height              : 8px;
+  width               : 81px;
+  position            : absolute;
+  margin              : 0;
+  left                : 147px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+}
+.a10008nccnproblist .spritualreligiousc {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 282px;
+  height              : auto;
+  width               : 183px;
+  position            : absolute;
+  margin              : 0;
+  left                : 39px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+  font-family         : "Montserrat", Helvetica, Arial, serif;
+  font-weight         : 300;
+  font-style          : normal;
+  font-size           : 16.0px;
+  color               : rgba(65, 65, 65, 1.0);
+  text-align          : left;
+  line-height         : 22.0px;
+}
+.a10008nccnproblist .otherproblems {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 204px;
+  height              : auto;
+  width               : 297px;
+  position            : absolute;
+  margin              : 0;
+  left                : 39px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+  font-family         : "Montserrat", Helvetica, Arial, serif;
+  font-weight         : 600;
+  font-style          : normal;
+  font-size           : 24.0px;
+  color               : rgba(61, 61, 61, 1.0);
+  text-align          : left;
+  line-height         : 36.0px;
+}
+.a10008nccnproblist .rectanglecopy2 {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 166px;
+  height              : 443px;
+  width               : 388px;
+  position            : absolute;
+  margin              : 0;
+  left                : -357px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+}
+.a10008nccnproblist .no {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 264px;
+  height              : auto;
+  width               : auto;
+  position            : absolute;
+  margin              : 0;
+  left                : 260px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+  font-family         : "Montserrat", Helvetica, Arial, serif;
+  font-weight         : 300;
+  font-style          : normal;
+  font-size           : 14.0px;
+  color               : rgba(61, 61, 61, 1.0);
+  text-align          : left;
+  line-height         : 18.0px;
+}
+.a10008nccnproblist .yes {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 264px;
+  height              : auto;
+  width               : auto;
+  position            : absolute;
+  margin              : 0;
+  left                : 304px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+  font-family         : "Montserrat", Helvetica, Arial, serif;
+  font-weight         : 300;
+  font-style          : normal;
+  font-size           : 14.0px;
+  color               : rgba(61, 61, 61, 1.0);
+  text-align          : left;
+  line-height         : 18.0px;
+}
+.a10008nccnproblist .group3 {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 293px;
+  height              : 20px;
+  width               : 66px;
+  position            : absolute;
+  margin              : 0;
+  left                : 260px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+}
+.a10008nccnproblist .group3 .group21 {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 0px;
+  height              : 20px;
+  width               : 20px;
+  position            : absolute;
+  margin              : 0;
+  left                : 46px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+}
+.a10008nccnproblist .group3 .group21 .ovalcopy {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 0px;
+  height              : 20px;
+  width               : 20px;
+  position            : absolute;
+  margin              : 0;
+  left                : 0px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+}
+.a10008nccnproblist .group3 .group2copy6 {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 0px;
+  height              : 20px;
+  width               : 20px;
+  position            : absolute;
+  margin              : 0;
+  left                : 0px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+}
+.a10008nccnproblist .group3 .group2copy6 .ovalcopy {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 0px;
+  height              : 20px;
+  width               : 20px;
+  position            : absolute;
+  margin              : 0;
+  left                : 0px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+}
+.a10008nccnproblist .whatotherproblems {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 378px;
+  height              : auto;
+  width               : 262px;
+  position            : absolute;
+  margin              : 0;
+  left                : 33px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+  font-family         : "Montserrat", Helvetica, Arial, serif;
+  font-weight         : 300;
+  font-style          : normal;
+  font-size           : 16.0px;
+  color               : rgba(133, 133, 133, 1.0);
+  text-align          : left;
+  line-height         : 22.0px;
+}
+.a10008nccnproblist .group2 {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 595px;
+  height              : 71px;
+  width               : 71px;
+  position            : absolute;
+  margin              : 0;
+  left                : 299px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+}
+.a10008nccnproblist .group2 .oval {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 0px;
+  height              : 71px;
+  width               : 71px;
+  position            : absolute;
+  margin              : 0;
+  left                : 0px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+}
+.a10008nccnproblist .group2 .arrowforward24px {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 17px;
+  height              : 33px;
+  width               : 33px;
+  position            : absolute;
+  margin              : 0;
+  left                : 17px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+}
+.a10008nccnproblist .group2 .arrowforward24px .path2 {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 0px;
+  height              : 33px;
+  width               : 33px;
+  position            : absolute;
+  margin              : 0;
+  left                : 0px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+}
+.a10008nccnproblist .group2 .arrowforward24px .path1 {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 6px;
+  height              : 21px;
+  width               : 21px;
+  position            : absolute;
+  margin              : 0;
+  left                : 5px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+}
+.a10008nccnproblist .ioskeyboardqwerty {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 441px;
+  height              : 266px;
+  width               : 425px;
+  position            : absolute;
+  margin              : 0;
+  left                : -25px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+}
+.a10008nccnproblist .ioskeyboardqwerty .bg {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 0px;
+  height              : 266px;
+  width               : 425px;
+  position            : absolute;
+  margin              : 0;
+  left                : 0px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+}
+.a10008nccnproblist .ioskeyboardqwerty .shift {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 128px;
+  height              : 43px;
+  width               : 42px;
+  position            : absolute;
+  margin              : 0;
+  left                : 28px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+}
+.a10008nccnproblist .ioskeyboardqwerty .shift .rectangle28 {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 0px;
+  height              : 43px;
+  width               : 42px;
+  position            : absolute;
+  margin              : 0;
+  left                : 0px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+}
+.a10008nccnproblist .ioskeyboardqwerty .shift .rectangle38 {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 13px;
+  height              : 15px;
+  width               : 18px;
+  position            : absolute;
+  margin              : 0;
+  left                : 12px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+}
+.a10008nccnproblist .ioskeyboardqwerty .keys {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 20px;
+  height              : 151px;
+  width               : 369px;
+  position            : absolute;
+  margin              : 0;
+  left                : 28px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+}
+.a10008nccnproblist .ioskeyboardqwerty .keys .row1 {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 0px;
+  height              : 43px;
+  width               : 369px;
+  position            : absolute;
+  margin              : 0;
+  left                : 0px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+}
+.a10008nccnproblist .ioskeyboardqwerty .keys .row1 .a1 {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 0px;
+  height              : 43px;
+  width               : 369px;
+  position            : absolute;
+  margin              : 0;
+  left                : 0px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+}
+.a10008nccnproblist .ioskeyboardqwerty .keys .row1 .a1 .rectangle2copy {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 0px;
+  height              : 43px;
+  width               : 32px;
+  position            : absolute;
+  margin              : 0;
+  left                : 38px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+}
+.a10008nccnproblist .ioskeyboardqwerty .keys .row1 .a1 .rectangle2copy2 {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 0px;
+  height              : 43px;
+  width               : 32px;
+  position            : absolute;
+  margin              : 0;
+  left                : 75px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+}
+.a10008nccnproblist .ioskeyboardqwerty .keys .row1 .a1 .rectangle2copy3 {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 0px;
+  height              : 43px;
+  width               : 32px;
+  position            : absolute;
+  margin              : 0;
+  left                : 112px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+}
+.a10008nccnproblist .ioskeyboardqwerty .keys .row1 .a1 .rectangle2copy4 {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 0px;
+  height              : 43px;
+  width               : 32px;
+  position            : absolute;
+  margin              : 0;
+  left                : 150px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+}
+.a10008nccnproblist .ioskeyboardqwerty .keys .row1 .a1 .rectangle2copy5 {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 0px;
+  height              : 43px;
+  width               : 32px;
+  position            : absolute;
+  margin              : 0;
+  left                : 187px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+}
+.a10008nccnproblist .ioskeyboardqwerty .keys .row1 .a1 .rectangle2copy6 {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 0px;
+  height              : 43px;
+  width               : 32px;
+  position            : absolute;
+  margin              : 0;
+  left                : 225px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+}
+.a10008nccnproblist .ioskeyboardqwerty .keys .row1 .a1 .rectangle2copy7 {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 0px;
+  height              : 43px;
+  width               : 32px;
+  position            : absolute;
+  margin              : 0;
+  left                : 262px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+}
+.a10008nccnproblist .ioskeyboardqwerty .keys .row1 .a1 .rectangle2copy8 {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 0px;
+  height              : 43px;
+  width               : 32px;
+  position            : absolute;
+  margin              : 0;
+  left                : 300px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+}
+.a10008nccnproblist .ioskeyboardqwerty .keys .row1 .a1 .rectangle2copy9 {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 0px;
+  height              : 43px;
+  width               : 32px;
+  position            : absolute;
+  margin              : 0;
+  left                : 337px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+}
+.a10008nccnproblist .ioskeyboardqwerty .keys .row1 .a1 .rectangle2 {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 0px;
+  height              : 43px;
+  width               : 32px;
+  position            : absolute;
+  margin              : 0;
+  left                : 0px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+}
+.a10008nccnproblist .ioskeyboardqwerty .keys .row1 .group {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 13px;
+  height              : 19px;
+  width               : 349px;
+  position            : absolute;
+  margin              : 0;
+  left                : 10px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+}
+.a10008nccnproblist .ioskeyboardqwerty .keys .row1 .group .p {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 1px;
+  height              : 18px;
+  width               : 348px;
+  position            : absolute;
+  margin              : 0;
+  left                : 0px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+}
+.a10008nccnproblist .ioskeyboardqwerty .keys .row2 {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 54px;
+  height              : 43px;
+  width               : 333px;
+  position            : absolute;
+  margin              : 0;
+  left                : 18px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+}
+.a10008nccnproblist .ioskeyboardqwerty .keys .row2 .a2 {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 0px;
+  height              : 43px;
+  width               : 333px;
+  position            : absolute;
+  margin              : 0;
+  left                : 0px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+}
+.a10008nccnproblist .ioskeyboardqwerty .keys .row2 .a2 .rectangle2copy10 {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 0px;
+  height              : 43px;
+  width               : 32px;
+  position            : absolute;
+  margin              : 0;
+  left                : 0px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+}
+.a10008nccnproblist .ioskeyboardqwerty .keys .row2 .a2 .rectangle2copy12 {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 0px;
+  height              : 43px;
+  width               : 32px;
+  position            : absolute;
+  margin              : 0;
+  left                : 75px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+}
+.a10008nccnproblist .ioskeyboardqwerty .keys .row2 .a2 .rectangle2copy13 {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 0px;
+  height              : 43px;
+  width               : 32px;
+  position            : absolute;
+  margin              : 0;
+  left                : 113px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+}
+.a10008nccnproblist .ioskeyboardqwerty .keys .row2 .a2 .rectangle2copy14 {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 0px;
+  height              : 43px;
+  width               : 32px;
+  position            : absolute;
+  margin              : 0;
+  left                : 151px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+}
+.a10008nccnproblist .ioskeyboardqwerty .keys .row2 .a2 .rectangle2copy15 {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 0px;
+  height              : 43px;
+  width               : 32px;
+  position            : absolute;
+  margin              : 0;
+  left                : 188px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+}
+.a10008nccnproblist .ioskeyboardqwerty .keys .row2 .a2 .rectangle2copy16 {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 0px;
+  height              : 43px;
+  width               : 32px;
+  position            : absolute;
+  margin              : 0;
+  left                : 226px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+}
+.a10008nccnproblist .ioskeyboardqwerty .keys .row2 .a2 .rectangle2copy17 {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 0px;
+  height              : 43px;
+  width               : 32px;
+  position            : absolute;
+  margin              : 0;
+  left                : 263px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+}
+.a10008nccnproblist .ioskeyboardqwerty .keys .row2 .a2 .rectangle2copy18 {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 0px;
+  height              : 43px;
+  width               : 32px;
+  position            : absolute;
+  margin              : 0;
+  left                : 301px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+}
+.a10008nccnproblist .ioskeyboardqwerty .keys .row2 .a2 .rectangle2copy11 {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 0px;
+  height              : 43px;
+  width               : 32px;
+  position            : absolute;
+  margin              : 0;
+  left                : 38px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+}
+.a10008nccnproblist .ioskeyboardqwerty .keys .row2 .a {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 13px;
+  height              : 17px;
+  width               : 313px;
+  position            : absolute;
+  margin              : 0;
+  left                : 9px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+}
+.a10008nccnproblist .ioskeyboardqwerty .keys .row3 {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 108px;
+  height              : 43px;
+  width               : 257px;
+  position            : absolute;
+  margin              : 0;
+  left                : 56px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+}
+.a10008nccnproblist .ioskeyboardqwerty .keys .row3 .a3 {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 0px;
+  height              : 43px;
+  width               : 257px;
+  position            : absolute;
+  margin              : 0;
+  left                : 0px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+}
+.a10008nccnproblist .ioskeyboardqwerty .keys .row3 .a3 .rectangle2copy19 {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 0px;
+  height              : 43px;
+  width               : 32px;
+  position            : absolute;
+  margin              : 0;
+  left                : 0px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+}
+.a10008nccnproblist .ioskeyboardqwerty .keys .row3 .a3 .rectangle2copy20 {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 0px;
+  height              : 43px;
+  width               : 32px;
+  position            : absolute;
+  margin              : 0;
+  left                : 37px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+}
+.a10008nccnproblist .ioskeyboardqwerty .keys .row3 .a3 .rectangle2copy21 {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 0px;
+  height              : 43px;
+  width               : 32px;
+  position            : absolute;
+  margin              : 0;
+  left                : 75px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+}
+.a10008nccnproblist .ioskeyboardqwerty .keys .row3 .a3 .rectangle2copy22 {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 0px;
+  height              : 43px;
+  width               : 32px;
+  position            : absolute;
+  margin              : 0;
+  left                : 113px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+}
+.a10008nccnproblist .ioskeyboardqwerty .keys .row3 .a3 .rectangle2copy23 {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 0px;
+  height              : 43px;
+  width               : 32px;
+  position            : absolute;
+  margin              : 0;
+  left                : 150px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+}
+.a10008nccnproblist .ioskeyboardqwerty .keys .row3 .a3 .rectangle2copy24 {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 0px;
+  height              : 43px;
+  width               : 32px;
+  position            : absolute;
+  margin              : 0;
+  left                : 188px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+}
+.a10008nccnproblist .ioskeyboardqwerty .keys .row3 .a3 .rectangle2copy25 {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 0px;
+  height              : 43px;
+  width               : 32px;
+  position            : absolute;
+  margin              : 0;
+  left                : 225px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+}
+.a10008nccnproblist .ioskeyboardqwerty .keys .row3 .groupcopy2 {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 12px;
+  height              : 18px;
+  width               : 240px;
+  position            : absolute;
+  margin              : 0;
+  left                : 9px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+}
+.a10008nccnproblist .ioskeyboardqwerty .keys .row3 .groupcopy2 .z {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 1px;
+  height              : 17px;
+  width               : 238px;
+  position            : absolute;
+  margin              : 0;
+  left                : 1px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+}
+.a10008nccnproblist .ioskeyboardqwerty .space {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 180px;
+  height              : 43px;
+  width               : 183px;
+  position            : absolute;
+  margin              : 0;
+  left                : 121px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+}
+.a10008nccnproblist .ioskeyboardqwerty .space .rectangle28copy3 {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 0px;
+  height              : 43px;
+  width               : 183px;
+  position            : absolute;
+  margin              : 0;
+  left                : 0px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+}
+.a10008nccnproblist .ioskeyboardqwerty .space .space1 {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 19px;
+  height              : 11px;
+  width               : 41px;
+  position            : absolute;
+  margin              : 0;
+  left                : 71px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+}
+.a10008nccnproblist .ioskeyboardqwerty .search {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 180px;
+  height              : 43px;
+  width               : 88px;
+  position            : absolute;
+  margin              : 0;
+  left                : 309px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+}
+.a10008nccnproblist .ioskeyboardqwerty .search .rectangle28copy4 {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 0px;
+  height              : 43px;
+  width               : 88px;
+  position            : absolute;
+  margin              : 0;
+  left                : 0px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+}
+.a10008nccnproblist .ioskeyboardqwerty .back {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 128px;
+  height              : 43px;
+  width               : 42px;
+  position            : absolute;
+  margin              : 0;
+  left                : 355px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+}
+.a10008nccnproblist .ioskeyboardqwerty .back .rectangle28copy5 {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 0px;
+  height              : 43px;
+  width               : 42px;
+  position            : absolute;
+  margin              : 0;
+  left                : 0px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+}
+.a10008nccnproblist .ioskeyboardqwerty .back .rectangle34 {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 13px;
+  height              : 16px;
+  width               : 22px;
+  position            : absolute;
+  margin              : 0;
+  left                : 10px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+}
+.a10008nccnproblist .ioskeyboardqwerty .numbers {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 180px;
+  height              : 43px;
+  width               : 41px;
+  position            : absolute;
+  margin              : 0;
+  left                : 28px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+}
+.a10008nccnproblist .ioskeyboardqwerty .numbers .rectangle28copy {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 0px;
+  height              : 43px;
+  width               : 41px;
+  position            : absolute;
+  margin              : 0;
+  left                : 0px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+}
+.a10008nccnproblist .ioskeyboardqwerty .numbers .a123 {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 16px;
+  height              : 11px;
+  width               : 23px;
+  position            : absolute;
+  margin              : 0;
+  left                : 9px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+}
+.a10008nccnproblist .ioskeyboardqwerty .smileykey {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 180px;
+  height              : 43px;
+  width               : 42px;
+  position            : absolute;
+  margin              : 0;
+  left                : 74px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+}
+.a10008nccnproblist .ioskeyboardqwerty .smileykey .rectangle28copy2 {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 0px;
+  height              : 43px;
+  width               : 42px;
+  position            : absolute;
+  margin              : 0;
+  left                : 0px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+}
+.a10008nccnproblist .ioskeyboardqwerty .smileykey .smiley {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 10px;
+  height              : 22px;
+  width               : 22px;
+  position            : absolute;
+  margin              : 0;
+  left                : 10px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+}
+.a10008nccnproblist .ioskeyboardqwerty .smileykey .smiley .shape {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 1px;
+  height              : 21px;
+  width               : 21px;
+  position            : absolute;
+  margin              : 0;
+  left                : 1px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+}
+.a10008nccnproblist .ioskeyboardqwerty .smileykey .smiley .oval2 {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 7px;
+  height              : 2px;
+  width               : 2px;
+  position            : absolute;
+  margin              : 0;
+  left                : 7px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+}
+.a10008nccnproblist .ioskeyboardqwerty .smileykey .smiley .oval2copy {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 7px;
+  height              : 2px;
+  width               : 2px;
+  position            : absolute;
+  margin              : 0;
+  left                : 13px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+}
+.a10008nccnproblist .ioskeyboardqwerty .smileykey .smiley .shape1 {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 11px;
+  height              : 8px;
+  width               : 14px;
+  position            : absolute;
+  margin              : 0;
+  left                : 4px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+}
+.a10008nccnproblist .ioskeyboardqwerty .smileykey .smiley .path1 {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 13px;
+  height              : 5px;
+  width               : 13px;
+  position            : absolute;
+  margin              : 0;
+  left                : 5px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+}
+.a10008nccnproblist .line {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 377px;
+  height              : 25px;
+  width               : 2px;
+  position            : absolute;
+  margin              : 0;
+  left                : 30px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+}
+.a10008nccnproblist .done {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 633px;
+  height              : auto;
+  width               : auto;
+  position            : absolute;
+  margin              : 0;
+  left                : 308px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+  font-family         : "SFProText-Light", Helvetica, Arial, serif;
+  font-size           : 16.0px;
+  color               : rgba(255, 255, 255, 1.0);
+  text-align          : left;
+  line-height         : 19.0px;
+}
+/* .anima-animate-appear prefix for appear animations */
+.anima-animate-appear {
+  opacity             : 0;
+  display             : block;
+  -webkit-animation   : anima-reveal 0.3s ease-in-out 1 normal forwards;
+  -moz-animation      : anima-reveal 0.3s ease-in 1 normal forwards;
+  -o-animation        : anima-reveal 0.3s ease-in-out 1 normal forwards;
+  animation           : anima-reveal 0.3s ease-in-out 1 normal forwards;
+}
+.anima-animate-disappear {
+  opacity             : 1;
+  display             : block;
+  -webkit-animation   : anima-reveal 0.3s ease-in-out 1 reverse forwards;
+  -moz-animation      : anima-reveal 0.3s ease-in 1 normal forwards;
+  -o-animation        : anima-reveal 0.3s ease-in-out 1 reverse forwards;
+  animation           : anima-reveal 0.3s ease-in-out 1 reverse forwards;
+}
+.anima-animate-nodelay {
+  -webkit-animation-delay: 0;
+  -moz-animation-delay: 0;
+  -o-animation-delay  : 0;
+  animation-delay     : 0;
+}
+@-webkit-keyframes anima-reveal {
+  0%
+   
+  {
+      opacity: 0;
+    }
+  
+    
+  100%
+   
+  {
+      opacity: 1;
+    }
+}
+@-moz-keyframes anima-reveal {
+  0%
+   
+  {
+      opacity: 0;
+    }
+  
+    
+  100%
+   
+  {
+      opacity: 1;
+    }
+}
+@-o-keyframes anima-reveal {
+  0%
+   
+  {
+      opacity: 0;
+    }
+  
+    
+  100%
+   
+  {
+      opacity: 1;
+    }
+}
+@keyframes anima-reveal {
+  0%
+   
+  {
+      opacity: 0;
+    }
+  
+    
+  100%
+   
+  {
+      opacity: 1;
+    }
+}

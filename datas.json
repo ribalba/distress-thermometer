@@ -1,22 +1,149 @@
 {
-	"questions": [
-		{
-			"title": "Did you have problems with child care?"
-		},
-		{
-			"title": "How secure was your housing situation?"
+    "questions": [
+        {
+            "title": "Practical Problems",
+            "items": [
+                {
+                    "title": "Child care"
+                },
+                {
+                    "title": "Housing"
+                },
+                {
+                    "title": "Insurance/ financial"
+                },
+                {
+                    "title": "Transportation"
+                },
+                {
+                    "title": "Work/ school"
+                },
+                {
+                    "title": "Treatment decisions"
+                }
+            ]
         },
         {
-			"title": "Did you have fears?"
+            "title": "Family Problems",
+            "items": [
+                {
+                    "title": "Dealing with children"
+                },
+                {
+                    "title": "Dealing with partner"
+                },
+                {
+                    "title": "Ability to have children"
+                },
+                {
+                    "title": "Family health issues"
+                }
+            ]
         },
         {
-			"title": "Did you have problems eating?"
+            "title": "Emotional Problems",
+            "items": [
+                {
+                    "title": "Depression"
+                },
+                {
+                    "title": "Fears"
+                },
+                {
+                    "title": "Nervousness"
+                },
+                {
+                    "title": "Sadness"
+                },
+                {
+                    "title": "Worry"
+                },
+                {
+                    "title": "Loss of interest in usual activities"
+                }
+            ]
         },
         {
-			"title": "Did you have pain?"
+            "title": "Physical Problems",
+            "items": [
+                {
+                    "title": "Appearance"
+                },
+                {
+                    "title": "Bathing/ dressing"
+                },
+                {
+                    "title": "Breathing"
+                },
+                {
+                    "title": "Changes in urination"
+                },
+                {
+                    "title": "Constipation"
+                },
+                {
+                    "title": "Diarrhea"
+                },
+                {
+                    "title": "Eating"
+                },
+                {
+                    "title": "Fatigue"
+                },
+                {
+                    "title": "Feeling swollen"
+                },
+                {
+                    "title": "Fevers"
+                },
+                {
+                    "title": "Getting around"
+                },
+                {
+                    "title": "Indigestion"
+                },
+                {
+                    "title": "Memory/ concentration"
+                },
+                {
+                    "title": "Mouth sores"
+                },
+                {
+                    "title": "Nausea"
+                },
+                {
+                    "title": "Nose dry/ congested"
+                },
+                {
+                    "title": "Pain"
+                },
+                {
+                    "title": "Sexual"
+                },
+                {
+                    "title": "Skin dry/ itchy"
+                },
+                {
+                    "title": "Sleep"
+                },
+                {
+                    "title": "Substance use"
+                },
+                {
+                    "title": "Tingling in hands/ feet"
+                }
+            ]
         },
         {
-			"title": "Did you sleep normally?"
-		}
-	]
+            "title": "Other Problems",
+            "items": [
+                {
+                    "title": "Spiritual/ Religious concerns"
+                },
+                {
+                    "input": "What other problems are you facing?"
+                }
+            ]
+        }
+    ]
 }
