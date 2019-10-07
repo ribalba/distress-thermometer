@@ -41,6 +41,10 @@
   width: 100%;
   text-overflow: ellipsis;
 }
+.whitelink {
+  color: #fff;
+  text-decoration: underline;
+}
 @import url('https://fonts.googleapis.com/css?family=Montserrat:300,600,500,700');
 
 @font-face {

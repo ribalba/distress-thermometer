@@ -212,9 +212,9 @@ $.fn.slider = function(parameters) {
               for(var i = 0, len = module.get.numLabels(); i <= len; i++) {
                 var
                   labelText = module.get.label(i),
-                  $label = (labelText !== "") 
+                  $label = (labelText !== "")
                     ? !(i % module.get.gapRatio())
-                      ? $('<li class="label">' + labelText + '</li>') 
+                      ? $('<li class="label">' + labelText + '</li>')
                       : $('<li class="halftick label"></li>')
                     : null,
                   ratio  = i / len
@@ -284,7 +284,7 @@ $.fn.slider = function(parameters) {
             }
           },
           windowEvents: function() {
-            $window.on('resize' + eventNamespace, module.event.resize);
+            //$window.on('resize' + eventNamespace, module.event.resize);
           }
         },
 
@@ -611,9 +611,9 @@ $.fn.slider = function(parameters) {
           },
           gapRatio: function() {
             var gapRatio = 1;
-            
+
             if( settings.autoAdjustLabels ) {
-              var 
+              var
                 numLabels = module.get.numLabels(),
                 gapCounter = 1
               ;
