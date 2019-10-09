@@ -3740,10 +3740,11 @@ module.exports = Marionette.View.extend({
     },
 
     onRender() {
-        this.onViewMainStart()
+        //this.onViewMainStart()
+        this.onViewStartMypath()
     }
 });
-},{"../../../mypath/views/layout/layout":39,"../../../nccn/views/layout/layout":56,"../splash/splash":29,"./layout.hbs":26,"backbone.marionette":"backbone.marionette"}],28:[function(require,module,exports){
+},{"../../../mypath/views/layout/layout":39,"../../../nccn/views/layout/layout":58,"../splash/splash":29,"./layout.hbs":26,"backbone.marionette":"backbone.marionette"}],28:[function(require,module,exports){
 // hbsfy compiled Handlebars template
 var HandlebarsCompiler = require('hbsfy/runtime');
 module.exports = HandlebarsCompiler.template({"compiler":[8,">= 4.3.0"],"main":function(container,depth0,helpers,partials,data) {
@@ -3910,6 +3911,7 @@ var Marionette = require('backbone.marionette');
 var QuestionView = require('../questions/questions');
 var DoneView = require('../done/done');
 var PersonalView = require('../personal/personal');
+var ThermoView = require('../thermo/thermo')
 var SessionStorage = require('../../models/session');
 var UserModel = require('../../models/user');
 var questionCollection = require('../../collections/questions');
@@ -3944,6 +3946,14 @@ module.exports = Marionette.View.extend({
 
     },
 
+    onChildviewThermoStart(childView) {
+        this.detachChildView('mainContainer');
+        this.showChildView('mainContainer', new ThermoView({model: SessionStorage}));
+        window.scrollTo(0, 0);
+
+    },
+
+
     onChildviewQuestionnaireFinish(childView){
         this.detachChildView('mainContainer');
         this.showChildView('mainContainer', new DoneView({model: SessionStorage}));
@@ -3960,7 +3970,7 @@ module.exports = Marionette.View.extend({
         this.onChildviewPersonalStart()
     }
 });
-},{"../../../../../my_datas.json":1,"../../collections/questions":30,"../../models/session":34,"../../models/user":35,"../done/done":37,"../personal/personal":41,"../questions/questions":46,"./layout.hbs":38,"backbone.marionette":"backbone.marionette"}],40:[function(require,module,exports){
+},{"../../../../../my_datas.json":1,"../../collections/questions":30,"../../models/session":34,"../../models/user":35,"../done/done":37,"../personal/personal":41,"../questions/questions":46,"../thermo/thermo":48,"./layout.hbs":38,"backbone.marionette":"backbone.marionette"}],40:[function(require,module,exports){
 // hbsfy compiled Handlebars template
 var HandlebarsCompiler = require('hbsfy/runtime');
 module.exports = HandlebarsCompiler.template({"compiler":[8,">= 4.3.0"],"main":function(container,depth0,helpers,partials,data) {
@@ -4017,7 +4027,7 @@ module.exports = Marionette.View.extend({
         });
         this.model.set('user',um)
 
-        this.triggerMethod('distressquestions:start', this);
+        this.triggerMethod('thermo:start', this);
     },
 
     templateContext: function(){
@@ -4271,25 +4281,45 @@ module.exports = Marionette.View.extend({
 });
 
 },{"../../collections/questions":30,"../../collections/results":31,"../../models/result":33,"../../models/session":34,"./category.hbs":42,"./header.hbs":43,"./item.hbs":44,"./items.hbs":45,"backbone":"backbone","backbone.marionette":"backbone.marionette","underscore":22}],47:[function(require,module,exports){
+// hbsfy compiled Handlebars template
+var HandlebarsCompiler = require('hbsfy/runtime');
+module.exports = HandlebarsCompiler.template({"compiler":[8,">= 4.3.0"],"main":function(container,depth0,helpers,partials,data) {
+    return "<div class=\"mtopbox\">\n\n    <h2 class=\"ui header\">\n        <img src=\"/img/quality.png\" style=\"max-height: 40px; width: auto;\n            height: auto;\">\n        <div class=\"content\">\n            Quality of Life\n        </div>\n    </h2>\n\n</div>\n\n\n\n<div class=\"mbottombox\">\n<h2>Taking everything in your life into account, please rate your overall quality of life.</h2>\n<br><br>\n<div class=\"ui seven column grid\">\n  <div class=\"row\">\n    <div class=\"column\"><img src='/img/sad.png'></div>\n    <div class=\"column\"></div>\n    <div class=\"column\"></div>\n    <div class=\"column\"><img src='/img/upset.png'></div>\n    <div class=\"column\"></div>\n    <div class=\"column\"></div>\n    <div class=\"column\"><img src='/img/happy.png'></div>\n  </div>\n  <div class=\"row\">\n    <div class=\"column\"><button class=\"big circular ui button js-quality\">1</button></div>\n    <div class=\"column\"><button class=\"big circular ui button js-quality\">2</button></div>\n    <div class=\"column\"><button class=\"big circular ui button js-quality\">3</button></div>\n    <div class=\"column\"><button class=\"big circular ui button js-quality\">4</button></div>\n    <div class=\"column\"><button class=\"big circular ui button js-quality\">5</button></div>\n    <div class=\"column\"><button class=\"big circular ui button js-quality\">6</button></div>\n    <div class=\"column\"><button class=\"big circular ui button js-quality\">7</button></div>\n  </div>\n  <div class=\"row\">\n    <div class=\"column\">Life is very distressing</div>\n    <div class=\"column\"></div>\n    <div class=\"column\"></div>\n    <div class=\"column\">Life is so-so</div>\n    <div class=\"column\"></div>\n    <div class=\"column\"></div>\n    <div class=\"column\">Life is great</div>\n  </div>\n\n</div>\n\n\n</div>\n";
+},"useData":true});
+
+},{"hbsfy/runtime":21}],48:[function(require,module,exports){
+var Marionette = require('backbone.marionette');
+var ThermoTemplate = require('./thermo.hbs');
+var UserModel = require('../../models/user');
+
+module.exports = Marionette.View.extend({
+
+    template: ThermoTemplate,
+    triggers: {
+        'click .js-quality': 'distressquestions:start',
+    },
+
+});
+},{"../../models/user":35,"./thermo.hbs":47,"backbone.marionette":"backbone.marionette"}],49:[function(require,module,exports){
 arguments[4][30][0].apply(exports,arguments)
-},{"../models/question":49,"backbone":"backbone","dup":30}],48:[function(require,module,exports){
+},{"../models/question":51,"backbone":"backbone","dup":30}],50:[function(require,module,exports){
 arguments[4][31][0].apply(exports,arguments)
-},{"../models/result":50,"backbone":"backbone","backbone.localstorage":"backbone.localstorage","dup":31}],49:[function(require,module,exports){
+},{"../models/result":52,"backbone":"backbone","backbone.localstorage":"backbone.localstorage","dup":31}],51:[function(require,module,exports){
 arguments[4][32][0].apply(exports,arguments)
-},{"backbone":"backbone","dup":32}],50:[function(require,module,exports){
+},{"backbone":"backbone","dup":32}],52:[function(require,module,exports){
 arguments[4][33][0].apply(exports,arguments)
-},{"backbone":"backbone","backbone.localstorage":"backbone.localstorage","dup":33}],51:[function(require,module,exports){
+},{"backbone":"backbone","backbone.localstorage":"backbone.localstorage","dup":33}],53:[function(require,module,exports){
 arguments[4][34][0].apply(exports,arguments)
-},{"backbone":"backbone","dup":34}],52:[function(require,module,exports){
+},{"backbone":"backbone","dup":34}],54:[function(require,module,exports){
 arguments[4][35][0].apply(exports,arguments)
-},{"backbone":"backbone","dup":35}],53:[function(require,module,exports){
+},{"backbone":"backbone","dup":35}],55:[function(require,module,exports){
 // hbsfy compiled Handlebars template
 var HandlebarsCompiler = require('hbsfy/runtime');
 module.exports = HandlebarsCompiler.template({"compiler":[8,">= 4.3.0"],"main":function(container,depth0,helpers,partials,data) {
     return "<div class=\"topbox\">\n    <div class=\"ui inverted dimmer js-loading\">\n        <div class=\"ui text loader\">Uploading</div>\n    </div>\n\n    <div class=\"vcentre\">\n        <h1>Great job! <br> You're all done</h1>\n        <p>Your data will now be uploaded</p>\n    </div>\n</div>\n<br>\n<button class=\"huge circular primary ui icon right floated button js-upload\n    right-button\">\n    <i class=\"angle up icon\"></i>\n</button>\n";
 },"useData":true});
 
-},{"hbsfy/runtime":21}],54:[function(require,module,exports){
+},{"hbsfy/runtime":21}],56:[function(require,module,exports){
 var Marionette = require('backbone.marionette');
 var DoneTemplate = require('./done.hbs');
 var UserModel = require('../../models/user');
@@ -4337,14 +4367,14 @@ module.exports = Marionette.View.extend({
         })
     },
 });
-},{"../../models/user":52,"./done.hbs":53,"backbone.marionette":"backbone.marionette","jquery":"jquery"}],55:[function(require,module,exports){
+},{"../../models/user":54,"./done.hbs":55,"backbone.marionette":"backbone.marionette","jquery":"jquery"}],57:[function(require,module,exports){
 // hbsfy compiled Handlebars template
 var HandlebarsCompiler = require('hbsfy/runtime');
 module.exports = HandlebarsCompiler.template({"compiler":[8,">= 4.3.0"],"main":function(container,depth0,helpers,partials,data) {
     return "<div class=\"main-container\"></div>\n";
 },"useData":true});
 
-},{"hbsfy/runtime":21}],56:[function(require,module,exports){
+},{"hbsfy/runtime":21}],58:[function(require,module,exports){
 var LayoutTemplate = require('./layout.hbs');
 var Marionette = require('backbone.marionette');
 var DoneView = require('../done/done');
@@ -4401,7 +4431,7 @@ module.exports = Marionette.View.extend({
 
     }
 });
-},{"../../../../../nccn_datas.json":2,"../../collections/questions":47,"../../models/session":51,"../../models/user":52,"../done/done":54,"../personal/personal":58,"../questions/questions":61,"../thermo/thermo":63,"./layout.hbs":55,"backbone.marionette":"backbone.marionette"}],57:[function(require,module,exports){
+},{"../../../../../nccn_datas.json":2,"../../collections/questions":49,"../../models/session":53,"../../models/user":54,"../done/done":56,"../personal/personal":60,"../questions/questions":63,"../thermo/thermo":65,"./layout.hbs":57,"backbone.marionette":"backbone.marionette"}],59:[function(require,module,exports){
 // hbsfy compiled Handlebars template
 var HandlebarsCompiler = require('hbsfy/runtime');
 module.exports = HandlebarsCompiler.template({"compiler":[8,">= 4.3.0"],"main":function(container,depth0,helpers,partials,data) {
@@ -4414,7 +4444,7 @@ module.exports = HandlebarsCompiler.template({"compiler":[8,">= 4.3.0"],"main":f
     + "\">\n  </div>\n  <div class=\"field\">\n    <div class=\"ui toggle checkbox\" id=\"user-checkbox\">\n      <input type=\"checkbox\" checked tabindex=\"0\" >\n      <label>Save my name for next time</label>\n    </div>\n  </div>\n</form>\n\n</div>\n\n<button class=\"huge circular primary ui icon right floated button js-tstart right-button\">\n    <i class=\"angle right icon\"></i>\n</button>\n\n<div class=\"ui modal privacy_modal\">\n  <div class=\"header\">Privacy</div>\n  <div class=\"scrolling content\">\n    <p>This needs to be added! But we send your encrypted data to our server and only specific people can access it.</p>\n  </div>\n    <div class=\"actions\">\n    <div class=\"ui approve primary button\">OK</div>\n  </div>\n\n</div>\n";
 },"useData":true});
 
-},{"hbsfy/runtime":21}],58:[function(require,module,exports){
+},{"hbsfy/runtime":21}],60:[function(require,module,exports){
 var Marionette = require('backbone.marionette');
 var ThermoTemplate = require('./personal.hbs');
 var UserModel = require('../../models/user');
@@ -4467,7 +4497,7 @@ module.exports = Marionette.View.extend({
         }
     },
 });
-},{"../../models/user":52,"./personal.hbs":57,"backbone.marionette":"backbone.marionette"}],59:[function(require,module,exports){
+},{"../../models/user":54,"./personal.hbs":59,"backbone.marionette":"backbone.marionette"}],61:[function(require,module,exports){
 // hbsfy compiled Handlebars template
 var HandlebarsCompiler = require('hbsfy/runtime');
 module.exports = HandlebarsCompiler.template({"1":function(container,depth0,helpers,partials,data) {
@@ -4489,7 +4519,7 @@ module.exports = HandlebarsCompiler.template({"1":function(container,depth0,help
     + ((stack1 = helpers["if"].call(alias2,(depth0 != null ? depth0.input : depth0),{"name":"if","hash":{},"fn":container.program(3, data, 0),"inverse":container.noop,"data":data})) != null ? stack1 : "");
 },"useData":true});
 
-},{"hbsfy/runtime":21}],60:[function(require,module,exports){
+},{"hbsfy/runtime":21}],62:[function(require,module,exports){
 // hbsfy compiled Handlebars template
 var HandlebarsCompiler = require('hbsfy/runtime');
 module.exports = HandlebarsCompiler.template({"compiler":[8,">= 4.3.0"],"main":function(container,depth0,helpers,partials,data) {
@@ -4500,7 +4530,7 @@ module.exports = HandlebarsCompiler.template({"compiler":[8,">= 4.3.0"],"main":f
     + "</h3>\n    <div class=\"js-items\"></div>\n</div>\n\n\n<button class=\"huge circular primary ui icon right floated button js-next right-button\">\n    <i class=\"angle right icon\"></i>\n</button>\n\n<div style=\"padding-bottom: 100px\"><br></div>";
 },"useData":true});
 
-},{"hbsfy/runtime":21}],61:[function(require,module,exports){
+},{"hbsfy/runtime":21}],63:[function(require,module,exports){
 var Marionette = require('backbone.marionette');
 var QuestionsTemplate = require('./questions.hbs');
 var QuestionTemplate = require('./question.hbs');
@@ -4604,14 +4634,14 @@ module.exports = Marionette.View.extend({
 
 });
 
-},{"../../collections/questions":47,"../../collections/results":48,"../../models/result":50,"../../models/session":51,"./question.hbs":59,"./questions.hbs":60,"backbone.marionette":"backbone.marionette","underscore":22}],62:[function(require,module,exports){
+},{"../../collections/questions":49,"../../collections/results":50,"../../models/result":52,"../../models/session":53,"./question.hbs":61,"./questions.hbs":62,"backbone.marionette":"backbone.marionette","underscore":22}],64:[function(require,module,exports){
 // hbsfy compiled Handlebars template
 var HandlebarsCompiler = require('hbsfy/runtime');
 module.exports = HandlebarsCompiler.template({"compiler":[8,">= 4.3.0"],"main":function(container,depth0,helpers,partials,data) {
     return "<div class=\"topbox\">\n    <h2>Distress Thermometer</h2>\n    <div>\n        What number best describes how much distress you have been experiencing in the past week, including today?\n    </div>\n</div>\n\n<div class=\"bottombox\">\n    <div class=\"ui labeled slider js-slider\"></div>\n\n    <div class=\"ui grid\">\n    <div class=\"four wide column\">No distress</div>\n    <div class=\"four wide column\"></div>\n    <div class=\"four wide column\"></div>\n    <div class=\"four wide column\">Extreme distress</div>\n    </div>\n</div>\n\n<button class=\"huge circular primary ui icon right floated button js-qstart right-button\">\n    <i class=\"angle right icon\"></i>\n</button>\n";
 },"useData":true});
 
-},{"hbsfy/runtime":21}],63:[function(require,module,exports){
+},{"hbsfy/runtime":21}],65:[function(require,module,exports){
 var Marionette = require('backbone.marionette');
 var ThermoTemplate = require('./thermo.hbs');
 
@@ -4636,4 +4666,4 @@ module.exports = Marionette.View.extend({
         this.triggerMethod('distressquestions:start', this);
     }
 });
-},{"./thermo.hbs":62,"backbone.marionette":"backbone.marionette"}]},{},[24]);
+},{"./thermo.hbs":64,"backbone.marionette":"backbone.marionette"}]},{},[24]);
