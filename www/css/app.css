@@ -75,7 +75,9 @@
 .my-main-container {
   height: 100%;
   width: 100%;
+  max-width: 600px;
   position: relative;
+  margin: auto;
 }
 .mtopbox {
   color: #000;
