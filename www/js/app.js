@@ -3740,8 +3740,8 @@ module.exports = Marionette.View.extend({
     },
 
     onRender() {
-        //this.onViewMainStart()
-        this.onViewStartMypath()
+        this.onViewMainStart()
+        //this.onViewStartMypath()
     }
 });
 },{"../../../mypath/views/layout/layout":39,"../../../nccn/views/layout/layout":58,"../splash/splash":29,"./layout.hbs":26,"backbone.marionette":"backbone.marionette"}],28:[function(require,module,exports){
