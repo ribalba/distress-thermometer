@@ -105,6 +105,26 @@
 .bottom-padded {
   padding-bottom: 15px !important;
 }
+.progress_circle {
+  height: 60px;
+  width: 60px;
+  display: inline-block !important;
+  float: left !important;
+  margin-bottom: 10px;
+  position: relative;
+}
+.progress_circle_box {
+  width: 65px;
+  display: inline-block !important;
+  float: left !important;
+  margin-right: 25px;
+  position: relative;
+  text-align: center;
+}
+.progress > svg {
+  height: 100%;
+  display: block;
+}
 @import url('https://fonts.googleapis.com/css?family=Montserrat:300,600,500,700');
 
 @font-face {
