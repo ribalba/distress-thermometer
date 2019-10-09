@@ -65,6 +65,9 @@
 /* bring your own prefixes */
   transform: translate(-50%, -50%);
 }
+.top-margin {
+  margin-top: 150px !important;
+}
 .bottom-space {
   margin-bottom: 70px;
 }

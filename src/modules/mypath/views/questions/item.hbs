@@ -1,0 +1,55 @@
+{{#if radio}}
+    <div class="ui form">
+        <div class="grouped fields">
+            <label>{{title}}</label>
+            {{#each options}}
+            <div class="field">
+                <div class="ui radio checkbox js-checkbox">
+                    <input type="radio" name="{{../id}}" data-value='{{this}}' data-header='{{../title}}'>
+                    <label>{{this}}</label>
+                </div>
+            </div>
+            {{/each}}
+        </div>
+    </div>
+{{/if}}
+
+{{#if slider}}
+    <div class="ui toggle checkbox js-toggle">
+        <input type="checkbox">
+        <label>{{title}}</label>
+    </div>
+
+    <div class="ui accordion left-padded ">
+        <div class="title"></div>
+        <div class="content bottom-padded">
+            <div class="ui form">
+                <div class="grouped fields">
+                    {{#each options}}
+
+                    <div class="field">
+                        <div class="ui radio checkbox js-checkbox">
+                            <input type="radio" name="{{../id}}" data-value='{{this}}' data-header='{{../title}}'>
+                            <label>{{this}}</label>
+                        </div>
+                    </div>
+                    {{/each}}
+                </div>
+            </div>
+        </div>
+    </div>
+
+{{/if}}
+
+{{#if text}}
+    <div class="ui form">
+        <div class="item">
+            <div class="ui form">
+                <div class="field">
+                    <label>{{title}}</label>
+                    <textarea class=".inputtext" data-header='{{title}}'></textarea>
+                </div>
+            </div>
+        </div>
+    </div>
+{{/if}}

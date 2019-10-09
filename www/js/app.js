@@ -6176,7 +6176,7 @@ module.exports = Marionette.View.extend({
 // hbsfy compiled Handlebars template
 var HandlebarsCompiler = require('hbsfy/runtime');
 module.exports = HandlebarsCompiler.template({"compiler":[8,">= 4.3.0"],"main":function(container,depth0,helpers,partials,data) {
-    return " <div class=\"ui vertical center aligned segment\">\n\n    <div class=\"ui text container centered\">\n        <h1 class=\"ui huge header\">\n            Hi There! Let’s start<br> off by selecting who you are.\n        </h1>\n        <br><br>\n        <div class=\"ui grid\">\n            <div class=\"five wide column js-mypath-start\">\n\n                <div class=\"ui huge image\">\n                    <img src=\"/img/patient.png\">\n                </div>\n                <h1>Patient</h1>\n\n            </div>\n            <div class=\"five wide column js-mypath-care-start\">\n                <div class=\"ui small image\">\n                    <img src=\"/img/caregiver.png\">\n                </div>\n                <h1>Caregiver</h1>\n\n            </div>\n            <div class=\"five wide column js-nccn-start\">\n                <div class=\"ui small image\">\n                    <img src=\"/img/nccn.png\">\n                </div>\n                <h1>Nccn</h1>\n            </div>\n        </div>\n    </div>\n\n</div>\n";
+    return " <div class=\"ui vertical center aligned segment top-margin\">\n\n        <h1 class=\"ui huge header\">\n            Hi There! Let’s start<br> off by selecting who you are.\n        </h1>\n        <br><br>\n        <div class=\"ui grid\">\n            <div class=\"five wide column js-mypath-start\">\n\n                <div class=\"ui small image\">\n                    <img src=\"/img/patient.png\">\n                </div>\n                <h1>Patient</h1>\n\n            </div>\n            <div class=\"five wide column js-mypath-care-start\">\n                <div class=\"ui small image\">\n                    <img src=\"/img/caregiver.png\">\n                </div>\n                <h1>Caregiver</h1>\n\n            </div>\n            <div class=\"five wide column js-nccn-start\">\n                <div class=\"ui small image\">\n                    <img src=\"/img/nccn.png\">\n                </div>\n                <h1>Nccn</h1>\n            </div>\n        </div>\n\n</div>\n";
 },"useData":true});
 
 },{"hbsfy/runtime":21}],37:[function(require,module,exports){
@@ -6262,7 +6262,7 @@ module.exports =  Backbone.Model.extend({
 // hbsfy compiled Handlebars template
 var HandlebarsCompiler = require('hbsfy/runtime');
 module.exports = HandlebarsCompiler.template({"compiler":[8,">= 4.3.0"],"main":function(container,depth0,helpers,partials,data) {
-    return "<div class=\"mtopbox\">\n    <h2 class=\"ui header\">\n        <img class=\"ui sa image\" src=\"/img/path.png\">\n        <div class=\"content\">\n            Your Path\n            <div class=\"sub header\">An overview of your path. Currently this is static.</div>\n        </div>\n\n    </h2>\n</div>\n\n\n\n<div class=\"mbottombox\">\n    <div class=\"ui inverted dimmer js-loading\">\n        <div class=\"ui text loader\">Uploading and analysing</div>\n    </div>\n\n<div class=\"ui four column grid\">\n  <div class=\"row\">\n    <div class=\"column\">\n        <img class=\"ui tiny image\" src='/img/quality.png'>\n        <h4>Quality of Life</h4>\n    </div>\n    <div class=\"ten wide column\">\n            <div class=\"progress_circle_box\"><div class=\"progress progress_circle\" id=\"ql1\"></div> <label>Today</label></div>\n            <div class=\"progress_circle_box\"><div class=\"progress progress_circle\" id=\"ql2\"></div> <label>Last week</label></div>\n            <div class=\"progress_circle_box\"><div class=\"progress progress_circle\" id=\"ql3\"></div> <label>Last month</label></div>\n    </div>\n  </div>\n  <div class=\"row\">\n    <div class=\"column\"><img class=\"ui tiny image\" src='/img/spirit.png'> <h4>Mind</h4></div>\n    <div class=\"column\">\n        <labe>Anxiety</labe>\n        <div id=\"progress1\"></div>\n        <labe>Depression</labe>\n        <div id=\"progress2\"></div>\n        <labe>Isolation</labe>\n        <div id=\"progress3\"></div>\n    </div>\n    <div class=\"ten wide olumn\">\n        <div class=\"ui basic compact segments\" style=\"width: 250px\">\n        <div class=\"ui segment\">\n            <h5>What should I do?</h5>\n            <p>You’re doing a great job. Keep it up!</p>\n        </div>\n        </div>\n    </div>\n  </div>\n  <div class=\"row\">\n    <div class=\"column\"><img class=\"ui tiny image\" src='/img/body.png'> <h4>Body</h4></div>\n    <div class=\"column\">\n        <labe>General</labe>\n        <div id=\"progress4\"></div>\n        <labe>Head & Neck</labe>\n        <div id=\"progress5\"></div>\n        <labe>Breathing & Heart</labe>\n        <div id=\"progress6\"></div>\n        <labe>Stomach & Gut</labe>\n        <div id=\"progress7\"></div>\n        <labe>Other</labe>\n        <div id=\"progress8\"></div>\n\n\n    </div>\n    <div class=\"ten wide olumn\">\n        <div class=\"ui basic compact segments\" style=\"width: 250px\">\n        <div class=\"ui segment\">\n            <h5>What should I do?</h5>\n            <p>Call Kentucky Home Place at\n555-567-8890.\nThey’ll be there for you.</p>\n        </div>\n        </div>\n    </div>\n  </div>\n  <div class=\"row\">\n    <div class=\"column\"><img class=\"ui tiny image\" src='/img/living.png'> <h4>Living</h4></div>\n    <div class=\"column\">\n        <labe>Household</labe>\n        <div id=\"progress9\"></div>\n        <labe>Finances</labe>\n        <div id=\"progress10\"></div>\n        <labe>Relationships & Spirituality</labe>\n        <div id=\"progress11\"></div>\n        <labe>Medication & Drugs</labe>\n        <div id=\"progress12\"></div>\n\n    </div>\n    <div class=\"ten wide olumn\">\n        <div class=\"ui basic compact segments\" style=\"width: 250px\">\n        <div class=\"ui segment\">\n            <h5>What should I do?</h5>\n            <p>Keep doing what you’re doing! Self care is key.</p>\n        </div>\n        </div>\n    </div>\n  </div>\n\n</div>\n\n\n\n\n</div></div>\n<br>\n<button class=\"huge circular primary ui icon right floated button js-upload\n    right-button\">\n    <i class=\"angle right icon\"></i>\n</button>\n";
+    return "<div class=\"mtopbox\">\n    <h2 class=\"ui header\">\n        <img class=\"ui sa image\" src=\"/img/path.png\">\n        <div class=\"content\">\n            Your Path\n            <div class=\"sub header\">An overview of your path. Currently this is static.</div>\n        </div>\n\n    </h2>\n</div>\n\n\n\n<div class=\"mbottombox\">\n    <div class=\"ui inverted dimmer js-loading\">\n        <div class=\"ui text loader\">Uploading and analysing</div>\n    </div>\n\n<div class=\"ui four column grid\">\n  <div class=\"row\">\n    <div class=\"column\">\n        <img class=\"ui tiny image\" src='/img/quality.png'>\n        <h4>Quality of Life</h4>\n    </div>\n    <div class=\"ten wide column\">\n            <div class=\"progress_circle_box\"><div class=\"progress progress_circle\" id=\"ql1\"></div> <label>Today</label></div>\n            <div class=\"progress_circle_box\"><div class=\"progress progress_circle\" id=\"ql2\"></div> <label>Last week</label></div>\n            <div class=\"progress_circle_box\"><div class=\"progress progress_circle\" id=\"ql3\"></div> <label>Last month</label></div>\n    </div>\n  </div>\n    <div class=\"row\">\n      <div class=\"sixteen wide column\">        <div class=\"ui segment\">\n            <h5>How am I doing</h5>\nOverall things are looking great! Looks like your breathing problems have gotten better.<br>\n\n            Call Kentucky Home Place at\n<a href\"tel:555-567-8890\">555-567-8890</a> if you need help.\nThey’ll be there for you.\n        </div>\n</div>\n\n  </div>\n\n  <div class=\"row\">\n    <div class=\"column\"><img class=\"ui tiny image\" src='/img/spirit.png'> <h4>Mind</h4></div>\n    <div class=\"column\">\n        <labe>Anxiety</labe>\n        <div id=\"progress1\"></div>\n        <labe>Depression</labe>\n        <div id=\"progress2\"></div>\n        <labe>Isolation</labe>\n        <div id=\"progress3\"></div>\n    </div>\n    <div class=\"two wide column\">\n        <div class=\"ui basic compact segments\" style=\"width: 250px\">\n\n        </div>\n\n    </div>\n  </div>\n\n  <div class=\"row\">\n    <div class=\"column\"><img class=\"ui tiny image\" src='/img/body.png'> <h4>Body</h4></div>\n    <div class=\"column\">\n        <labe>General</labe>\n        <div id=\"progress4\"></div>\n        <labe>Head & Neck</labe>\n        <div id=\"progress5\"></div>\n        <labe>Breathing & Heart</labe>\n        <div id=\"progress6\"></div>\n        <labe>Stomach & Gut</labe>\n        <div id=\"progress7\"></div>\n        <labe>Other</labe>\n        <div id=\"progress8\"></div>\n\n\n    </div>\n    <div class=\"ten wide olumn\">\n        <div class=\"ui basic compact segments\" style=\"width: 250px\">\n        <div class=\"ui segment\">\n            <h4><i class=\"info circle icon\"></i>Info</h4>\n            You have stomach and gut problems find helpful reseources here <a href=\"#\">www.stochandgut.org</a>\n        </div>\n        </div>\n    </div>\n  </div>\n  <div class=\"row\">\n    <div class=\"column\"><img class=\"ui tiny image\" src='/img/living.png'> <h4>Living</h4></div>\n    <div class=\"column\">\n        <labe>Household</labe>\n        <div id=\"progress9\"></div>\n        <labe>Finances</labe>\n        <div id=\"progress10\"></div>\n        <labe>Relationships & Spirituality</labe>\n        <div id=\"progress11\"></div>\n        <labe>Medication & Drugs</labe>\n        <div id=\"progress12\"></div>\n\n    </div>\n    <div class=\"ten wide olumn\">\n        <div class=\"ui basic compact segments\" style=\"width: 250px\">\n        <div class=\"ui segment\">\n        </div>\n        </div>\n    </div>\n  </div>\n\n</div>\n\n\n\n\n</div></div>\n<br>\n<button class=\"huge circular primary ui icon right floated button js-upload\n    right-button\">\n    <i class=\"angle right icon\"></i>\n</button>\n";
 },"useData":true});
 
 },{"hbsfy/runtime":21}],45:[function(require,module,exports){
@@ -6455,7 +6455,8 @@ module.exports = Marionette.View.extend({
 
 
     onRender() {
-        this.onChildviewThermoStart()
+        //this.onChildviewDistressquestionsStart()
+        this.onChildviewQuestionnaireFinish()
     }
 });
 },{"../../../../../my_datas.json":1,"../../collections/questions":38,"../../models/session":42,"../../models/user":43,"../done/done":45,"../personal/personal":49,"../questions/questions":54,"../thermo/thermo":56,"./layout.hbs":46,"backbone.marionette":"backbone.marionette"}],48:[function(require,module,exports){
@@ -6560,12 +6561,16 @@ module.exports = HandlebarsCompiler.template({"1":function(container,depth0,help
     + ((stack1 = helpers.each.call(alias2,(depth0 != null ? depth0.options : depth0),{"name":"each","hash":{},"fn":container.program(2, data, 0, blockParams, depths),"inverse":container.noop,"data":data})) != null ? stack1 : "")
     + "        </div>\n    </div>\n";
 },"2":function(container,depth0,helpers,partials,data,blockParams,depths) {
-    var alias1=container.lambda, alias2=container.escapeExpression;
+    var alias1=container.propertyIsEnumerable, alias2=container.lambda, alias3=container.escapeExpression;
 
   return "            <div class=\"field\">\n                <div class=\"ui radio checkbox js-checkbox\">\n                    <input type=\"radio\" name=\""
-    + alias2(alias1((depths[1] != null ? depths[1].id : depths[1]), depth0))
-    + "\">\n                    <label>"
-    + alias2(alias1(depth0, depth0))
+    + alias3(alias2((depths[1] != null ? depths[1].id : depths[1]), depth0))
+    + "\" data-value='"
+    + alias3(alias2(depth0, depth0))
+    + "' data-header='"
+    + alias3(alias2((depths[1] != null ? depths[1].title : depths[1]), depth0))
+    + "'>\n                    <label>"
+    + alias3(alias2(depth0, depth0))
     + "</label>\n                </div>\n            </div>\n";
 },"4":function(container,depth0,helpers,partials,data,blockParams,depths) {
     var stack1, helper, alias1=container.propertyIsEnumerable, alias2=depth0 != null ? depth0 : (container.nullContext || {});
@@ -6576,19 +6581,25 @@ module.exports = HandlebarsCompiler.template({"1":function(container,depth0,help
     + ((stack1 = helpers.each.call(alias2,(depth0 != null ? depth0.options : depth0),{"name":"each","hash":{},"fn":container.program(5, data, 0, blockParams, depths),"inverse":container.noop,"data":data})) != null ? stack1 : "")
     + "                </div>\n            </div>\n        </div>\n    </div>\n\n";
 },"5":function(container,depth0,helpers,partials,data,blockParams,depths) {
-    var alias1=container.lambda, alias2=container.escapeExpression;
+    var alias1=container.propertyIsEnumerable, alias2=container.lambda, alias3=container.escapeExpression;
 
   return "\n                    <div class=\"field\">\n                        <div class=\"ui radio checkbox js-checkbox\">\n                            <input type=\"radio\" name=\""
-    + alias2(alias1((depths[1] != null ? depths[1].id : depths[1]), depth0))
-    + "\">\n                            <label>"
-    + alias2(alias1(depth0, depth0))
+    + alias3(alias2((depths[1] != null ? depths[1].id : depths[1]), depth0))
+    + "\" data-value='"
+    + alias3(alias2(depth0, depth0))
+    + "' data-header='"
+    + alias3(alias2((depths[1] != null ? depths[1].title : depths[1]), depth0))
+    + "'>\n                            <label>"
+    + alias3(alias2(depth0, depth0))
     + "</label>\n                        </div>\n                    </div>\n";
 },"7":function(container,depth0,helpers,partials,data) {
-    var helper, alias1=container.propertyIsEnumerable;
+    var helper, alias1=container.propertyIsEnumerable, alias2=depth0 != null ? depth0 : (container.nullContext || {}), alias3=container.hooks.helperMissing, alias4="function", alias5=container.escapeExpression;
 
   return "    <div class=\"ui form\">\n        <div class=\"item\">\n            <div class=\"ui form\">\n                <div class=\"field\">\n                    <label>"
-    + container.escapeExpression(((helper = (helper = helpers.title || (depth0 != null ? depth0.title : depth0)) != null ? helper : container.hooks.helperMissing),(typeof helper === "function" ? helper.call(depth0 != null ? depth0 : (container.nullContext || {}),{"name":"title","hash":{},"data":data}) : helper)))
-    + "</label>\n                    <textarea id=\"inputtext\"></textarea>\n                </div>\n            </div>\n        </div>\n    </div>\n";
+    + alias5(((helper = (helper = helpers.title || (depth0 != null ? depth0.title : depth0)) != null ? helper : alias3),(typeof helper === alias4 ? helper.call(alias2,{"name":"title","hash":{},"data":data}) : helper)))
+    + "</label>\n                    <textarea class=\".inputtext\" data-header='"
+    + alias5(((helper = (helper = helpers.title || (depth0 != null ? depth0.title : depth0)) != null ? helper : alias3),(typeof helper === alias4 ? helper.call(alias2,{"name":"title","hash":{},"data":data}) : helper)))
+    + "'></textarea>\n                </div>\n            </div>\n        </div>\n    </div>\n";
 },"compiler":[8,">= 4.3.0"],"main":function(container,depth0,helpers,partials,data,blockParams,depths) {
     var stack1, alias1=container.propertyIsEnumerable, alias2=depth0 != null ? depth0 : (container.nullContext || {});
 
@@ -6618,35 +6629,12 @@ var ItemTemplate = require('./item.hbs');
 var HeaderTemplate = require('./header.hbs');
 var ItemsTemplate = require('./items.hbs');
 var _ = require('underscore');
+var $ = require('jquery')
 var questionCollection = require('../../collections/questions')
 var SessionStorage = require('../../models/session');
 
 var resultStorage = require('../../collections/results');
 var resultModel = require('../../models/result');
-
-// const QuestionView = Marionette.View.extend({
-//     template: QuestionTemplate,
-//     className: 'item',
-
-//     onAttach: function () {
-//         this.$el.find('#answer-js').checkbox({
-//             onChecked: (function(_this) {
-//                 return function() {
-//                     answers = SessionStorage.get("answers");
-//                     answers.push(_this.model.get('title'));
-//                     SessionStorage.set("answers", answers);
-//                 };
-//               })(this),
-//               onUnchecked: (function(_this) {
-//                 return function() {
-//                     answers = SessionStorage.get("answers");
-//                     answers = _.without(answers, _this.model.get('title'));
-//                     SessionStorage.set("answers", answers);
-//                 };
-//               })(this)
-//         });
-//     },
-// });
 
 const ItemView = Marionette.View.extend({
     template: ItemTemplate,
@@ -6665,7 +6653,15 @@ const ItemView = Marionette.View.extend({
                 };
               })(this)
             })
-        this.$el.find('.js-checkbox').checkbox();
+        this.$el.find('.js-checkbox').checkbox({
+            onChecked: (function(_this) {
+                return function() {
+                    key =  $(this).data('header')
+                    value =  $(this).data('value')
+                    _this.model.set({key, value})
+                };
+                })(this)
+        });
 
     },
 
@@ -6738,7 +6734,17 @@ module.exports = Marionette.View.extend({
     },
 
     show_next: function () {
-        if (this.$el.find('#inputtext')){
+        if (this.$el.find('textarea')){
+            this.$el.find('textarea').each((function(_this) {
+                return function(idx, li) {
+                  if( $(li).val()){
+                    key =  $(this).data('header')
+                    value =  $(li).val()
+                    _this.collection.at(_this.counter).set({key, value})
+                  }
+                };
+              })(this));
+
             SessionStorage.set('other', this.$el.find('#inputtext').val() )
         }
         this.counter += 1
@@ -6768,7 +6774,7 @@ module.exports = Marionette.View.extend({
 
 });
 
-},{"../../collections/questions":38,"../../collections/results":39,"../../models/result":41,"../../models/session":42,"./category.hbs":50,"./header.hbs":51,"./item.hbs":52,"./items.hbs":53,"backbone":"backbone","backbone.marionette":"backbone.marionette","underscore":30}],55:[function(require,module,exports){
+},{"../../collections/questions":38,"../../collections/results":39,"../../models/result":41,"../../models/session":42,"./category.hbs":50,"./header.hbs":51,"./item.hbs":52,"./items.hbs":53,"backbone":"backbone","backbone.marionette":"backbone.marionette","jquery":"jquery","underscore":30}],55:[function(require,module,exports){
 // hbsfy compiled Handlebars template
 var HandlebarsCompiler = require('hbsfy/runtime');
 module.exports = HandlebarsCompiler.template({"compiler":[8,">= 4.3.0"],"main":function(container,depth0,helpers,partials,data) {

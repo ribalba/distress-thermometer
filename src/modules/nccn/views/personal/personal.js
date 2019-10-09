@@ -49,9 +49,4 @@ module.exports = Marionette.View.extend({
             "lname": this.model.get('user').get('lname')
         }
     },
-
-    onRender: function(){
-        //console.log(this.model)
-    }
-
 });

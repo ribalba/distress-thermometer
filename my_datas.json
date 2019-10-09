@@ -1,0 +1,630 @@
+{
+    "questions": [
+        {
+            "title": "Mind",
+            "subtitle": "How have your spirits been over the past week, including today?",
+            "img": "/img/spirit.png",
+            "questions": [
+                {
+                    "title": "Over the last 2 weeks, how often have you been bothered by the following problems:",
+                    "questions": [
+                        {
+                            "title": "Little interest or pleasure in doing things",
+                            "options": [
+                                "Not at all",
+                                "Serveral days",
+                                "More than half the day",
+                                "Nearly every day"
+                            ],
+                            "slider": true
+                        },
+                        {
+                            "title": "Feeling down, depressed or hopeless",
+                            "options": [
+                                "Not at all",
+                                "Serveral days",
+                                "More than half the day",
+                                "Nearly every day"
+                            ],
+                            "slider": true
+                        },
+                        {
+                            "title": "Feeling nervous, anxious or on edge",
+                            "options": [
+                                "Not at all",
+                                "Serveral days",
+                                "More than half the day",
+                                "Nearly every day"
+                            ],
+                            "slider": true
+                        },
+                        {
+                            "title": "Not being able to stop or control worrying",
+                            "options": [
+                                "Not at all",
+                                "Serveral days",
+                                "More than half the day",
+                                "Nearly every day"
+                            ],
+                            "slider": true
+                        },
+                        {
+                            "title": "Felt that you lack companionship",
+                            "options": [
+                                "Hardly ever",
+                                "Some of the time",
+                                "Often"
+                            ],
+                            "slider": true
+                        },
+                        {
+                            "title": "Felt left out",
+                            "options": [
+                                "Hardly ever",
+                                "Some of the time",
+                                "Often"
+                            ],
+                            "slider": true
+                        },
+                        {
+                            "title": "Felt isolated from others",
+                            "options": [
+                                "Hardly ever",
+                                "Some of the time",
+                                "Often"
+                            ],
+                            "slider": true
+                        },
+                        {
+                            "title": "Feeling guilty about being a burden on others",
+                            "options": [
+                                "Hardly ever",
+                                "Some of the time",
+                                "Often"
+                            ],
+                            "slider": true
+                        },
+                        {
+                            "title": "Feeling uncertain about the future",
+                            "options": [
+                                "Hardly ever",
+                                "Some of the time",
+                                "Often"
+                            ],
+                            "slider": true
+                        },
+                        {
+                            "title": "Feeling irritable",
+                            "options": [
+                                "Hardly ever",
+                                "Some of the time",
+                                "Often"
+                            ],
+                            "slider": true
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "title": "Body",
+            "subtitle": "How has your body felt over the last week, including today?",
+            "img": "/img/body.png",
+            "questions": [
+                {
+                    "title": "Whole Body",
+                    "questions": [
+                        {
+                            "title": "I have had fevers",
+                            "options": [
+                                "Always",
+                                "Very Often",
+                                "Sometimes",
+                                "Rarely",
+                                "Never"
+                            ],
+                            "slider": true
+                        },
+                        {
+                            "title": "I have had fatigue",
+                            "options": [
+                                "Always",
+                                "Very Often",
+                                "Sometimes",
+                                "Rarely",
+                                "Never"
+                            ],
+                            "slider": true
+                        },
+                        {
+                            "title": "I have had trouble sleeping",
+                            "options": [
+                                "Always",
+                                "Very Often",
+                                "Sometimes",
+                                "Rarely",
+                                "Never"
+                            ],
+                            "slider": true
+                        },
+                        {
+                            "title": "I have had memory problems",
+                            "options": [
+                                "Always",
+                                "Very Often",
+                                "Sometimes",
+                                "Rarely",
+                                "Never"
+                            ],
+                            "slider": true
+                        },
+                        {
+                            "title": "I have had weight loss",
+                            "options": [
+                                "Always",
+                                "Very Often",
+                                "Sometimes",
+                                "Rarely",
+                                "Never"
+                            ],
+                            "slider": true
+                        },
+                        {
+                            "title": "I have had dry, itchy skin",
+                            "options": [
+                                "Always",
+                                "Very Often",
+                                "Sometimes",
+                                "Rarely",
+                                "Never"
+                            ],
+                            "slider": true
+                        },
+                        {
+                            "title": "I have had swelling in my limbs or abdomen",
+                            "options": [
+                                "Always",
+                                "Very Often",
+                                "Sometimes",
+                                "Rarely",
+                                "Never"
+                            ],
+                            "slider": true
+                        },
+                        {
+                            "title": "I have had tingling in my hands or feet",
+                            "options": [
+                                "Always",
+                                "Very Often",
+                                "Sometimes",
+                                "Rarely",
+                                "Never"
+                            ],
+                            "slider": true
+                        },
+                        {
+                            "title": "I have had pain",
+                            "options": [
+                                "Always",
+                                "Very Often",
+                                "Sometimes",
+                                "Rarely",
+                                "Never"
+                            ],
+                            "slider": true
+                        },
+                        {
+                            "title": "I have had bone or joint pain",
+                            "options": [
+                                "Always",
+                                "Very Often",
+                                "Sometimes",
+                                "Rarely",
+                                "Never"
+                            ],
+                            "slider": true
+                        },
+                        {
+                            "title": "I am worried about my appearance",
+                            "options": [
+                                "Always",
+                                "Very Often",
+                                "Sometimes",
+                                "Rarely",
+                                "Never"
+                            ],
+                            "slider": true
+                        }
+                    ]
+                },
+                {
+                    "title": "Head, Face, Neck",
+                    "questions": [
+                        {
+                            "title": "I have had headaches",
+                            "options": [
+                                "Always",
+                                "Very Often",
+                                "Sometimes",
+                                "Rarely",
+                                "Never"
+                            ],
+                            "slider": true
+                        },
+                        {
+                            "title": "I have had difficulty chewing or eating",
+                            "options": [
+                                "Always",
+                                "Very Often",
+                                "Sometimes",
+                                "Rarely",
+                                "Never"
+                            ],
+                            "slider": true
+                        },
+                        {
+                            "title": "I have had sores in my mouth or lips",
+                            "options": [
+                                "Always",
+                                "Very Often",
+                                "Sometimes",
+                                "Rarely",
+                                "Never"
+                            ],
+                            "slider": true
+                        },
+                        {
+                            "title": "I have had a dry or congested nose",
+                            "options": [
+                                "Always",
+                                "Very Often",
+                                "Sometimes",
+                                "Rarely",
+                                "Never"
+                            ],
+                            "slider": true
+                        }
+                    ]
+                },
+                {
+                    "title": "Respiration and Hear",
+                    "questions": [
+                        {
+                            "title": "I have had difficulty breathing",
+                            "options": [
+                                "Always",
+                                "Very Often",
+                                "Sometimes",
+                                "Rarely",
+                                "Never"
+                            ],
+                            "slider": true
+                        },
+                        {
+                            "title": "I have had shortness of breath",
+                            "options": [
+                                "Always",
+                                "Very Often",
+                                "Sometimes",
+                                "Rarely",
+                                "Never"
+                            ],
+                            "slider": true
+                        },
+                        {
+                            "title": "I have had chest pain",
+                            "options": [
+                                "Always",
+                                "Very Often",
+                                "Sometimes",
+                                "Rarely",
+                                "Never"
+                            ],
+                            "slider": true
+                        },
+                        {
+                            "title": "I have had heart palpitations",
+                            "options": [
+                                "Always",
+                                "Very Often",
+                                "Sometimes",
+                                "Rarely",
+                                "Never"
+                            ],
+                            "slider": true
+                        }
+                    ]
+                },
+                {
+                    "title": "Stomach and Gut",
+                    "questions": [
+                        {
+                            "title": "I have had nausea or vomiting",
+                            "options": [
+                                "Always",
+                                "Very Often",
+                                "Sometimes",
+                                "Rarely",
+                                "Never"
+                            ],
+                            "slider": true
+                        },
+                        {
+                            "title": "I have had diarrhea",
+                            "options": [
+                                "Always",
+                                "Very Often",
+                                "Sometimes",
+                                "Rarely",
+                                "Never"
+                            ],
+                            "slider": true
+                        },
+                        {
+                            "title": "I have had a decreased or increased appetite",
+                            "options": [
+                                "Always",
+                                "Very Often",
+                                "Sometimes",
+                                "Rarely",
+                                "Never"
+                            ],
+                            "slider": true
+                        },
+                        {
+                            "title": "I have had constipation",
+                            "options": [
+                                "Always",
+                                "Very Often",
+                                "Sometimes",
+                                "Rarely",
+                                "Never"
+                            ],
+                            "slider": true
+                        },
+                        {
+                            "title": "I have had indigestion",
+                            "options": [
+                                "Always",
+                                "Very Often",
+                                "Sometimes",
+                                "Rarely",
+                                "Never"
+                            ],
+                            "slider": true
+                        }
+                    ]
+                },
+                {
+                    "title": "Other",
+                    "questions": [
+                        {
+                            "title": "I have had increased or decreased urination",
+                            "options": [
+                                "Always",
+                                "Very Often",
+                                "Sometimes",
+                                "Rarely",
+                                "Never"
+                            ],
+                            "slider": true
+                        },
+                        {
+                            "title": "I have had changes in sexual function",
+                            "options": [
+                                "Always",
+                                "Very Often",
+                                "Sometimes",
+                                "Rarely",
+                                "Never"
+                            ],
+                            "slider": true
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "title": "Living",
+            "subtitle": "How are you getting along in your daily activities over the last week, including today?",
+            "img": "/img/living.png",
+            "questions": [
+                {
+                    "title": "Household",
+                    "questions": [
+                        {
+                            "title": "I can bathe and dress myself",
+                            "options": [
+                                "Strongly Agree",
+                                "Agree",
+                                "Undecided",
+                                "Disagree",
+                                "Strongly Disagree"
+                            ],
+                            "radio": true
+                        },
+                        {
+                            "title": "I can work/go to school / do household duties",
+                            "options": [
+                                "Strongly Agree",
+                                "Agree",
+                                "Undecided",
+                                "Disagree",
+                                "Strongly Disagree"
+                            ],
+                            "radio": true
+                        },
+                        {
+                            "title": "I can get around",
+                            "options": [
+                                "Strongly Agree",
+                                "Agree",
+                                "Undecided",
+                                "Disagree",
+                                "Strongly Disagree"
+                            ],
+                            "radio": true
+                        }
+                    ]
+                },
+                {
+                    "title": "Finances",
+                    "questions": [
+                        {
+                            "title": "I am having no problems with health insurance",
+                            "options": [
+                                "Strongly Agree",
+                                "Agree",
+                                "Undecided",
+                                "Disagree",
+                                "Strongly Disagree"
+                            ],
+                            "radio": true
+                        },
+                        {
+                            "title": "I am having no problems with housing",
+                            "options": [
+                                "Strongly Agree",
+                                "Agree",
+                                "Undecided",
+                                "Disagree",
+                                "Strongly Disagree"
+                            ],
+                            "radio": true
+                        },
+                        {
+                            "title": "I am having no problems with transportation",
+                            "options": [
+                                "Strongly Agree",
+                                "Agree",
+                                "Undecided",
+                                "Disagree",
+                                "Strongly Disagree"
+                            ],
+                            "radio": true
+                        },
+                        {
+                            "title": "I am having no problems with paying my bills",
+                            "options": [
+                                "Strongly Agree",
+                                "Agree",
+                                "Undecided",
+                                "Disagree",
+                                "Strongly Disagree"
+                            ],
+                            "radio": true
+                        }
+                    ]
+                },
+                {
+                    "title": "Relationships",
+                    "questions": [
+                        {
+                            "title": "I can maintain my family and social obligations",
+                            "options": [
+                                "Strongly Agree",
+                                "Agree",
+                                "Undecided",
+                                "Disagree",
+                                "Strongly Disagree"
+                            ],
+                            "radio": true
+                        },
+                        {
+                            "title": "I have someone to help/support me",
+                            "options": [
+                                "Strongly Agree",
+                                "Agree",
+                                "Undecided",
+                                "Disagree",
+                                "Strongly Disagree"
+                            ],
+                            "radio": true
+                        }
+                    ]
+                },
+                {
+                    "title": "Medications and drugs",
+                    "questions": [
+                        {
+                            "title": "I have access to the medication I need",
+                            "options": [
+                                "Strongly Agree",
+                                "Agree",
+                                "Undecided",
+                                "Disagree",
+                                "Strongly Disagree"
+                            ],
+                            "radio": true
+                        },
+                        {
+                            "title": "I am having no problems with housing",
+                            "options": [
+                                "Strongly Agree",
+                                "Agree",
+                                "Undecided",
+                                "Disagree",
+                                "Strongly Disagree"
+                            ],
+                            "radio": true
+                        },
+                        {
+                            "title": "I am having no problems with transportation",
+                            "options": [
+                                "Strongly Agree",
+                                "Agree",
+                                "Undecided",
+                                "Disagree",
+                                "Strongly Disagree"
+                            ],
+                            "radio": true
+                        },
+                        {
+                            "title": "I take drugs not prescribed to me, or I’m using more pain medications than prescribed to me",
+                            "options": [
+                                "Strongly Agree",
+                                "Agree",
+                                "Undecided",
+                                "Disagree",
+                                "Strongly Disagree"
+                            ],
+                            "radio": true
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "title": "Living",
+            "subtitle": "How are you getting along in your daily activities over the last week, including today?",
+            "img": "/img/living-text.png",
+            "questions": [
+                {
+                    "title": "",
+                    "questions": [
+                        {
+                            "title": "Which of these is most important to you?",
+                            "text": true
+                        },
+                        {
+                            "title": "Is there any other information you want to tell us about?",
+                            "text": true
+                        },
+                        {
+                            "title": "Would you like to schedule time to talk with someone about your well-being?",
+                            "text": true
+                        },
+                        {
+                            "title": "Would you like to make an appointment to get spiritual or faith-based support?",
+                            "options": [
+                                "Yes please",
+                                "No thanks"
+                            ],
+                            "radio": true
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

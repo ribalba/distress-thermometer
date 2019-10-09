@@ -5,11 +5,9 @@ module.exports = Marionette.View.extend({
 
     template: SplashTemplate,
 
-    events: {
-        'click .getstarted-js': 'distressthermometer_start'
+    triggers: {
+        'click .js-nccn-start': 'start:nccn',
+        'click .js-mypath-start': 'start:mypath',
+        'click .js-mypath-care-start': 'start:care:mypath'
     },
-
-    distressthermometer_start: function(){
-        this.triggerMethod('personal:start', this);
-    }
 });

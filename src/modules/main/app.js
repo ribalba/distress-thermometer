@@ -1,8 +1,6 @@
 var Backbone = require('backbone');
 var Marionette = require ('backbone.marionette');
-var UserModel = require('./models/user');
 var LayoutView = require('./views/layout/layout');
-var resultStorage = require('./collections/results');
 
 module.exports = Marionette.Application.extend({
     region: '#app',
@@ -15,7 +13,7 @@ module.exports = Marionette.Application.extend({
     },
 
     onStart() {
-      this.showView(new LayoutView({model: this.user_model}));
+      this.showView(new LayoutView());
       Backbone.history.start();
     }
   });
