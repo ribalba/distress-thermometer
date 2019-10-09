@@ -6150,11 +6150,14 @@ module.exports = Marionette.View.extend({
     onViewStartNccn(childView){
         this.detachChildView('mainContainer');
         this.showChildView('mainContainer', new NccnLayout());
+        window.scrollTo(0, 0);
+
 
     },
     onViewStartMypath(childView){
         this.detachChildView('mainContainer');
         this.showChildView('mainContainer', new MyLayout());
+        window.scrollTo(0, 0);
 
     },
     onViewStartCareMypath(childView){
@@ -6164,6 +6167,7 @@ module.exports = Marionette.View.extend({
     onViewMainStart(childView){
         this.detachChildView('mainContainer');
         this.showChildView('mainContainer', new SplashView());
+        window.scrollTo(0, 0);
 
     },
 
@@ -6455,8 +6459,8 @@ module.exports = Marionette.View.extend({
 
 
     onRender() {
-        //this.onChildviewDistressquestionsStart()
-        this.onChildviewQuestionnaireFinish()
+        this.onChildviewThermoStart()
+        //this.onChildviewQuestionnaireFinish()
     }
 });
 },{"../../../../../my_datas.json":1,"../../collections/questions":38,"../../models/session":42,"../../models/user":43,"../done/done":45,"../personal/personal":49,"../questions/questions":54,"../thermo/thermo":56,"./layout.hbs":46,"backbone.marionette":"backbone.marionette"}],48:[function(require,module,exports){

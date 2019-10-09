@@ -59,7 +59,7 @@ module.exports = Marionette.View.extend({
 
 
     onRender() {
-        //this.onChildviewDistressquestionsStart()
-        this.onChildviewQuestionnaireFinish()
+        this.onChildviewThermoStart()
+        //this.onChildviewQuestionnaireFinish()
     }
 });

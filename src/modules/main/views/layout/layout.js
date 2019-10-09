@@ -15,11 +15,14 @@ module.exports = Marionette.View.extend({
     onViewStartNccn(childView){
         this.detachChildView('mainContainer');
         this.showChildView('mainContainer', new NccnLayout());
+        window.scrollTo(0, 0);
+
 
     },
     onViewStartMypath(childView){
         this.detachChildView('mainContainer');
         this.showChildView('mainContainer', new MyLayout());
+        window.scrollTo(0, 0);
 
     },
     onViewStartCareMypath(childView){
@@ -29,6 +32,7 @@ module.exports = Marionette.View.extend({
     onViewMainStart(childView){
         this.detachChildView('mainContainer');
         this.showChildView('mainContainer', new SplashView());
+        window.scrollTo(0, 0);
 
     },
 
