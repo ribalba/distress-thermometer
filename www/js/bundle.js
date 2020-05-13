@@ -35,7 +35,7 @@ module.exports={
 
     },
     "8": {
-        "text": "",
+        "text": "Thank you for sharing. Your data has been forwarded.",
         "email_to": ["mypath@launchhealth.org"]
 
     }
