@@ -91,8 +91,12 @@ module.exports = Marionette.View.extend({
 
 		$('.js-loading').addClass('active');
 
-		data_upload = JSON.parse(localStorage.toupload || null) || []
-		data_upload.push(data)
+        data_upload = JSON.parse(localStorage.toupload || null) || []
+        console.log(data_upload)
+
+        if(data['user'] !== null){
+            data_upload.push(data)
+        }
 
 		$.ajax({
 			type: "POST",
@@ -109,10 +113,6 @@ module.exports = Marionette.View.extend({
 							message: 'Data uploaded'
 						});
 
-						_this.model.set('answers', [])
-						_this.model.set('other', "")
-						_this.model.set({'user': new UserModel()})
-
 						localStorage.toupload = []
 
 					}else{
@@ -122,7 +122,13 @@ module.exports = Marionette.View.extend({
 						$('.js-loading').removeClass('active');
 
 						localStorage.toupload = JSON.stringify(_data_upload);
-					}
+                    }
+
+                    _this.model.set('answers', [])
+                    _this.model.set('other', "")
+                    _this.model.set({'user': null})
+
+
 				};
 				})(this, data_upload)
 		})
