@@ -1,26 +1,40 @@
-.my-main-container
-    height: 100%
-    width: 100%
-    max-width: 800px
-    position:relative
-    margin:auto
+// .my-main-container
+//     height: 100%
+//     width: 100%
+//     max-width: 800px
+//     position:relative
+//     margin:auto
 
+.header-top-margin
+    margin-top: 10px !important
 
 .mtopbox
     color: black;
     background-color: $mgreen
     padding: 20px 20px 20px 20px;
-    height: 200px;
-    border-radius: 0px 0px 25px 25px;
 
 .mbottombox
-    position:relative;
     margin:auto;
     background-color: white;
     padding: 20px;
-    border-radius: 25px;
-    top:-20px
-    margin-top: -80px
+    margin-bottom: 20px;
+
+// .mtopbox
+//     color: black;
+//     background-color: $mgreen
+//     padding: 20px 20px 20px 20px;
+//     height: 200px;
+//     border-radius: 0px 0px 25px 25px;
+
+// .mbottombox
+//     position:relative;
+//     margin:auto;
+//     background-color: white;
+//     padding: 20px;
+//     border-radius: 25px;
+//     top:-20px
+//     margin-top: -80px
+
 
 .blacklink
     color: black
@@ -52,4 +66,26 @@
 .progress > svg {
     height: 100%;
     display: block;
+}
+
+@media only screen and (max-width: 767px) {
+  [class*="mobile hidden"],
+  [class*="tablet only"]:not(.mobile),
+  [class*="computer only"]:not(.mobile),
+  [class*="large monitor only"]:not(.mobile),
+  [class*="widescreen monitor only"]:not(.mobile),
+  [class*="or lower hidden"] {
+    display: none !important;
+  }
+}
+
+@media only screen and (min-width: 767px) {
+  [class*="mobile only"],
+  [class*="tablet only"]:not(.mobile),
+  [class*="computer only"]:not(.mobile),
+  [class*="large monitor only"]:not(.mobile),
+  [class*="widescreen monitor only"]:not(.mobile),
+  [class*="or lower hidden"] {
+    display: none !important;
+  }
 }

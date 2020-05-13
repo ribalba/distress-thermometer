@@ -37,7 +37,7 @@ module.exports = Marionette.View.extend({
     },
 
     onRender() {
-        this.onViewMainStart()
-        //this.onViewStartMypath()
+        //this.onViewMainStart()
+        this.onViewStartMypath()
     }
 });

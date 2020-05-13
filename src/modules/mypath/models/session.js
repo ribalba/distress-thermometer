@@ -3,7 +3,7 @@ var Backbone = require('backbone');
 const SessionStorage =  Backbone.Model.extend({
 	defaults: {
         answers: [],
-        save:true
+        user_save:true
     },
 });
 

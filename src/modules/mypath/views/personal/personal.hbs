@@ -1,58 +1,80 @@
 <div class="mtopbox">
     <h2 class="ui header">
-        <img class="ui sa image" src="/img/patient.png">
+        <img class="ui sa image" src="img/patient.png" />
         <div class="content">
             Patient
         </div>
     </h2>
 </div>
-
-
-
 <div class="mbottombox">
     <form class="ui form">
         <div class="field">
-            <label>First Name</label>
-            <input type="text" name="first-name" id="first-name"
-                placeholder="First Name" value="{{fname}}">
+            <label>
+                Pseudonym
+            </label>
+            <input type="text" name="pseudonym" id="pseudonym" placeholder="" value="{{pseudonym}}" />
         </div>
         <div class="field">
-            <label>Last Name</label>
-            <input type="text" name="last-name" id="last-name" placeholder="Last Name" value="{{lname}}">
+            <label>
+                Diagnosis
+            </label>
+            <input type="text" name="diagnosis" id="diagnosis" placeholder="" value="{{diagnosis}}" />
+        </div>
+        <div class="field">
+            <label>
+                Phone Number
+            </label>
+            <input type="text" name="phone_number" id="phone_number" placeholder="" value="{{phone_number}}" />
+        </div>
+        <div class="field">
+            <label>
+                Providers’ Phone Number
+            </label>
+            <input type="text" name="provider_phone_number" id="provider_phone_number" placeholder=""
+                value="{{provider_phone_number}}" />
+        </div>
+        <div class="field">
+            <label>
+                Clinic
+            </label>
+            <select name="clinic" id='clinic' class="ui selection dropdown">
+                <option disabled selected value>
+                    Please select your clinic
+                </option>
+                {{#each clinics}}
+                    <option {{#if this.selected}}selected="selected"{{/if}} value="{{this.email}}">{{this.name}} ({{this.email}})</option>
+                {{/each}}
+            </select>
         </div>
         <div class="field">
             <div class="ui toggle checkbox" id="user-checkbox">
-                <input type="checkbox" checked tabindex="0">
-                <label>Save my name for next time</label>
+                <input type="checkbox" checked tabindex="0" />
+                <label>
+                    Save for the future
+                </label>
             </div>
         </div>
-
-        <div class="ui horizontal divider">
-            Or
-        </div>
-        <div class="field">
-            <label>Alias</label>
-            <input type="text" name="alias" id="alias"
-                placeholder="Alias" value="">
-        </div>
-
-
     </form>
-
 </div>
-
-<button class="big circular primary ui icon right floated button js-tstart right-button">
-    <i class="angle right icon"></i>
+<button class="ui icon big right labeled icon blue right floated button js-tstart right-button">
+    <i class="angle right icon"></i> Next
 </button>
-
 <div class="ui modal privacy_modal">
-    <div class="header">Privacy</div>
+    <div class="header">
+        Please fill out missing fields
+    </div>
     <div class="scrolling content">
-        <p>This needs to be added! But we send your encrypted data to our server
-            and only specific people can access it.</p>
+        <p>
+            Please add all fields as they are required!
+        </p>
+        <p>
+            We send your data encrypted to our server
+            and only specific people can access it.
+        </p>
     </div>
     <div class="actions">
-        <div class="ui approve primary button">OK</div>
+        <div class="ui positive primary button">
+            OK
+        </div>
     </div>
-
 </div>

@@ -46,7 +46,12 @@ module.exports = function (grunt) {
             prod: {
                 src: 'src/index.html',
                 dest: 'www/index.html'
+            },
+            phone: {
+                src: 'src/index.html',
+                dest: 'www/index.html'
             }
+
         },
 
         copy: {
@@ -98,7 +103,16 @@ module.exports = function (grunt) {
                 },
                 src: ['assets/css/app.styl'],
                 dest: 'www/css/app.css'
+            },
+            'phone': {
+                options: {
+                    compress: true,
+                    "include css": true
+                },
+                src: ['assets/css/app.styl'],
+                dest: 'www/css/app.css'
             }
+
         },
 
         autoprefixer: {
@@ -154,6 +168,7 @@ module.exports = function (grunt) {
 
 
     grunt.registerTask('builddev', ['clean', 'browserify:app', 'browserify:vendors', 'targethtml:dev', 'stylus:dev', 'copy' ]);
+    grunt.registerTask('buildphone', ['clean', 'browserify:bundle', 'targethtml:phone', 'stylus:phone', 'autoprefixer', 'copy']);
     grunt.registerTask('buildprod', ['clean', 'browserify:bundle', 'targethtml:prod', 'stylus:prod', 'autoprefixer', 'copy']);
     grunt.registerTask('run',   ['builddev', 'connect', 'watch']);
 

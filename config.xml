@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="distressthermometer" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
-    <name>Distress Thermometer</name>
+<widget id="org.rebeleproject.mypath" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
+    <name>MyPath</name>
     <description>
         A little app that asks some questions
     </description>
@@ -10,12 +10,20 @@
     <content src="index.html" />
     <preference name="DisallowOverscroll" value="true" />
     <preference name="android-minSdkVersion" value="19" />
-    <allow-intent href="http://*/*" />
+    <allow-intent href="http://localhost:9000/*" />
     <allow-intent href="https://*/*" />
     <allow-intent href="tel:*" />
     <allow-intent href="sms:*" />
     <allow-intent href="mailto:*" />
     <allow-intent href="geo:*" />
+    <access origin="http://localhost:9000/*" />
+    <access origin="*" />
+
+    <allow-navigation href="*" />
+    <allow-intent href="*" />
+    <access origin="*" />
+
+
     <platform name="android">
         <allow-intent href="market:*" />
     </platform>

@@ -1,239 +1,441 @@
 {
     "questions": [
         {
-            "title": "Mind",
-            "subtitle": "How have your spirits been over the past week, including today?",
-            "img": "/img/spirit.png",
-            "questions": [
-                {
-                    "title": "Over the last 2 weeks, how often have you been bothered by the following problems:",
-                    "questions": [
-                        {
-                            "title": "Little interest or pleasure in doing things",
-                            "options": [
-                                "Not at all",
-                                "Serveral days",
-                                "More than half the day",
-                                "Nearly every day"
-                            ],
-                            "slider": true
-                        },
-                        {
-                            "title": "Feeling down, depressed or hopeless",
-                            "options": [
-                                "Not at all",
-                                "Serveral days",
-                                "More than half the day",
-                                "Nearly every day"
-                            ],
-                            "slider": true
-                        },
-                        {
-                            "title": "Feeling nervous, anxious or on edge",
-                            "options": [
-                                "Not at all",
-                                "Serveral days",
-                                "More than half the day",
-                                "Nearly every day"
-                            ],
-                            "slider": true
-                        },
-                        {
-                            "title": "Not being able to stop or control worrying",
-                            "options": [
-                                "Not at all",
-                                "Serveral days",
-                                "More than half the day",
-                                "Nearly every day"
-                            ],
-                            "slider": true
-                        },
-                        {
-                            "title": "Felt that you lack companionship",
-                            "options": [
-                                "Hardly ever",
-                                "Some of the time",
-                                "Often"
-                            ],
-                            "slider": true
-                        },
-                        {
-                            "title": "Felt left out",
-                            "options": [
-                                "Hardly ever",
-                                "Some of the time",
-                                "Often"
-                            ],
-                            "slider": true
-                        },
-                        {
-                            "title": "Felt isolated from others",
-                            "options": [
-                                "Hardly ever",
-                                "Some of the time",
-                                "Often"
-                            ],
-                            "slider": true
-                        },
-                        {
-                            "title": "Feeling guilty about being a burden on others",
-                            "options": [
-                                "Hardly ever",
-                                "Some of the time",
-                                "Often"
-                            ],
-                            "slider": true
-                        },
-                        {
-                            "title": "Feeling uncertain about the future",
-                            "options": [
-                                "Hardly ever",
-                                "Some of the time",
-                                "Often"
-                            ],
-                            "slider": true
-                        },
-                        {
-                            "title": "Feeling irritable",
-                            "options": [
-                                "Hardly ever",
-                                "Some of the time",
-                                "Often"
-                            ],
-                            "slider": true
-                        }
-                    ]
-                }
-            ]
-        },
-        {
             "title": "Body",
-            "subtitle": "How has your body felt over the last week, including today?",
-            "img": "/img/body.png",
+            "subtitle": "How has your body felt over the last 7 days, including today?",
+            "img": "img/body.png",
             "questions": [
                 {
                     "title": "Whole Body",
                     "questions": [
                         {
-                            "title": "I have had fevers",
+                            "group": "Body",
+                            "title": "I have pain",
                             "options": [
-                                "Always",
-                                "Very Often",
-                                "Sometimes",
-                                "Rarely",
-                                "Never"
+                                {
+                                    "title": "Not at all",
+                                    "event": 0,
+                                    "value": 1
+                                },
+                                {
+                                    "title": "A little bit",
+                                    "event": 7,
+                                    "value": 2
+                                },
+                                {
+                                    "title": "Somewhat",
+                                    "event": 7,
+                                    "value": 3
+                                },
+                                {
+                                    "title": "Quite a bit",
+                                    "event": 1,
+                                    "value": 4
+                                },
+                                {
+                                    "title": "Very much",
+                                    "event": 1,
+                                    "value": 5
+                                }
                             ],
-                            "slider": true
+                            "slider": true,
+                            "events": [
+                                0,
+                                7,
+                                7,
+                                1,
+                                1
+                            ]
                         },
                         {
-                            "title": "I have had fatigue",
+                            "group": "Body",
+                            "title": "I have fatigue",
                             "options": [
-                                "Always",
-                                "Very Often",
-                                "Sometimes",
-                                "Rarely",
-                                "Never"
+                                {
+                                    "title": "Not at all",
+                                    "event": 0,
+                                    "value": 1
+                                },
+                                {
+                                    "title": "A little bit",
+                                    "event": 7,
+                                    "value": 2
+                                },
+                                {
+                                    "title": "Somewhat",
+                                    "event": 7,
+                                    "value": 3
+                                },
+                                {
+                                    "title": "Quite a bit",
+                                    "event": 7,
+                                    "value": 4
+                                },
+                                {
+                                    "title": "Very much",
+                                    "event": 7,
+                                    "value": 5
+                                }
                             ],
-                            "slider": true
+                            "slider": true,
+                            "events": [
+                                0,
+                                7,
+                                7,
+                                7,
+                                7
+                            ]
                         },
                         {
-                            "title": "I have had trouble sleeping",
+                            "group": "Body",
+                            "title": "I have trouble sleeping",
                             "options": [
-                                "Always",
-                                "Very Often",
-                                "Sometimes",
-                                "Rarely",
-                                "Never"
+                                {
+                                    "title": "Not at all",
+                                    "event": 0,
+                                    "value": 1
+                                },
+                                {
+                                    "title": "A little bit",
+                                    "event": 7,
+                                    "value": 2
+                                },
+                                {
+                                    "title": "Somewhat",
+                                    "event": 7,
+                                    "value": 3
+                                },
+                                {
+                                    "title": "Quite a bit",
+                                    "event": 7,
+                                    "value": 4
+                                },
+                                {
+                                    "title": "Very much",
+                                    "event": 7,
+                                    "value": 5
+                                }
                             ],
-                            "slider": true
+                            "slider": true,
+                            "events": [
+                                0,
+                                7,
+                                7,
+                                7,
+                                7
+                            ]
                         },
                         {
-                            "title": "I have had memory problems",
+                            "group": "Body",
+                            "title": "I have memory problems",
                             "options": [
-                                "Always",
-                                "Very Often",
-                                "Sometimes",
-                                "Rarely",
-                                "Never"
+                                {
+                                    "title": "Not at all",
+                                    "event": 0,
+                                    "value": 1
+                                },
+                                {
+                                    "title": "A little bit",
+                                    "event": 7,
+                                    "value": 2
+                                },
+                                {
+                                    "title": "Somewhat",
+                                    "event": 7,
+                                    "value": 3
+                                },
+                                {
+                                    "title": "Quite a bit",
+                                    "event": 7,
+                                    "value": 4
+                                },
+                                {
+                                    "title": "Very much",
+                                    "event": 7,
+                                    "value": 5
+                                }
                             ],
-                            "slider": true
+                            "slider": true,
+                            "events": [
+                                0,
+                                7,
+                                7,
+                                7,
+                                7
+                            ]
                         },
                         {
-                            "title": "I have had weight loss",
+                            "group": "Body",
+                            "title": "I have significant unintentional weight loss > 5 lbs.",
                             "options": [
-                                "Always",
-                                "Very Often",
-                                "Sometimes",
-                                "Rarely",
-                                "Never"
+                                {
+                                    "title": "Not at all",
+                                    "event": 0,
+                                    "value": 1
+                                },
+                                {
+                                    "title": "A little bit",
+                                    "event": 7,
+                                    "value": 2
+                                },
+                                {
+                                    "title": "Somewhat",
+                                    "event": 7,
+                                    "value": 3
+                                },
+                                {
+                                    "title": "Quite a bit",
+                                    "event": 1,
+                                    "value": 4
+                                },
+                                {
+                                    "title": "Very much",
+                                    "event": 1,
+                                    "value": 5
+                                }
                             ],
-                            "slider": true
+                            "slider": true,
+                            "events": [
+                                0,
+                                7,
+                                7,
+                                1,
+                                1
+                            ]
                         },
                         {
-                            "title": "I have had dry, itchy skin",
+                            "group": "Body",
+                            "title": "I have dry, itchy skin",
                             "options": [
-                                "Always",
-                                "Very Often",
-                                "Sometimes",
-                                "Rarely",
-                                "Never"
+                                {
+                                    "title": "Not at all",
+                                    "event": 0,
+                                    "value": 1
+                                },
+                                {
+                                    "title": "A little bit",
+                                    "event": 7,
+                                    "value": 2
+                                },
+                                {
+                                    "title": "Somewhat",
+                                    "event": 7,
+                                    "value": 3
+                                },
+                                {
+                                    "title": "Quite a bit",
+                                    "event": 7,
+                                    "value": 4
+                                },
+                                {
+                                    "title": "Very much",
+                                    "event": 7,
+                                    "value": 5
+                                }
                             ],
-                            "slider": true
+                            "slider": true,
+                            "events": [
+                                0,
+                                7,
+                                7,
+                                7,
+                                7
+                            ]
                         },
                         {
-                            "title": "I have had swelling in my limbs or abdomen",
+                            "group": "Body",
+                            "title": "I have swelling in my limbs",
                             "options": [
-                                "Always",
-                                "Very Often",
-                                "Sometimes",
-                                "Rarely",
-                                "Never"
+                                {
+                                    "title": "Not at all",
+                                    "event": 0,
+                                    "value": 1
+                                },
+                                {
+                                    "title": "A little bit",
+                                    "event": 7,
+                                    "value": 2
+                                },
+                                {
+                                    "title": "Somewhat",
+                                    "event": 7,
+                                    "value": 3
+                                },
+                                {
+                                    "title": "Quite a bit",
+                                    "event": 1,
+                                    "value": 4
+                                },
+                                {
+                                    "title": "Very much",
+                                    "event": 1,
+                                    "value": 5
+                                }
                             ],
-                            "slider": true
+                            "slider": true,
+                            "events": [
+                                0,
+                                7,
+                                7,
+                                1,
+                                1
+                            ]
                         },
                         {
-                            "title": "I have had tingling in my hands or feet",
+                            "group": "Body",
+                            "title": "I have tingling in my hands or feet",
                             "options": [
-                                "Always",
-                                "Very Often",
-                                "Sometimes",
-                                "Rarely",
-                                "Never"
+                                {
+                                    "title": "Not at all",
+                                    "event": 0,
+                                    "value": 1
+                                },
+                                {
+                                    "title": "A little bit",
+                                    "event": 7,
+                                    "value": 2
+                                },
+                                {
+                                    "title": "Somewhat",
+                                    "event": 7,
+                                    "value": 3
+                                },
+                                {
+                                    "title": "Quite a bit",
+                                    "event": 7,
+                                    "value": 4
+                                },
+                                {
+                                    "title": "Very much",
+                                    "event": 1,
+                                    "value": 5
+                                }
                             ],
-                            "slider": true
+                            "slider": true,
+                            "events": [
+                                0,
+                                7,
+                                7,
+                                7,
+                                1
+                            ]
                         },
                         {
-                            "title": "I have had pain",
+                            "group": "Body",
+                            "title": "I have fevers",
                             "options": [
-                                "Always",
-                                "Very Often",
-                                "Sometimes",
-                                "Rarely",
-                                "Never"
+                                {
+                                    "title": "Not at all",
+                                    "event": 0,
+                                    "value": 1
+                                },
+                                {
+                                    "title": "A little bit",
+                                    "event": 7,
+                                    "value": 2
+                                },
+                                {
+                                    "title": "Somewhat",
+                                    "event": 7,
+                                    "value": 3
+                                },
+                                {
+                                    "title": "Quite a bit",
+                                    "event": 1,
+                                    "value": 4
+                                },
+                                {
+                                    "title": "Very much",
+                                    "event": 1,
+                                    "value": 5
+                                }
                             ],
-                            "slider": true
+                            "slider": true,
+                            "events": [
+                                0,
+                                7,
+                                7,
+                                1,
+                                1
+                            ]
                         },
                         {
-                            "title": "I have had bone or joint pain",
+                            "group": "Body",
+                            "title": "I have bone or joint pain",
                             "options": [
-                                "Always",
-                                "Very Often",
-                                "Sometimes",
-                                "Rarely",
-                                "Never"
+                                {
+                                    "title": "Not at all",
+                                    "event": 0,
+                                    "value": 1
+                                },
+                                {
+                                    "title": "A little bit",
+                                    "event": 7,
+                                    "value": 2
+                                },
+                                {
+                                    "title": "Somewhat",
+                                    "event": 7,
+                                    "value": 3
+                                },
+                                {
+                                    "title": "Quite a bit",
+                                    "event": 7,
+                                    "value": 4
+                                },
+                                {
+                                    "title": "Very much",
+                                    "event": 1,
+                                    "value": 5
+                                }
                             ],
-                            "slider": true
+                            "slider": true,
+                            "events": [
+                                0,
+                                7,
+                                7,
+                                7,
+                                1
+                            ]
                         },
                         {
+                            "group": "Body",
                             "title": "I am worried about my appearance",
                             "options": [
-                                "Always",
-                                "Very Often",
-                                "Sometimes",
-                                "Rarely",
-                                "Never"
+                                {
+                                    "title": "Not at all",
+                                    "event": 0,
+                                    "value": 1
+                                },
+                                {
+                                    "title": "A little bit",
+                                    "event": 7,
+                                    "value": 2
+                                },
+                                {
+                                    "title": "Somewhat",
+                                    "event": 7,
+                                    "value": 3
+                                },
+                                {
+                                    "title": "Quite a bit",
+                                    "event": 7,
+                                    "value": 4
+                                },
+                                {
+                                    "title": "Very much",
+                                    "event": 7,
+                                    "value": 5
+                                }
                             ],
-                            "slider": true
+                            "slider": true,
+                            "events": [
+                                0,
+                                7,
+                                7,
+                                7,
+                                7
+                            ]
                         }
                     ]
                 },
@@ -241,97 +443,204 @@
                     "title": "Head, Face, Neck",
                     "questions": [
                         {
-                            "title": "I have had headaches",
+                            "group": "Body",
+                            "title": "I have headaches",
                             "options": [
-                                "Always",
-                                "Very Often",
-                                "Sometimes",
-                                "Rarely",
-                                "Never"
+                                {
+                                    "title": "Not at all",
+                                    "event": 0,
+                                    "value": 1
+                                },
+                                {
+                                    "title": "A little bit",
+                                    "event": 7,
+                                    "value": 2
+                                },
+                                {
+                                    "title": "Somewhat",
+                                    "event": 7,
+                                    "value": 3
+                                },
+                                {
+                                    "title": "Quite a bit",
+                                    "event": 1,
+                                    "value": 4
+                                },
+                                {
+                                    "title": "Very much",
+                                    "event": 1,
+                                    "value": 5
+                                }
                             ],
-                            "slider": true
+                            "slider": true,
+                            "events": [
+                                0,
+                                7,
+                                7,
+                                1,
+                                1
+                            ]
                         },
                         {
-                            "title": "I have had difficulty chewing or eating",
+                            "group": "Body",
+                            "title": "I have difficulty chewing or eating",
                             "options": [
-                                "Always",
-                                "Very Often",
-                                "Sometimes",
-                                "Rarely",
-                                "Never"
+                                {
+                                    "title": "Not at all",
+                                    "event": 0,
+                                    "value": 1
+                                },
+                                {
+                                    "title": "A little bit",
+                                    "event": 7,
+                                    "value": 2
+                                },
+                                {
+                                    "title": "Somewhat",
+                                    "event": 7,
+                                    "value": 3
+                                },
+                                {
+                                    "title": "Quite a bit",
+                                    "event": 1,
+                                    "value": 4
+                                },
+                                {
+                                    "title": "Very much",
+                                    "event": 1,
+                                    "value": 5
+                                }
                             ],
-                            "slider": true
+                            "slider": true,
+                            "events": [
+                                0,
+                                7,
+                                7,
+                                1,
+                                1
+                            ]
                         },
                         {
-                            "title": "I have had sores in my mouth or lips",
+                            "group": "Body",
+                            "title": "I have sores in my mouth or lips",
                             "options": [
-                                "Always",
-                                "Very Often",
-                                "Sometimes",
-                                "Rarely",
-                                "Never"
+                                {
+                                    "title": "Not at all",
+                                    "event": 0,
+                                    "value": 1
+                                },
+                                {
+                                    "title": "A little bit",
+                                    "event": 7,
+                                    "value": 2
+                                },
+                                {
+                                    "title": "Somewhat",
+                                    "event": 7,
+                                    "value": 3
+                                },
+                                {
+                                    "title": "Quite a bit",
+                                    "event": 1,
+                                    "value": 4
+                                },
+                                {
+                                    "title": "Very much",
+                                    "event": 1,
+                                    "value": 5
+                                }
                             ],
-                            "slider": true
+                            "slider": true,
+                            "events": [
+                                0,
+                                7,
+                                7,
+                                1,
+                                1
+                            ]
                         },
                         {
-                            "title": "I have had a dry or congested nose",
+                            "group": "Body",
+                            "title": "I have a dry or congested nose",
                             "options": [
-                                "Always",
-                                "Very Often",
-                                "Sometimes",
-                                "Rarely",
-                                "Never"
+                                {
+                                    "title": "Not at all",
+                                    "event": 0,
+                                    "value": 1
+                                },
+                                {
+                                    "title": "A little bit",
+                                    "event": 7,
+                                    "value": 2
+                                },
+                                {
+                                    "title": "Somewhat",
+                                    "event": 7,
+                                    "value": 3
+                                },
+                                {
+                                    "title": "Quite a bit",
+                                    "event": 7,
+                                    "value": 4
+                                },
+                                {
+                                    "title": "Very much",
+                                    "event": 1,
+                                    "value": 5
+                                }
                             ],
-                            "slider": true
+                            "slider": true,
+                            "events": [
+                                0,
+                                7,
+                                7,
+                                7,
+                                1
+                            ]
                         }
                     ]
                 },
                 {
-                    "title": "Respiration and Hear",
+                    "title": "Respiration and Heart",
                     "questions": [
                         {
-                            "title": "I have had difficulty breathing",
+                            "group": "Body",
+                            "title": "I have new difficulty breathing, shortness of breath, or chest pain",
                             "options": [
-                                "Always",
-                                "Very Often",
-                                "Sometimes",
-                                "Rarely",
-                                "Never"
+                                {
+                                    "title": "Not at all",
+                                    "event": 0,
+                                    "value": 1
+                                },
+                                {
+                                    "title": "A little bit",
+                                    "event": 3,
+                                    "value": 2
+                                },
+                                {
+                                    "title": "Somewhat",
+                                    "event": 3,
+                                    "value": 3
+                                },
+                                {
+                                    "title": "Quite a bit",
+                                    "event": 3,
+                                    "value": 4
+                                },
+                                {
+                                    "title": "Very much",
+                                    "event": 3,
+                                    "value": 5
+                                }
                             ],
-                            "slider": true
-                        },
-                        {
-                            "title": "I have had shortness of breath",
-                            "options": [
-                                "Always",
-                                "Very Often",
-                                "Sometimes",
-                                "Rarely",
-                                "Never"
-                            ],
-                            "slider": true
-                        },
-                        {
-                            "title": "I have had chest pain",
-                            "options": [
-                                "Always",
-                                "Very Often",
-                                "Sometimes",
-                                "Rarely",
-                                "Never"
-                            ],
-                            "slider": true
-                        },
-                        {
-                            "title": "I have had heart palpitations",
-                            "options": [
-                                "Always",
-                                "Very Often",
-                                "Sometimes",
-                                "Rarely",
-                                "Never"
-                            ],
-                            "slider": true
+                            "slider": true,
+                            "events": [
+                                0,
+                                3,
+                                3,
+                                3,
+                                3
+                            ]
                         }
                     ]
                 },
@@ -339,59 +648,199 @@
                     "title": "Stomach and Gut",
                     "questions": [
                         {
-                            "title": "I have had nausea or vomiting",
+                            "group": "Body",
+                            "title": "I have had nausea or vomiting for longer than 24 hours",
                             "options": [
-                                "Always",
-                                "Very Often",
-                                "Sometimes",
-                                "Rarely",
-                                "Never"
+                                {
+                                    "title": "Not at all",
+                                    "event": 0,
+                                    "value": 1
+                                },
+                                {
+                                    "title": "A little bit",
+                                    "event": 7,
+                                    "value": 2
+                                },
+                                {
+                                    "title": "Somewhat",
+                                    "event": 1,
+                                    "value": 3
+                                },
+                                {
+                                    "title": "Quite a bit",
+                                    "event": 1,
+                                    "value": 4
+                                },
+                                {
+                                    "title": "Very much",
+                                    "event": 1,
+                                    "value": 5
+                                }
                             ],
-                            "slider": true
+                            "slider": true,
+                            "events": [
+                                0,
+                                7,
+                                1,
+                                1,
+                                1
+                            ]
                         },
                         {
-                            "title": "I have had diarrhea",
+                            "group": "Body",
+                            "title": "I have had diarrhea for longer than 24 hours",
                             "options": [
-                                "Always",
-                                "Very Often",
-                                "Sometimes",
-                                "Rarely",
-                                "Never"
+                                {
+                                    "title": "Not at all",
+                                    "event": 0,
+                                    "value": 1
+                                },
+                                {
+                                    "title": "A little bit",
+                                    "event": 7,
+                                    "value": 2
+                                },
+                                {
+                                    "title": "Somewhat",
+                                    "event": 1,
+                                    "value": 3
+                                },
+                                {
+                                    "title": "Quite a bit",
+                                    "event": 1,
+                                    "value": 4
+                                },
+                                {
+                                    "title": "Very much",
+                                    "event": 1,
+                                    "value": 5
+                                }
                             ],
-                            "slider": true
+                            "slider": true,
+                            "events": [
+                                0,
+                                7,
+                                1,
+                                1,
+                                1
+                            ]
                         },
                         {
-                            "title": "I have had a decreased or increased appetite",
+                            "group": "Body",
+                            "title": "I have a decreased appetite",
                             "options": [
-                                "Always",
-                                "Very Often",
-                                "Sometimes",
-                                "Rarely",
-                                "Never"
+                                {
+                                    "title": "Not at all",
+                                    "event": 0,
+                                    "value": 1
+                                },
+                                {
+                                    "title": "A little bit",
+                                    "event": 7,
+                                    "value": 2
+                                },
+                                {
+                                    "title": "Somewhat",
+                                    "event": 7,
+                                    "value": 3
+                                },
+                                {
+                                    "title": "Quite a bit",
+                                    "event": 7,
+                                    "value": 4
+                                },
+                                {
+                                    "title": "Very much",
+                                    "event": 1,
+                                    "value": 5
+                                }
                             ],
-                            "slider": true
+                            "slider": true,
+                            "events": [
+                                0,
+                                7,
+                                7,
+                                7,
+                                1
+                            ]
                         },
                         {
-                            "title": "I have had constipation",
+                            "group": "Body",
+                            "title": "I have constipation",
                             "options": [
-                                "Always",
-                                "Very Often",
-                                "Sometimes",
-                                "Rarely",
-                                "Never"
+                                {
+                                    "title": "Not at all",
+                                    "event": 0,
+                                    "value": 1
+                                },
+                                {
+                                    "title": "A little bit",
+                                    "event": 7,
+                                    "value": 2
+                                },
+                                {
+                                    "title": "Somewhat",
+                                    "event": 7,
+                                    "value": 3
+                                },
+                                {
+                                    "title": "Quite a bit",
+                                    "event": 7,
+                                    "value": 4
+                                },
+                                {
+                                    "title": "Very much",
+                                    "event": 1,
+                                    "value": 5
+                                }
                             ],
-                            "slider": true
+                            "slider": true,
+                            "events": [
+                                0,
+                                7,
+                                7,
+                                7,
+                                1
+                            ]
                         },
                         {
-                            "title": "I have had indigestion",
+                            "group": "Body",
+                            "title": "I have indigestion",
                             "options": [
-                                "Always",
-                                "Very Often",
-                                "Sometimes",
-                                "Rarely",
-                                "Never"
+                                {
+                                    "title": "Not at all",
+                                    "event": 0,
+                                    "value": 1
+                                },
+                                {
+                                    "title": "A little bit",
+                                    "event": 7,
+                                    "value": 2
+                                },
+                                {
+                                    "title": "Somewhat",
+                                    "event": 7,
+                                    "value": 3
+                                },
+                                {
+                                    "title": "Quite a bit",
+                                    "event": 7,
+                                    "value": 4
+                                },
+                                {
+                                    "title": "Very much",
+                                    "event": 1,
+                                    "value": 5
+                                }
                             ],
-                            "slider": true
+                            "slider": true,
+                            "events": [
+                                0,
+                                7,
+                                7,
+                                7,
+                                1
+                            ]
                         }
                     ]
                 },
@@ -399,26 +848,351 @@
                     "title": "Other",
                     "questions": [
                         {
-                            "title": "I have had increased or decreased urination",
+                            "group": "Body",
+                            "title": "I have increased or decreased urination",
                             "options": [
-                                "Always",
-                                "Very Often",
-                                "Sometimes",
-                                "Rarely",
-                                "Never"
+                                {
+                                    "title": "Not at all",
+                                    "event": 0,
+                                    "value": 1
+                                },
+                                {
+                                    "title": "A little bit",
+                                    "event": 7,
+                                    "value": 2
+                                },
+                                {
+                                    "title": "Somewhat",
+                                    "event": 7,
+                                    "value": 3
+                                },
+                                {
+                                    "title": "Quite a bit",
+                                    "event": 7,
+                                    "value": 4
+                                },
+                                {
+                                    "title": "Very much",
+                                    "event": 7,
+                                    "value": 5
+                                }
+                            ],
+                            "slider": true,
+                            "events": [
+                                0,
+                                7,
+                                7,
+                                7,
+                                7
+                            ]
+                        },
+                        {
+                            "group": "Body",
+                            "title": "I have changes in sexual function and/or intimacy",
+                            "options": [
+                                {
+                                    "title": "Not at all",
+                                    "event": 0,
+                                    "value": 1
+                                },
+                                {
+                                    "title": "A little bit",
+                                    "event": 7,
+                                    "value": 2
+                                },
+                                {
+                                    "title": "Somewhat",
+                                    "event": 7,
+                                    "value": 3
+                                },
+                                {
+                                    "title": "Quite a bit",
+                                    "event": 7,
+                                    "value": 4
+                                },
+                                {
+                                    "title": "Very much",
+                                    "event": 7,
+                                    "value": 5
+                                }
+                            ],
+                            "slider": true,
+                            "events": [
+                                0,
+                                7,
+                                7,
+                                7,
+                                7
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "title": "Mind",
+            "subtitle": "How have your spirits been over the last 7 days, including today?",
+            "img": "img/spirit.png",
+            "questions": [
+                {
+                    "title": "Over the last 2 weeks, how often have you been bothered by the following problems:",
+                    "questions": [
+                        {
+                            "group": "Mind",
+                            "title": "Feeling down, depressed or hopeless",
+                            "options": [
+                                {
+                                    "title": "Not at all",
+                                    "event": 0,
+                                    "value": 1
+                                },
+                                {
+                                    "title": "Serveral days",
+                                    "event": 6,
+                                    "value": 2
+                                },
+                                {
+                                    "title": "More than half the day",
+                                    "event": 6,
+                                    "value": 3
+                                },
+                                {
+                                    "title": "Nearly every day",
+                                    "event": 7,
+                                    "value": 4
+                                }
                             ],
                             "slider": true
                         },
                         {
-                            "title": "I have had changes in sexual function",
+                            "group": "Mind",
+                            "title": "Not being able to stop or control worrying",
                             "options": [
-                                "Always",
-                                "Very Often",
-                                "Sometimes",
-                                "Rarely",
-                                "Never"
+                                {
+                                    "title": "Not at all",
+                                    "event": 0,
+                                    "value": 1
+                                },
+                                {
+                                    "title": "Serveral days",
+                                    "event": 6,
+                                    "value": 2
+                                },
+                                {
+                                    "title": "More than half the day",
+                                    "event": 6,
+                                    "value": 3
+                                },
+                                {
+                                    "title": "Nearly every day",
+                                    "event": 7,
+                                    "value": 4
+                                }
                             ],
                             "slider": true
+                        },
+                        {
+                            "group": "Mind",
+                            "title": "Feeling nervous, anxious or on edge",
+                            "options": [
+                                {
+                                    "title": "Not at all",
+                                    "event": 0,
+                                    "value": 1
+                                },
+                                {
+                                    "title": "Serveral days",
+                                    "event": 6,
+                                    "value": 2
+                                },
+                                {
+                                    "title": "More than half the day",
+                                    "event": 6,
+                                    "value": 3
+                                },
+                                {
+                                    "title": "Nearly every day",
+                                    "event": 4,
+                                    "value": 4
+                                }
+                            ],
+                            "slider": true
+                        },
+                        {
+                            "group": "Mind",
+                            "title": "Little interest or pleasure in doing things",
+                            "options": [
+                                {
+                                    "title": "Not at all",
+                                    "event": 0,
+                                    "value": 1
+                                },
+                                {
+                                    "title": "Serveral days",
+                                    "event": 6,
+                                    "value": 2
+                                },
+                                {
+                                    "title": "More than half the day",
+                                    "event": 6,
+                                    "value": 3
+                                },
+                                {
+                                    "title": "Nearly every day",
+                                    "event": 7,
+                                    "value": 4
+                                }
+                            ],
+                            "slider": true
+                        },
+                        {
+                            "group": "Mind",
+                            "title": "Felt that you lack companionship",
+                            "options": [
+                                {
+                                    "title": "Hardly ever",
+                                    "event": 0,
+                                    "value": 1
+                                },
+                                {
+                                    "title": "Some of the time",
+                                    "event": 6,
+                                    "value": 2
+                                },
+                                {
+                                    "title": "Often",
+                                    "event": 7,
+                                    "value": 3
+                                }
+                            ],
+                            "slider": true
+                        },
+                        {
+                            "group": "Mind",
+                            "title": "Felt left out",
+                            "options": [
+                                {
+                                    "title": "Hardly ever",
+                                    "event": 0,
+                                    "value": 1
+                                },
+                                {
+                                    "title": "Some of the time",
+                                    "event": 6,
+                                    "value": 2
+                                },
+                                {
+                                    "title": "Often",
+                                    "event": 7,
+                                    "value": 3
+                                }
+                            ],
+                            "slider": true
+                        },
+                        {
+                            "group": "Mind",
+                            "title": "Felt isolated from others",
+                            "options": [
+                                {
+                                    "title": "Hardly ever",
+                                    "event": 0,
+                                    "value": 1
+                                },
+                                {
+                                    "title": "Some of the time",
+                                    "event": 6,
+                                    "value": 2
+                                },
+                                {
+                                    "title": "Often",
+                                    "event": 7,
+                                    "value": 3
+                                }
+                            ],
+                            "slider": true
+                        },
+                        {
+                            "group": "Mind",
+                            "title": "Feeling guilty about being a burden on others",
+                            "options": [
+                                {
+                                    "title": "Hardly ever",
+                                    "event": 0,
+                                    "value": 1
+                                },
+                                {
+                                    "title": "Some of the time",
+                                    "event": 6,
+                                    "value": 2
+                                },
+                                {
+                                    "title": "Often",
+                                    "event": 7,
+                                    "value": 3
+                                }
+                            ],
+                            "slider": true
+                        },
+                        {
+                            "group": "Mind",
+                            "title": "Feeling uncertain about the future",
+                            "options": [
+                                {
+                                    "title": "Hardly ever",
+                                    "event": 0,
+                                    "value": 1
+                                },
+                                {
+                                    "title": "Some of the time",
+                                    "event": 6,
+                                    "value": 2
+                                },
+                                {
+                                    "title": "Often",
+                                    "event": 7,
+                                    "value": 3
+                                }
+                            ],
+                            "slider": true
+                        },
+                        {
+                            "group": "Mind",
+                            "title": "Feeling irritable",
+                            "options": [
+                                {
+                                    "title": "Hardly ever",
+                                    "event": 0,
+                                    "value": 1
+                                },
+                                {
+                                    "title": "Some of the time",
+                                    "event": 6,
+                                    "value": 2
+                                },
+                                {
+                                    "title": "Often",
+                                    "event": 7,
+                                    "value": 3
+                                }
+                            ],
+                            "slider": true
+                        },
+                        {
+                            "group": "Mind",
+                            "title": "Would you like to make an appointment to get spiritual or faith-based support?",
+                            "options": [
+                                {
+                                    "title": "Yes, I would",
+                                    "event": 5,
+                                    "value": 1
+                                },
+                                {
+                                    "title": "No, thanks",
+                                    "event": 0,
+                                    "value": 2
+                                }
+                            ],
+                            "radio": true
                         }
                     ]
                 }
@@ -426,42 +1200,105 @@
         },
         {
             "title": "Living",
-            "subtitle": "How are you getting along in your daily activities over the last week, including today?",
-            "img": "/img/living.png",
+            "subtitle": "How are you getting along in your daily activities over the last 7 days, including today? When thinking about your cancer diagnosis, how would you answer the following?",
+            "img": "img/living.png",
             "questions": [
                 {
                     "title": "Household",
                     "questions": [
                         {
+                            "group": "Living",
                             "title": "I can bathe and dress myself",
                             "options": [
-                                "Strongly Agree",
-                                "Agree",
-                                "Undecided",
-                                "Disagree",
-                                "Strongly Disagree"
+                                {
+                                    "title": "Strongly Agree",
+                                    "event": 0,
+                                    "value": 1
+                                },
+                                {
+                                    "title": "Agree",
+                                    "event": 0,
+                                    "value": 2
+                                },
+                                {
+                                    "title": "Undecided",
+                                    "event": 0,
+                                    "value": 3
+                                },
+                                {
+                                    "title": "Disagree",
+                                    "event": 7,
+                                    "value": 4
+                                },
+                                {
+                                    "title": "Strongly Disagree",
+                                    "event": 7,
+                                    "value": 5
+                                }
                             ],
                             "radio": true
                         },
                         {
-                            "title": "I can work/go to school / do household duties",
+                            "group": "Living",
+                            "title": "I can work/go to school",
                             "options": [
-                                "Strongly Agree",
-                                "Agree",
-                                "Undecided",
-                                "Disagree",
-                                "Strongly Disagree"
+                                {
+                                    "title": "Strongly Agree",
+                                    "event": 0,
+                                    "value": 1
+                                },
+                                {
+                                    "title": "Agree",
+                                    "event": 0,
+                                    "value": 2
+                                },
+                                {
+                                    "title": "Undecided",
+                                    "event": 0,
+                                    "value": 3
+                                },
+                                {
+                                    "title": "Disagree",
+                                    "event": 7,
+                                    "value": 4
+                                },
+                                {
+                                    "title": "Strongly Disagree",
+                                    "event": 7,
+                                    "value": 5
+                                }
                             ],
                             "radio": true
                         },
                         {
+                            "group": "Living",
                             "title": "I can get around",
                             "options": [
-                                "Strongly Agree",
-                                "Agree",
-                                "Undecided",
-                                "Disagree",
-                                "Strongly Disagree"
+                                {
+                                    "title": "Strongly Agree",
+                                    "event": 0,
+                                    "value": 1
+                                },
+                                {
+                                    "title": "Agree",
+                                    "event": 0,
+                                    "value": 2
+                                },
+                                {
+                                    "title": "Undecided",
+                                    "event": 0,
+                                    "value": 3
+                                },
+                                {
+                                    "title": "Disagree",
+                                    "event": 7,
+                                    "value": 4
+                                },
+                                {
+                                    "title": "Strongly Disagree",
+                                    "event": 7,
+                                    "value": 5
+                                }
                             ],
                             "radio": true
                         }
@@ -471,46 +1308,130 @@
                     "title": "Finances",
                     "questions": [
                         {
-                            "title": "I am having no problems with health insurance",
+                            "group": "Living",
+                            "title": "I have health insurance to cover me during my diagnosis",
                             "options": [
-                                "Strongly Agree",
-                                "Agree",
-                                "Undecided",
-                                "Disagree",
-                                "Strongly Disagree"
+                                {
+                                    "title": "Strongly Agree",
+                                    "event": 0,
+                                    "value": 1
+                                },
+                                {
+                                    "title": "Agree",
+                                    "event": 0,
+                                    "value": 2
+                                },
+                                {
+                                    "title": "Undecided",
+                                    "event": 0,
+                                    "value": 3
+                                },
+                                {
+                                    "title": "Disagree",
+                                    "event": 7,
+                                    "value": 4
+                                },
+                                {
+                                    "title": "Strongly Disagree",
+                                    "event": 7,
+                                    "value": 5
+                                }
                             ],
                             "radio": true
                         },
                         {
-                            "title": "I am having no problems with housing",
+                            "group": "Living",
+                            "title": "I have housing while I am in treatment",
                             "options": [
-                                "Strongly Agree",
-                                "Agree",
-                                "Undecided",
-                                "Disagree",
-                                "Strongly Disagree"
+                                {
+                                    "title": "Strongly Agree",
+                                    "event": 0,
+                                    "value": 1
+                                },
+                                {
+                                    "title": "Agree",
+                                    "event": 0,
+                                    "value": 2
+                                },
+                                {
+                                    "title": "Undecided",
+                                    "event": 0,
+                                    "value": 3
+                                },
+                                {
+                                    "title": "Disagree",
+                                    "event": 7,
+                                    "value": 4
+                                },
+                                {
+                                    "title": "Strongly Disagree",
+                                    "event": 7,
+                                    "value": 5
+                                }
                             ],
                             "radio": true
                         },
                         {
-                            "title": "I am having no problems with transportation",
+                            "group": "Living",
+                            "title": "I have transportation to and from cancer treatment",
                             "options": [
-                                "Strongly Agree",
-                                "Agree",
-                                "Undecided",
-                                "Disagree",
-                                "Strongly Disagree"
+                                {
+                                    "title": "Strongly Agree",
+                                    "event": 0,
+                                    "value": 1
+                                },
+                                {
+                                    "title": "Agree",
+                                    "event": 0,
+                                    "value": 2
+                                },
+                                {
+                                    "title": "Undecided",
+                                    "event": 0,
+                                    "value": 3
+                                },
+                                {
+                                    "title": "Disagree",
+                                    "event": 7,
+                                    "value": 4
+                                },
+                                {
+                                    "title": "Strongly Disagree",
+                                    "event": 7,
+                                    "value": 5
+                                }
                             ],
                             "radio": true
                         },
                         {
-                            "title": "I am having no problems with paying my bills",
+                            "group": "Living",
+                            "title": "I am paying my bills while I am going through treatment; my ability to pay my bills has changed since being diagnosed/has increased, has decreased, etc.",
                             "options": [
-                                "Strongly Agree",
-                                "Agree",
-                                "Undecided",
-                                "Disagree",
-                                "Strongly Disagree"
+                                {
+                                    "title": "Strongly Agree",
+                                    "event": 0,
+                                    "value": 1
+                                },
+                                {
+                                    "title": "Agree",
+                                    "event": 0,
+                                    "value": 2
+                                },
+                                {
+                                    "title": "Undecided",
+                                    "event": 0,
+                                    "value": 3
+                                },
+                                {
+                                    "title": "Disagree",
+                                    "event": 7,
+                                    "value": 4
+                                },
+                                {
+                                    "title": "Strongly Disagree",
+                                    "event": 7,
+                                    "value": 5
+                                }
                             ],
                             "radio": true
                         }
@@ -520,24 +1441,66 @@
                     "title": "Relationships",
                     "questions": [
                         {
-                            "title": "I can maintain my family and social obligations",
+                            "group": "Living",
+                            "title": "I can maintain my family and social obligations while I am going through treatmen",
                             "options": [
-                                "Strongly Agree",
-                                "Agree",
-                                "Undecided",
-                                "Disagree",
-                                "Strongly Disagree"
+                                {
+                                    "title": "Strongly Agree",
+                                    "event": 0,
+                                    "value": 1
+                                },
+                                {
+                                    "title": "Agree",
+                                    "event": 0,
+                                    "value": 2
+                                },
+                                {
+                                    "title": "Undecided",
+                                    "event": 0,
+                                    "value": 3
+                                },
+                                {
+                                    "title": "Disagree",
+                                    "event": 7,
+                                    "value": 4
+                                },
+                                {
+                                    "title": "Strongly Disagree",
+                                    "event": 7,
+                                    "value": 5
+                                }
                             ],
                             "radio": true
                         },
                         {
-                            "title": "I have someone to help/support me",
+                            "group": "Living",
+                            "title": "I have someone to help/support me while I am going through treatment",
                             "options": [
-                                "Strongly Agree",
-                                "Agree",
-                                "Undecided",
-                                "Disagree",
-                                "Strongly Disagree"
+                                {
+                                    "title": "Strongly Agree",
+                                    "event": 0,
+                                    "value": 1
+                                },
+                                {
+                                    "title": "Agree",
+                                    "event": 0,
+                                    "value": 2
+                                },
+                                {
+                                    "title": "Undecided",
+                                    "event": 0,
+                                    "value": 3
+                                },
+                                {
+                                    "title": "Disagree",
+                                    "event": 7,
+                                    "value": 4
+                                },
+                                {
+                                    "title": "Strongly Disagree",
+                                    "event": 7,
+                                    "value": 5
+                                }
                             ],
                             "radio": true
                         }
@@ -547,46 +1510,66 @@
                     "title": "Medications and drugs",
                     "questions": [
                         {
-                            "title": "I have access to the medication I need",
+                            "group": "Living",
+                            "title": "I have access to drugs prescribed to me",
                             "options": [
-                                "Strongly Agree",
-                                "Agree",
-                                "Undecided",
-                                "Disagree",
-                                "Strongly Disagree"
+                                {
+                                    "title": "Strongly Agree",
+                                    "event": 0,
+                                    "value": 1
+                                },
+                                {
+                                    "title": "Agree",
+                                    "event": 0,
+                                    "value": 2
+                                },
+                                {
+                                    "title": "Undecided",
+                                    "event": 0,
+                                    "value": 3
+                                },
+                                {
+                                    "title": "Disagree",
+                                    "event": 2,
+                                    "value": 4
+                                },
+                                {
+                                    "title": "Strongly Disagree",
+                                    "event": 2,
+                                    "value": 5
+                                }
                             ],
                             "radio": true
                         },
                         {
-                            "title": "I am having no problems with housing",
+                            "group": "Living",
+                            "title": "I take drugs not prescribed to me",
                             "options": [
-                                "Strongly Agree",
-                                "Agree",
-                                "Undecided",
-                                "Disagree",
-                                "Strongly Disagree"
-                            ],
-                            "radio": true
-                        },
-                        {
-                            "title": "I am having no problems with transportation",
-                            "options": [
-                                "Strongly Agree",
-                                "Agree",
-                                "Undecided",
-                                "Disagree",
-                                "Strongly Disagree"
-                            ],
-                            "radio": true
-                        },
-                        {
-                            "title": "I take drugs not prescribed to me, or I’m using more pain medications than prescribed to me",
-                            "options": [
-                                "Strongly Agree",
-                                "Agree",
-                                "Undecided",
-                                "Disagree",
-                                "Strongly Disagree"
+                                {
+                                    "title": "Strongly Agree",
+                                    "event": 5,
+                                    "value": 1
+                                },
+                                {
+                                    "title": "Agree",
+                                    "event": 5,
+                                    "value": 2
+                                },
+                                {
+                                    "title": "Undecided",
+                                    "event": 0,
+                                    "value": 3
+                                },
+                                {
+                                    "title": "Disagree",
+                                    "event": 0,
+                                    "value": 4
+                                },
+                                {
+                                    "title": "Strongly Disagree",
+                                    "event": 0,
+                                    "value": 5
+                                }
                             ],
                             "radio": true
                         }
@@ -595,30 +1578,33 @@
             ]
         },
         {
-            "title": "Living",
-            "subtitle": "How are you getting along in your daily activities over the last week, including today?",
-            "img": "/img/living-text.png",
+            "title": "Wrap-up",
+            "subtitle": "",
+            "img": "img/living-text.png",
             "questions": [
                 {
                     "title": "",
                     "questions": [
                         {
-                            "title": "Which of these is most important to you?",
-                            "text": true
-                        },
-                        {
+                            "group": "Extra",
                             "title": "Is there any other information you want to tell us about?",
-                            "text": true
+                            "text": true,
+                            "event": 8
                         },
                         {
-                            "title": "Would you like to schedule time to talk with someone about your well-being?",
-                            "text": true
-                        },
-                        {
-                            "title": "Would you like to make an appointment to get spiritual or faith-based support?",
+                            "group": "Extra",
+                            "title": "Would you like to schedule time to talk with someone about coping with your diagnosis?",
                             "options": [
-                                "Yes please",
-                                "No thanks"
+                                {
+                                    "title": "Yes, I would",
+                                    "event": 5,
+                                    "value": 1
+                                },
+                                {
+                                    "title": "No, thanks",
+                                    "event": 0,
+                                    "value": 2
+                                }
                             ],
                             "radio": true
                         }

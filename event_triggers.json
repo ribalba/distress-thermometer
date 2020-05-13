@@ -1,0 +1,41 @@
+{
+    "1": {
+        "text": "Please call the oncology nurses today at (859) 562-2386 (for CT surgery patients) or UK Markey Cancer Center (859) 257-4488 during regular business hours (M-F, 8am-5pm). If you need to speak with someone outside regular business hours, please call the UK Paging Operator at (859)323-5321.",
+        "email_to": ["mypath@launchhealth.org"]
+    },
+    "2": {
+        "text": "Please call the oncology social workers today at (859) 323-2798 during regular business hours (M-F, 8am-5pm). If you need to speak with someone outside regular business hours, please call the UK Paging Operator at (859)323-5321.",
+        "email_to": ["mypath@launchhealth.org"]
+
+    },
+    "3": {
+        "text": "Please call the oncology nurses today at (859) 562-2386 (for CT surgery patients) or UK Markey Cancer Center (859) 257-4488 during regular business hours (M-F, 8am-5pm). If you need to speak with someone outside regular business hours, please call the UK Paging Operator at (859)323-5321. If you cannot reach a provider, please seek emergency medical care (911 or urgent care).",
+        "email_to": ["mypath@launchhealth.org"]
+
+    },
+    "4": {
+        "text": "Please call the oncology nurses today at (859) 562-2386 (for CT surgery patients) or UK Markey Cancer Center (859) 257-4488 during regular business hours (M-F, 8am-5pm). If you need to speak with someone outside regular business hours, please call the UK Paging Operator at (859)323-5321. If you are having thoughts of harming yourself, please call 800.273.TALK(8255).",
+        "email_to": ["mypath@launchhealth.org"]
+
+    },
+    "5": {
+        "text": "An oncology social worker will contact you at their earliest convenience. The number for the oncology social worker is (859)323-2798. If you need to speak with someone outside regular business hours, please call the UK Paging Operator at (859)323-5321.",
+        "email_to": ["mccsocialworker@uky.edu", "mypath@launchhealth.org"]
+
+    },
+    "6": {
+        "text": "An oncology social worker will send you some information at their earliest convenience. The number for the oncology social worker is (859)323-2798. If you need to speak with someone outside regular business hours, please call the UK Paging Operator at (859)323-5321.",
+        "email_to": ["mccsocialworker@uky.edu", "mypath@launchhealth.org"]
+
+    },
+    "7": {
+        "text": "Please discuss this with your provider at your next visit. A reminder will be entered into your medical record.",
+        "email_to": ["mccsocialworker@uky.edu", "mypath@launchhealth.org"]
+
+    },
+    "8": {
+        "text": "",
+        "email_to": ["mypath@launchhealth.org"]
+
+    }
+}

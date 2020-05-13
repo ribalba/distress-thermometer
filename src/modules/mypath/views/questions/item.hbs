@@ -5,8 +5,8 @@
             {{#each options}}
             <div class="field">
                 <div class="ui radio checkbox js-checkbox">
-                    <input type="radio" name="{{../id}}" data-value='{{this}}' data-header='{{../title}}'>
-                    <label>{{this}}</label>
+                    <input type="radio" name="{{../id}}" data-event='{{this.event}}' data-answer='{{this.title}}' data-value='{{this.value}}' data-header='{{../title}}' data-group='{{../group}}'>
+                    <label>{{this.title}}</label>
                 </div>
             </div>
             {{/each}}
@@ -29,8 +29,8 @@
 
                     <div class="field">
                         <div class="ui radio checkbox js-checkbox">
-                            <input type="radio" name="{{../id}}" data-value='{{this}}' data-header='{{../title}}'>
-                            <label>{{this}}</label>
+                            <input type="radio" name="{{../id}}" data-event='{{this.event}}' data-answer='{{this.title}}' data-value='{{this.value}}' data-header='{{../title}}' data-group='{{../group}}'>
+                            <label>{{this.title}}</label>
                         </div>
                     </div>
                     {{/each}}
@@ -47,7 +47,7 @@
             <div class="ui form">
                 <div class="field">
                     <label>{{title}}</label>
-                    <textarea class=".inputtext" data-header='{{title}}'></textarea>
+                    <textarea class=".inputtext" data-header='{{title}}' data-event='{{event}}' data-header='{{title}}' data-group='{{group}}'></textarea>
                 </div>
             </div>
         </div>

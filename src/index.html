@@ -3,12 +3,18 @@
     <head>
         <meta charset="utf-8">
 
-        <meta http-equiv="Content-Security-Policy" content="default-src * gap: ws: https://ssl.gstatic.com;img-src * 'self' data: content:;style-src 'self' 'unsafe-inline' data: blob:;script-src * 'unsafe-eval' 'unsafe-inline' data: blob:;font-src * data: blob 'self';">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
+        <meta name="apple-mobile-web-app-capable" content="yes">
 
-        <meta
-            name='viewport'
-            content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0'
-        />
+        <!--(if target phone)><!-->
+        <meta http-equiv="Content-Security-Policy" content="default-src 'self'  http://10.0.2.2:9000 https://distress-thermometer-server.herokuapp.com  gap: ws: https://ssl.gstatic.com 'unsafe-inline' data:; img-src * 'self' data: content: blob: 'unsafe-inline'; style-src 'self' 'unsafe-inline' data: blob:; script-src 'self' 'unsafe-inline' 'unsafe-eval' data: blob:;">
+        <!--<!(endif)-->
+
+        <!--(if target prod)><!-->
+        <meta http-equiv="Content-Security-Policy" content="default-src 'self'  https://distress-thermometer-server.herokuapp.com  gap: ws: https://ssl.gstatic.com 'unsafe-inline' data:; img-src * 'self' data: content: blob: 'unsafe-inline'; style-src 'self' 'unsafe-inline' data: blob:; script-src 'self' 'unsafe-inline' 'unsafe-eval' data: blob:;">
+        <!--<!(endif)-->
+
+
         <title>Distress Thermometer</title>
         <link rel="stylesheet" href="css/app.css">
         <link rel="stylesheet" href="sematic/semantic.min.css">
@@ -19,18 +25,21 @@
 
 
         <!--(if target dev)><!-->
-
-        <script src="js/vendors.js"></script>
-        <script src="js/app.js"></script>
-        <script>window.api_url="http://localhost:8000"</script>
-
+            <script>window.api_url="http://localhost:9000"</script>
+            <script src="js/vendors.js"></script>
+            <script src="js/app.js"></script>
         <!--<!(endif)-->
 
         <!--(if target prod)><!-->
-        <script src="js/bundle.js"></script>
-        <script>window.api_url="https://distress-thermometer-server.herokuapp.com"</script>
-
+            <script>window.api_url="https://distress-thermometer-server.herokuapp.com"</script>
+            <script src="js/bundle.js"></script>
         <!--<!(endif)-->
+
+        <!--(if target phone)><!-->
+            <script>window.api_url="http://10.0.2.2:9000"</script>
+            <script src="js/bundle.js"></script>
+        <!--<!(endif)-->
+
 
     </body>
 </html>
