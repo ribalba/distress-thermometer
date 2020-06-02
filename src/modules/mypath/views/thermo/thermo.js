@@ -10,6 +10,11 @@ module.exports = Marionette.View.extend({
     template: ThermoTemplate,
     events: {
         'click .js-quality': 'save_quality',
+        'click .js-back': 'back',
+    },
+
+    back: function(){
+        this.triggerMethod('personal:start', this);
     },
 
     save_quality: function(event){

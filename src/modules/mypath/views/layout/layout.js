@@ -92,6 +92,6 @@ module.exports = Marionette.View.extend({
 
     onRender() {
         this.onChildviewWelcomeView()
-        //this.onChildviewPersonalStart()
+        //this.onChildviewQuestionnaireFinish()
     }
 });

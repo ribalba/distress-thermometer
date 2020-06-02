@@ -57,7 +57,8 @@ module.exports = Marionette.View.extend({
             diagnosis: diagnosis,
             phone_number: phone_number,
             provider_phone_number: provider_phone_number,
-            clinic_email:clinic
+            clinic_email:clinic,
+            onesignal_id: window.idapp
         }
 
         this.model.set('user', um)

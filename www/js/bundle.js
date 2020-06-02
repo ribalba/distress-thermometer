@@ -1485,7 +1485,7 @@ module.exports={
                     "questions": [
                         {
                             "group": "Living",
-                            "title": "I can maintain my family and social obligations while I am going through treatmen",
+                            "title": "I can maintain my family and social obligations while I am going through treatment",
                             "options": [
                                 {
                                     "title": "Strongly Agree",
@@ -22892,6 +22892,40 @@ var App = require('./modules/main/app');
 var app = new App();
 app.start();
 
+
+
+document.addEventListener('deviceready', function () {
+    console.log("Ready")
+    //Remove this method to stop OneSignal Debugging
+    window.plugins.OneSignal.setLogLevel({logLevel: 6, visualLevel: 0});
+
+    var notificationOpenedCallback = function(jsonData) {
+        console.log('notificationOpenedCallback: ' + JSON.stringify(jsonData));
+    };
+    // Set your iOS Settings
+    var iosSettings = {};
+    iosSettings["kOSSettingsKeyAutoPrompt"] = false;
+    iosSettings["kOSSettingsKeyInAppLaunchURL"] = false;
+
+    window.plugins.OneSignal
+        .startInit("3ec27349-1873-4324-9f60-49fdeb45d640")
+        .handleNotificationOpened(notificationOpenedCallback)
+        .iOSSettings(iosSettings)
+        .inFocusDisplaying(window.plugins.OneSignal.OSInFocusDisplayOption.Notification)
+        .endInit();
+
+    // The promptForPushNotificationsWithUserResponse function will show the iOS push notification prompt. We recommend removing the following code and instead using an In-App Message to prompt for notification permission (See step 6)
+    window.plugins.OneSignal.promptForPushNotificationsWithUserResponse(function(accepted) {
+        console.log("User accepted notifications: " + accepted);
+    });
+
+    window.plugins.OneSignal.getPermissionSubscriptionState(function(status) {
+        window.idapp = status.subscriptionStatus.userId;
+    });
+
+
+}, false);
+
 },{"../semantic/dist/semantic.min.js":41,"./modules/main/app":43,"backbone":7,"jquery":30,"underscore":40}],43:[function(require,module,exports){
 var Backbone = require('backbone');
 var Marionette = require ('backbone.marionette');
@@ -23061,7 +23095,7 @@ arguments[4][51][0].apply(exports,arguments)
 // hbsfy compiled Handlebars template
 var HandlebarsCompiler = require('hbsfy/runtime');
 module.exports = HandlebarsCompiler.template({"compiler":[8,">= 4.3.0"],"main":function(container,depth0,helpers,partials,data) {
-    return "<div class=\"mtopbox\">\n    <h2 class=\"ui header\">\n        <img class=\"ui image\" src=\"img/path.png\">\n        <div class=\"content\">\n            Your Path\n            <div class=\"sub header mobile hidden\">Thank you for completing the questionnaire.</div>\n        </div>\n        <div class=\"sub header mobile only header-top-margin\">Thank you for completing the questionnaire.</div>\n    </h2>\n</div>\n\n\n\n<div class=\"mbottombox\">\n    <div class=\"ui inverted dimmer active js-loading\">\n        <div class=\"ui text loader\">Uploading and analysing</div>\n    </div>\n    <div class=\"ui hidden warning message js-error-uploading\">\n        <i class=\"close icon\"></i>\n        <div class=\"header\">\n            Error Uploading Data\n        </div>\n        There was an error uploading your data. This could be down to bad internet reception. We have saved and will try\n        and upload it the next time you complete a questionnaire. No data has been lost!\n    </div>\n    <div class=\"result-container\"></div>\n</div>\n\n\n\n\n</div>\n</div>\n<br>\n<button class=\"ui icon big right labeled icon blue right floated button js-done right-button\">\n    <i class=\"check icon\"></i>Finish\n</button>";
+    return "<div class=\"mtopbox\">\n    <h2 class=\"ui header\">\n        <img class=\"ui image\" src=\"img/path.png\">\n        <div class=\"content\">\n            Your Path\n            <div class=\"sub header mobile hidden\">Thank you for completing the questionnaire.</div>\n        </div>\n        <div class=\"sub header mobile only header-top-margin\">Thank you for completing the questionnaire.</div>\n    </h2>\n</div>\n\n\n\n<div class=\"mbottombox\">\n    <div class=\"ui inverted dimmer active js-loading\">\n        <div class=\"ui text loader\">Uploading and analysing</div>\n    </div>\n    <div class=\"ui hidden warning message js-error-uploading\">\n        <i class=\"close icon\"></i>\n        <div class=\"header\">\n            Error Uploading Data\n        </div>\n        There was an error uploading your data. This could be down to bad internet reception. We have saved and will try\n        and upload it the next time you complete a questionnaire. No data has been lost!\n    </div>\n    <div class=\"result-container\"></div>\n    <p></p>\n    <div class=\"ui fluid accordion\">\n        <div class=\"title\">\n            <i class=\"dropdown icon\"></i>\n            More details?\n        </div>\n        <div class=\"content\">\n            <p class=\"transition visible detail-container\">\n            </p>\n        </div>\n    </div>\n</div>\n\n<br>\n<button class=\"ui icon big right labeled icon blue right floated button js-done right-button\">\n    <i class=\"check icon\"></i>Finish\n</button>";
 },"useData":true});
 
 },{"hbsfy/runtime":29}],57:[function(require,module,exports){
@@ -23093,12 +23127,38 @@ const ResultCollection = Marionette.CollectionView.extend({
 });
 
 
+const DetailView = Marionette.View.extend({
+    className: 'item',
+
+    template: _.template(`
+            <div class="content">
+                <div class="header"><%- answer.question %></div>
+                <div class="description"><%- answer.answer %></div>
+            </div>`),
+    })
+
+const NoDetailView = Marionette.View.extend({
+	template: _.template('<p>Thank you for taking the assessment.</p>'),
+})
+
+
+const DetailCollection = Marionette.CollectionView.extend({
+	childView: DetailView,
+    emptyView: NoDetailView,
+
+    childViewContainer: '.js-list',
+    template: _.template('<h4>Your Answers</h4><div class="ui divided list js-list"></div>')
+
+});
+
+
 module.exports = Marionette.View.extend({
 
 	template: DoneTemplate,
 
 	regions: {
-		'result-container': '.result-container'
+		'result-container': '.result-container',
+		'detail-container': '.detail-container'
 	},
 
 	generate_text: function(){
@@ -23123,7 +23183,7 @@ module.exports = Marionette.View.extend({
 
 
 	onAttach: function () {
-
+        this.$('.ui.accordion').accordion();
 	},
 
 	onRender: function () {
@@ -23138,6 +23198,9 @@ module.exports = Marionette.View.extend({
 		})
 
 		this.showChildView('result-container', new ResultCollection({ collection: new Backbone.Collection(result_uni)}));
+        this.showChildView('detail-container', new DetailCollection({ collection: new Backbone.Collection(result_set)}));
+
+        console.log(result_set)
 
 
 		// Upload
@@ -23145,10 +23208,6 @@ module.exports = Marionette.View.extend({
 			result_set: result_set,
 			user: this.model.get('user')
 		}
-
-
-        //dummp_data = '{"result_set":[{"answer":{"question":"quality of life","answer":1,"event":5,"heading":"quality of life","subheading":""},"response":{"text":"An oncology social worker will contact you at their earliest convenience. The number for the oncology social worker is (859)323-2798. If you need to speak with someone outside regular business hours, please call the UK Paging Operator at (859)323-5321.","email_to":["mccsocialworker@uky.edu","mypath@launchhealth.org"]}},{"answer":{"question":"I have fatigue","answer":"Very much","event":7,"heading":"Body","subheading":"Whole Body","value":5},"response":{"text":"Please discuss this with your provider at your next visit. A reminder will be entered into your medical record.","email_to":["mccsocialworker@uky.edu","mypath@launchhealth.org"]}},{"answer":{"question":"I have tingling in my hands or feet","answer":"Very much","event":1,"heading":"Body","subheading":"Whole Body","value":5},"response":{"text":"Please call the oncology nurses today at (859) 562-2386 (for CT surgery patients) or UK Markey Cancer Center (859) 257-4488 during regular business hours (M-F, 8am-5pm). If you need to speak with someone outside regular business hours, please call the UK Paging Operator at (859)323-5321.","email_to":["mypath@launchhealth.org"]}},{"answer":{"question":"I have difficulty chewing or eating","answer":"Quite a bit","event":1,"heading":"Body","subheading":"Head, Face, Neck","value":4},"response":{"text":"Please call the oncology nurses today at (859) 562-2386 (for CT surgery patients) or UK Markey Cancer Center (859) 257-4488 during regular business hours (M-F, 8am-5pm). If you need to speak with someone outside regular business hours, please call the UK Paging Operator at (859)323-5321.","email_to":["mypath@launchhealth.org"]}},{"answer":{"question":"I have had diarrhea for longer than 24 hours","answer":"Quite a bit","event":1,"heading":"Body","subheading":"Stomach and Gut","value":4},"response":{"text":"Please call the oncology nurses today at (859) 562-2386 (for CT surgery patients) or UK Markey Cancer Center (859) 257-4488 during regular business hours (M-F, 8am-5pm). If you need to speak with someone outside regular business hours, please call the UK Paging Operator at (859)323-5321.","email_to":["mypath@launchhealth.org"]}},{"answer":{"question":"I have changes in sexual function and/or intimacy","answer":"Very much","event":7,"heading":"Body","subheading":"Other","value":5},"response":{"text":"Please discuss this with your provider at your next visit. A reminder will be entered into your medical record.","email_to":["mccsocialworker@uky.edu","mypath@launchhealth.org"]}},{"answer":{"question":"I have increased or decreased urination","answer":"Quite a bit","event":7,"heading":"Body","subheading":"Other","value":4},"response":{"text":"Please discuss this with your provider at your next visit. A reminder will be entered into your medical record.","email_to":["mccsocialworker@uky.edu","mypath@launchhealth.org"]}},{"answer":{"question":"Felt left out","answer":"Often","event":7,"heading":"Mind","subheading":"Over the last 2 weeks, how often have you been bothered by the following problems:","value":3},"response":{"text":"Please discuss this with your provider at your next visit. A reminder will be entered into your medical record.","email_to":["mccsocialworker@uky.edu","mypath@launchhealth.org"]}},{"answer":{"question":"Would you like to make an appointment to get spiritual or faith-based support?","answer":"Yes, I would","event":5,"heading":"Mind","subheading":"Over the last 2 weeks, how often have you been bothered by the following problems:","value":1},"response":{"text":"An oncology social worker will contact you at their earliest convenience. The number for the oncology social worker is (859)323-2798. If you need to speak with someone outside regular business hours, please call the UK Paging Operator at (859)323-5321.","email_to":["mccsocialworker@uky.edu","mypath@launchhealth.org"]}},{"answer":{"question":"I can bathe and dress myself","answer":"Strongly Disagree","event":7,"heading":"Living","subheading":"Household","value":5},"response":{"text":"Please discuss this with your provider at your next visit. A reminder will be entered into your medical record.","email_to":["mccsocialworker@uky.edu","mypath@launchhealth.org"]}},{"answer":{"question":"I can work/go to school","answer":"Disagree","event":7,"heading":"Living","subheading":"Household","value":4},"response":{"text":"Please discuss this with your provider at your next visit. A reminder will be entered into your medical record.","email_to":["mccsocialworker@uky.edu","mypath@launchhealth.org"]}},{"answer":{"question":"I have health insurance to cover me during my diagnosis","answer":"Strongly Disagree","event":7,"heading":"Living","subheading":"Finances","value":5},"response":{"text":"Please discuss this with your provider at your next visit. A reminder will be entered into your medical record.","email_to":["mccsocialworker@uky.edu","mypath@launchhealth.org"]}},{"answer":{"question":"I have someone to help/support me while I am going through treatment","answer":"Disagree","event":7,"heading":"Living","subheading":"Relationships","value":4},"response":{"text":"Please discuss this with your provider at your next visit. A reminder will be entered into your medical record.","email_to":["mccsocialworker@uky.edu","mypath@launchhealth.org"]}},{"answer":{"question":"Would you like to schedule time to talk with someone about coping with your diagnosis?","answer":"Yes, I would","event":5,"heading":"Extra","value":1},"response":{"text":"An oncology social worker will contact you at their earliest convenience. The number for the oncology social worker is (859)323-2798. If you need to speak with someone outside regular business hours, please call the UK Paging Operator at (859)323-5321.","email_to":["mccsocialworker@uky.edu","mypath@launchhealth.org"]}},{"answer":{"question":"Is there any other information you want to tell us about?","answer":"info tell us","event":8,"heading":"Extra"},"response":{"text":"","email_to":["mypath@launchhealth.org"]}}],"user":{"pseudonym":"Pseudonym","diagnosis":"Diagnosis","phone_number":"Phone Number","provider_phone_number":"Providers’ Phone Number","clinic_email":"test_b@xyz.com"}}'
-        //upload_data = JSON.parse(dummp_data)
 
         this.upload_results(upload_data)
 
@@ -23304,7 +23363,7 @@ module.exports = Marionette.View.extend({
 
     onRender() {
         this.onChildviewWelcomeView()
-        //this.onChildviewPersonalStart()
+        //this.onChildviewQuestionnaireFinish()
     }
 });
 },{"../../../../../my_datas.json":2,"../../collections/clinics":48,"../../collections/questions":49,"../../models/session":54,"../../models/user":55,"../done/done":57,"../nointernet/nointernet":61,"../personal/personal":63,"../questions/questions":68,"../thermo/thermo":70,"../welcome/welcome":72,"./layout.hbs":58,"backbone.marionette":5}],60:[function(require,module,exports){
@@ -23437,7 +23496,8 @@ module.exports = Marionette.View.extend({
             diagnosis: diagnosis,
             phone_number: phone_number,
             provider_phone_number: provider_phone_number,
-            clinic_email:clinic
+            clinic_email:clinic,
+            onesignal_id: window.idapp
         }
 
         this.model.set('user', um)
@@ -23778,7 +23838,8 @@ module.exports = Marionette.View.extend({
     },
 
     events: {
-        'click .js-next': 'show_next'
+        'click .js-next': 'show_next',
+        'click .js-back': 'show_prev'
     },
 
     onAttach: function () {
@@ -23787,6 +23848,19 @@ module.exports = Marionette.View.extend({
         });
     },
 
+
+    show_prev: function() {
+        this.counter -= 1
+        console.log(this.counter)
+        if (this.counter === -1) {
+            this.triggerMethod('thermo:start', this);
+        }else{
+            this.render();
+            window.scrollTo(0, 0);
+
+        }
+
+    },
     show_next: function () {
         if (this.$el.find('textarea')){
             this.$el.find('textarea').each((function(_this) {
@@ -23850,7 +23924,7 @@ module.exports = Marionette.View.extend({
 // hbsfy compiled Handlebars template
 var HandlebarsCompiler = require('hbsfy/runtime');
 module.exports = HandlebarsCompiler.template({"compiler":[8,">= 4.3.0"],"main":function(container,depth0,helpers,partials,data) {
-    return "<div class=\"mtopbox\">\n\n    <h2 class=\"ui header\">\n        <img src=\"img/quality.png\" style=\"max-height: 40px; width: auto;\n            height: auto;\">\n        <div class=\"content\">\n            Quality of Life\n        </div>\n    </h2>\n\n</div>\n\n\n\n<div class=\"mbottombox\">\n<h3>Taking everything in your life into account, please rate your overall quality of life.</h3>\n<br><br>\n<div class=\"ui stackable seven column grid\">\n  <div class=\"row mobile hidden\">\n    <div class=\"column\"><img src='/img/sad.png'></div>\n    <div class=\"column\"></div>\n    <div class=\"column\"></div>\n    <div class=\"column\"><img src='/img/upset.png'></div>\n    <div class=\"column\"></div>\n    <div class=\"column\"></div>\n    <div class=\"column\"><img src='/img/happy.png'></div>\n  </div>\n  <div class=\"row\">\n    <div class=\"column\"><button class=\"big circular ui button js-quality\" data-value='1' data-event='5'><i class=\"frown outline icon mobile only\"></i>1</button><div class=\"ui basic left pointing label mobile only\">Life is very distressing</div></div>\n    <div class=\"column\"><button class=\"big circular ui button js-quality\" data-value='2' data-event='5'>2</button></div>\n    <div class=\"column\"><button class=\"big circular ui button js-quality\" data-value='3'>3</button></div>\n    <div class=\"column\"><button class=\"big circular ui button js-quality\" data-value='4'><i class=\"meh outline icon mobile only\"></i>4</button><div class=\"ui basic left pointing label mobile only\">Life is so-so</div></div>\n    <div class=\"column\"><button class=\"big circular ui button js-quality\" data-value='5'>5</button></div>\n    <div class=\"column\"><button class=\"big circular ui button js-quality\" data-value='6'>6</button></div>\n    <div class=\"column\"><button class=\"big circular ui button js-quality\" data-value='7'><i class=\"smile outline icon mobile only\"></i>7</button><div class=\"ui basic left pointing label mobile only\">Life is great</div></div>\n  </div>\n  <div class=\"row mobile hidden\">\n    <div class=\"column\">Life is very distressing</div>\n    <div class=\"column\"></div>\n    <div class=\"column\"></div>\n    <div class=\"column\">Life is so-so</div>\n    <div class=\"column\"></div>\n    <div class=\"column\"></div>\n    <div class=\"column\">Life is great</div>\n  </div>\n\n</div>\n\n\n</div>\n";
+    return "<div class=\"mtopbox\">\n\n    <h2 class=\"ui header\">\n        <img src=\"img/quality.png\" style=\"max-height: 40px; width: auto;\n            height: auto;\">\n        <div class=\"content\">\n            Quality of Life\n        </div>\n    </h2>\n\n</div>\n\n\n\n<div class=\"mbottombox\">\n    <h3>Taking everything in your life into account, please rate your overall quality of life.</h3>\n    <br><br>\n    <div class=\"ui stackable seven column grid\">\n        <div class=\"row mobile hidden\">\n            <div class=\"column\"><img src='/img/sad.png'></div>\n            <div class=\"column\"></div>\n            <div class=\"column\"></div>\n            <div class=\"column\"><img src='/img/upset.png'></div>\n            <div class=\"column\"></div>\n            <div class=\"column\"></div>\n            <div class=\"column\"><img src='/img/happy.png'></div>\n        </div>\n        <div class=\"row\">\n            <div class=\"column\"><button class=\"big circular ui button js-quality\" data-value='1' data-event='5'><i\n                        class=\"frown outline icon mobile only\"></i>1</button>\n                <div class=\"ui basic left pointing label mobile only\">Life is very distressing</div>\n            </div>\n            <div class=\"column\"><button class=\"big circular ui button js-quality\" data-value='2'\n                    data-event='5'>2</button></div>\n            <div class=\"column\"><button class=\"big circular ui button js-quality\" data-value='3'>3</button></div>\n            <div class=\"column\"><button class=\"big circular ui button js-quality\" data-value='4'><i\n                        class=\"meh outline icon mobile only\"></i>4</button>\n                <div class=\"ui basic left pointing label mobile only\">Life is so-so</div>\n            </div>\n            <div class=\"column\"><button class=\"big circular ui button js-quality\" data-value='5'>5</button></div>\n            <div class=\"column\"><button class=\"big circular ui button js-quality\" data-value='6'>6</button></div>\n            <div class=\"column\"><button class=\"big circular ui button js-quality\" data-value='7'><i\n                        class=\"smile outline icon mobile only\"></i>7</button>\n                <div class=\"ui basic left pointing label mobile only\">Life is great</div>\n            </div>\n        </div>\n        <div class=\"row mobile hidden\">\n            <div class=\"column\">Life is very distressing</div>\n            <div class=\"column\"></div>\n            <div class=\"column\"></div>\n            <div class=\"column\">Life is so-so</div>\n            <div class=\"column\"></div>\n            <div class=\"column\"></div>\n            <div class=\"column\">Life is great</div>\n        </div>\n\n    </div>\n</div>";
 },"useData":true});
 
 },{"hbsfy/runtime":29}],70:[function(require,module,exports){
@@ -23866,6 +23940,11 @@ module.exports = Marionette.View.extend({
     template: ThermoTemplate,
     events: {
         'click .js-quality': 'save_quality',
+        'click .js-back': 'back',
+    },
+
+    back: function(){
+        this.triggerMethod('personal:start', this);
     },
 
     save_quality: function(event){
@@ -23899,7 +23978,7 @@ module.exports = Marionette.View.extend({
 // hbsfy compiled Handlebars template
 var HandlebarsCompiler = require('hbsfy/runtime');
 module.exports = HandlebarsCompiler.template({"compiler":[8,">= 4.3.0"],"main":function(container,depth0,helpers,partials,data) {
-    return "<div class=\"mtopbox\">\n    <h2 class=\"ui header\">\n        <img class=\"ui sa image\" src=\"img/path.png\">\n        <div class=\"content\">\n            MyPath\n        </div>\n    </h2>\n</div>\n\n\n\n<div class=\"mbottombox\">\n    <h3>Welcome to the MyPath app.</h3>\n    <p>\n        This is a digital system to help you during your\n        cancer journey. You will use MyPath with your healthcare providers at Markey\n        Cancer Center.\n    </p>\n    <div class=\"ui red message\">\n        If you are having or have an emergency always call 911.\n    </div>\n\n    If you\n    are having fevers, chills, significant cough or shortness of breath, severe fatigue\n    or any bleeding, you should immediately contact your provider or seek\n    emergency treatment. The symptoms reported by you via the app and the\n    surveys completed by you are not intended to be a source of medical advice or\n    treatment. Any questions about medications, health care, and/or participation in\n    this program should be directed to your health care provider.\n    Please fill out the following questions, which will help guide you through your\n    treatment.</p>\n    <p>Please click on the blue button to continue.</p>\n</div>\n\n<div class=\"ui icon message hidden js-goto-done\">\n    <i class=\"exclamation triangle icon\"></i>\n    <div class=\"content\">\n        <div class=\"header\">\n            There are some records that haven't been uploaded.\n        </div>\n        <p>Click here to try again. Otherwise we will try again at questionnaire completion.</p>\n    </div>\n\n</div>\n\n\n<button class=\"ui icon big right labeled icon blue right floated button js-tstart right-button\">\n    <i class=\"angle right icon\"></i>Next\n</button>\n\n\n</div>";
+    return "<div class=\"mtopbox\">\n    <h2 class=\"ui header\">\n        <img class=\"ui sa image\" src=\"img/path.png\">\n        <div class=\"content\">\n            MyPath\n        </div>\n    </h2>\n</div>\n\n\n\n<div class=\"mbottombox\">\n    <h3>Welcome to the MyPath app.</h3>\n    <p>\n        This is a digital system to help you during your\n        cancer journey. You will use MyPath with your healthcare providers at Markey\n        Cancer Center.\n    </p>\n    <div class=\"ui red message\">\n        If you are having or have an emergency always call 911.\n    </div>\n\n    If you\n    are having fevers, chills, significant cough or shortness of breath, severe fatigue\n    or any bleeding, you should immediately contact your provider or seek\n    emergency treatment. The symptoms reported by you via the app and the\n    surveys completed by you are not intended to be a source of medical advice or\n    treatment. Any questions about medications, health care, and/or participation in\n    this program should be directed to your health care provider.\n    Please fill out the following questions, which will help guide you through your\n    treatment.</p>\n    <p>Please click on the blue button to continue.</p>\n</div>\n\n<div class=\"ui icon message hidden js-goto-done\">\n    <i class=\"exclamation triangle icon\"></i>\n    <div class=\"content\">\n        <div class=\"header\">\n            There are some records that haven't been uploaded.\n        </div>\n        <p>Click here to try again. Otherwise we will try again at questionnaire completion.</p>\n    </div>\n\n</div>\n\n\n<button class=\"ui icon big right labeled icon blue right floated button js-tstart right-button\">\n    <i class=\"angle right icon\"></i>Next\n</button>\n";
 },"useData":true});
 
 },{"hbsfy/runtime":29}],72:[function(require,module,exports){
@@ -23917,6 +23996,7 @@ module.exports = Marionette.View.extend({
     },
 
     personal_start: function(){
+        this.$('.js-tstart').addClass('loading')
         this.triggerMethod('personal:start', this);
     },
 

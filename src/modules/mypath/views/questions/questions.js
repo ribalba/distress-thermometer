@@ -140,7 +140,8 @@ module.exports = Marionette.View.extend({
     },
 
     events: {
-        'click .js-next': 'show_next'
+        'click .js-next': 'show_next',
+        'click .js-back': 'show_prev'
     },
 
     onAttach: function () {
@@ -149,6 +150,19 @@ module.exports = Marionette.View.extend({
         });
     },
 
+
+    show_prev: function() {
+        this.counter -= 1
+        console.log(this.counter)
+        if (this.counter === -1) {
+            this.triggerMethod('thermo:start', this);
+        }else{
+            this.render();
+            window.scrollTo(0, 0);
+
+        }
+
+    },
     show_next: function () {
         if (this.$el.find('textarea')){
             this.$el.find('textarea').each((function(_this) {

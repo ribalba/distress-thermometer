@@ -12,6 +12,7 @@ module.exports = Marionette.View.extend({
     },
 
     personal_start: function(){
+        this.$('.js-tstart').addClass('loading')
         this.triggerMethod('personal:start', this);
     },
 
