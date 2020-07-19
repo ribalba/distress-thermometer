@@ -22951,7 +22951,7 @@ module.exports = Marionette.Application.extend({
 // hbsfy compiled Handlebars template
 var HandlebarsCompiler = require('hbsfy/runtime');
 module.exports = HandlebarsCompiler.template({"compiler":[8,">= 4.3.0"],"main":function(container,depth0,helpers,partials,data) {
-    return "<div class=\"main-wrapper-container\"></div>\n\n<div class=\"ui modal js-not-implemented\">\n    <div class=\"content\">\n        <div class=\"description\">\n            <p>This feature hasn't been implemented in this version of the app. It will follow shortly.</p>\n        </div>\n    </div>\n    <div class=\"actions\">\n\n        <div class=\"ui positive right labeled icon button\">\n            Ok\n            <i class=\"checkmark icon\"></i>\n        </div>\n    </div>\n</div>\n";
+    return "<div class=\"main-wrapper-container ui container\"></div>\n\n<div class=\"ui modal js-not-implemented\">\n    <div class=\"content\">\n        <div class=\"description\">\n            <p>This feature hasn't been implemented in this version of the app. It will follow shortly.</p>\n        </div>\n    </div>\n    <div class=\"actions\">\n\n        <div class=\"ui positive right labeled icon button\">\n            Ok\n            <i class=\"checkmark icon\"></i>\n        </div>\n    </div>\n</div>\n";
 },"useData":true});
 
 },{"hbsfy/runtime":29}],45:[function(require,module,exports){
