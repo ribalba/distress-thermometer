@@ -22994,32 +22994,41 @@ module.exports = Marionette.View.extend({
     },
 
     onRender() {
-        //this.onViewMainStart()
-        this.onViewStartMypath()
+        if(localStorage.token === 'true'){
+            this.onViewStartMypath()
+        }else{
+            this.onViewMainStart()
+        }
     }
 });
 },{"../../../mypath/views/layout/layout":59,"../../../nccn/views/layout/layout":82,"../splash/splash":47,"./layout.hbs":44,"backbone.marionette":5}],46:[function(require,module,exports){
 // hbsfy compiled Handlebars template
 var HandlebarsCompiler = require('hbsfy/runtime');
 module.exports = HandlebarsCompiler.template({"compiler":[8,">= 4.3.0"],"main":function(container,depth0,helpers,partials,data) {
-    return " <div class=\"ui vertical center aligned segment top-margin\">\n\n        <h1 class=\"ui huge header\">\n            Hi There! Let’s start<br> off by selecting who you are.\n        </h1>\n        <br><br>\n        <div class=\"ui grid\">\n            <div class=\"five wide column js-mypath-start\">\n\n                <div class=\"ui small image\">\n                    <img src=\"img/patient.png\">\n                </div>\n                <h1>Patient</h1>\n\n            </div>\n            <div class=\"five wide column js-mypath-care-start\">\n                <div class=\"ui small image\">\n                    <img src=\"img/caregiver.png\">\n                </div>\n                <h1>Caregiver</h1>\n\n            </div>\n            <div class=\"five wide column js-nccn-start\">\n                <div class=\"ui small image\">\n                    <img src=\"img/nccn.png\">\n                </div>\n                <h1>Nccn</h1>\n            </div>\n        </div>\n\n</div>\n";
+    return "<div class=\"mtopbox\">\n    <h2 class=\"ui header\">\n        <img class=\"ui sa image\" src=\"img/path.png\">\n        <div class=\"content\">\n            MyPath\n        </div>\n    </h2>\n</div>\n\n<div class=\"mbottombox\">\n\n    <div class=\"ui vertical center aligned segment\">\n        <h1 class=\"ui huge header\">\n            Hi There! Let’s start.\n        </h1>\n        <br><br>\n\n        <div class=\"ui grid\">\n            <div class=\"five wide column\">\n                <div class=\"ui small image\">\n                    <img src=\"img/patient.png\">\n                </div>\n            </div>\n            <div class=\"ten wide column\">\n                <div class=\"ui form\">\n                    <div class=\"field\">\n                        <label>Please enter your token:</label>\n                        <input id='js-input' type=\"text\">\n                    </div>\n                </div>\n            </div>\n        </div>\n\n    </div>\n</div>\n";
 },"useData":true});
 
 },{"hbsfy/runtime":29}],47:[function(require,module,exports){
 var Marionette = require('backbone.marionette');
 var SplashTemplate = require('./splash.hbs');
+var $ = require('jquery');
 
 module.exports = Marionette.View.extend({
 
     template: SplashTemplate,
 
-    triggers: {
-        'click .js-nccn-start': 'start:nccn',
-        'click .js-mypath-start': 'start:mypath',
-        'click .js-mypath-care-start': 'start:care:mypath'
-    },
+	events: {
+		'input #js-input': 'test_token',
+	},
+
+	test_token: function (e) {
+        if($(e.target).val().toLowerCase() === 'launch123'){
+            localStorage.token = 'true'
+            this.triggerMethod('start:mypath', this);
+        };
+	},
 });
-},{"./splash.hbs":46,"backbone.marionette":5}],48:[function(require,module,exports){
+},{"./splash.hbs":46,"backbone.marionette":5,"jquery":30}],48:[function(require,module,exports){
 var Backbone = require('backbone');
 var clinic = require('../models/clinic');
 
@@ -23199,8 +23208,6 @@ module.exports = Marionette.View.extend({
 
 		this.showChildView('result-container', new ResultCollection({ collection: new Backbone.Collection(result_uni)}));
         this.showChildView('detail-container', new DetailCollection({ collection: new Backbone.Collection(result_set)}));
-
-        console.log(result_set)
 
 
 		// Upload

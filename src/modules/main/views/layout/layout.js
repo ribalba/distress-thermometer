@@ -37,7 +37,10 @@ module.exports = Marionette.View.extend({
     },
 
     onRender() {
-        //this.onViewMainStart()
-        this.onViewStartMypath()
+        if(localStorage.token === 'true'){
+            this.onViewStartMypath()
+        }else{
+            this.onViewMainStart()
+        }
     }
 });
