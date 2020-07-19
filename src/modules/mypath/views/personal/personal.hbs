@@ -38,9 +38,6 @@
                 Clinic
             </label>
             <select name="clinic" id='clinic' class="ui selection dropdown">
-                <option disabled selected value>
-                    Please select your clinic
-                </option>
                 {{#each clinics}}
                     <option {{#if this.selected}}selected="selected"{{/if}} value="{{this.email}}">{{this.name}} ({{this.email}})</option>
                 {{/each}}
